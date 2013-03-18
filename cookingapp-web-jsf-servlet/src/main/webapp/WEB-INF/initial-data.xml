@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<INGREDIENT id="1" name="Abadèche" description="" deletable="false" />
+	<INGREDIENT id="2" name="Abondance" description="" deletable="false" />
+	<INGREDIENT id="3" name="Abricot" description="" deletable="false" />
+	<INGREDIENT id="4" name="Agar agar" description="" deletable="false" />
+	<INGREDIENT id="5" name="Agar-agar" description="" deletable="false" />
+	<INGREDIENT id="6" name="Agneau" description="" deletable="false" />
+	<INGREDIENT id="7" name="Aiguillette de canard" description="" deletable="false" />
+	<INGREDIENT id="8" name="Aiguillette de poulet" description="" deletable="false" />
+	<INGREDIENT id="9" name="Aiguillettes de dinde" description="" deletable="false" />
+	<INGREDIENT id="10" name="Ail" description="" deletable="false" />
+	<INGREDIENT id="11" name="Aile de poulet" description="" deletable="false" />
+	<INGREDIENT id="12" name="Airelles" description="" deletable="false" />
+	<INGREDIENT id="13" name="Alevin" description="" deletable="false" />
+	<INGREDIENT id="14" name="Aligot" description="" deletable="false" />
+	<INGREDIENT id="15" name="Amande" description="" deletable="false" />
+	<INGREDIENT id="16" name="Amidon" description="" deletable="false" />
+	<INGREDIENT id="17" name="Ananas" description="" deletable="false" />
+	<INGREDIENT id="18" name="Anchoïade" description="" deletable="false" />
+	<INGREDIENT id="19" name="Anchois" description="" deletable="false" />
+	<INGREDIENT id="20" name="Andouille" description="" deletable="false" />
+	<INGREDIENT id="21" name="Andouillette" description="" deletable="false" />
+	<INGREDIENT id="22" name="Aneth" description="" deletable="false" />
+	<INGREDIENT id="23" name="Anguille" description="" deletable="false" />
+	<INGREDIENT id="24" name="Anis étoilé" description="" deletable="false" />
+	<INGREDIENT id="25" name="Anis vert" description="" deletable="false" />
+	<INGREDIENT id="26" name="Appenzeller" description="" deletable="false" />
+	<INGREDIENT id="27" name="Arachide" description="" deletable="false" />
+	<INGREDIENT id="28" name="Araignée de mer" description="" deletable="false" />
+	<INGREDIENT id="29" name="Arbois" description="" deletable="false" />
+	<INGREDIENT id="30" name="Arbouse" description="" deletable="false" />
+	<INGREDIENT id="31" name="Armagnac" description="" deletable="false" />
+	<INGREDIENT id="32" name="Arôme" description="" deletable="false" />
+	<INGREDIENT id="33" name="Artichaut" description="" deletable="false" />
+	<INGREDIENT id="34" name="Asperge" description="" deletable="false" />
+	<INGREDIENT id="35" name="Aubergine" description="" deletable="false" />
+	<INGREDIENT id="36" name="Autruche" description="" deletable="false" />
+	<INGREDIENT id="37" name="Avocat" description="" deletable="false" />
+	<INGREDIENT id="38" name="Avoine" description="" deletable="false" />
+	<INGREDIENT id="39" name="Bacon" description="" deletable="false" />
+	<INGREDIENT id="40" name="Badiane" description="" deletable="false" />
+	<INGREDIENT id="41" name="Baguette" description="" deletable="false" />
+	<INGREDIENT id="42" name="Baie de genévrier" description="" deletable="false" />
+	<INGREDIENT id="43" name="Baies rose" description="" deletable="false" />
+	<INGREDIENT id="44" name="Bambou" description="" deletable="false" />
+	<INGREDIENT id="45" name="Banane" description="" deletable="false" />
+	<INGREDIENT id="46" name="Banane plantain" description="" deletable="false" />
+	<INGREDIENT id="47" name="Banon" description="" deletable="false" />
+	<INGREDIENT id="48" name="Bar" description="" deletable="false" />
+	<INGREDIENT id="49" name="Barbue" description="" deletable="false" />
+	<INGREDIENT id="50" name="Baron" description="" deletable="false" />
+	<INGREDIENT id="51" name="Basilic" description="" deletable="false" />
+	<INGREDIENT id="52" name="Beaufort" description="" deletable="false" />
+	<INGREDIENT id="53" name="Beaujolais" description="" deletable="false" />
+	<INGREDIENT id="54" name="Bécasse" description="" deletable="false" />
+	<INGREDIENT id="55" name="Béchamel" description="" deletable="false" />
+	<INGREDIENT id="56" name="Beef steak" description="" deletable="false" />
+	<INGREDIENT id="57" name="Bélangère" description="" deletable="false" />
+	<INGREDIENT id="58" name="Bergamote" description="" deletable="false" />
+	<INGREDIENT id="59" name="Bergerac" description="" deletable="false" />
+	<INGREDIENT id="60" name="Bernique" description="" deletable="false" />
+	<INGREDIENT id="61" name="Betterave" description="" deletable="false" />
+	<INGREDIENT id="62" name="Bettes à cardes" description="" deletable="false" />
+	<INGREDIENT id="63" name="Beurre" description="" deletable="false" />
+	<INGREDIENT id="64" name="Beurre allégé" description="" deletable="false" />
+	<INGREDIENT id="65" name="Beurre de cacahuète" description="" deletable="false" />
+	<INGREDIENT id="66" name="Beurre doux" description="" deletable="false" />
+	<INGREDIENT id="67" name="Beurre tendre" description="" deletable="false" />
+	<INGREDIENT id="68" name="Bicarbonate" description="" deletable="false" />
+	<INGREDIENT id="69" name="Bicarbonate de soude" description="" deletable="false" />
+	<INGREDIENT id="70" name="Bière" description="" deletable="false" />
+	<INGREDIENT id="71" name="Bigarade" description="" deletable="false" />
+	<INGREDIENT id="72" name="Bigorneau" description="" deletable="false" />
+	<INGREDIENT id="73" name="Biscotte" description="" deletable="false" />
+	<INGREDIENT id="74" name="Biscuit cuiller" description="" deletable="false" />
+	<INGREDIENT id="75" name="Biscuit sec" description="" deletable="false" />
+	<INGREDIENT id="76" name="Biscuits à la cuillère" description="" deletable="false" />
+	<INGREDIENT id="77" name="Bison" description="" deletable="false" />
+	<INGREDIENT id="78" name="Blanc de dinde" description="" deletable="false" />
+	<INGREDIENT id="79" name="Blanc de poulet" description="" deletable="false" />
+	<INGREDIENT id="80" name="Blanquette de veau" description="" deletable="false" />
+	<INGREDIENT id="81" name="Blé" description="" deletable="false" />
+	<INGREDIENT id="82" name="Blette" description="" deletable="false" />
+	<INGREDIENT id="83" name="Bleu" description="" deletable="false" />
+	<INGREDIENT id="84" name="Bleu d'auvergne" description="" deletable="false" />
+	<INGREDIENT id="85" name="Bleu de bresse" description="" deletable="false" />
+	<INGREDIENT id="86" name="Bleu de gex" description="" deletable="false" />
+	<INGREDIENT id="87" name="Bleu des causses" description="" deletable="false" />
+	<INGREDIENT id="88" name="Blini" description="" deletable="false" />
+	<INGREDIENT id="89" name="Bocconcini" description="" deletable="false" />
+	<INGREDIENT id="90" name="Boeuf" description="" deletable="false" />
+	<INGREDIENT id="91" name="Bok choy" description="" deletable="false" />
+	<INGREDIENT id="92" name="Bolet" description="" deletable="false" />
+	<INGREDIENT id="93" name="Bonnet" description="" deletable="false" />
+	<INGREDIENT id="94" name="Bordeaux" description="" deletable="false" />
+	<INGREDIENT id="95" name="Boudin blanc" description="" deletable="false" />
+	<INGREDIENT id="96" name="Boudin noir" description="" deletable="false" />
+	<INGREDIENT id="97" name="Boudoir" description="" deletable="false" />
+	<INGREDIENT id="98" name="Bouillon" description="" deletable="false" />
+	<INGREDIENT id="99" name="Bouillon de boeuf" description="" deletable="false" />
+	<INGREDIENT id="100" name="Bouillon de légume" description="" deletable="false" />
+	<INGREDIENT id="101" name="Bouillon de poule" description="" deletable="false" />
+	<INGREDIENT id="102" name="Bouillon de volaille" description="" deletable="false" />
+	<INGREDIENT id="103" name="Boulgour" description="" deletable="false" />
+	<INGREDIENT id="104" name="Bouquet garni" description="" deletable="false" />
+	<INGREDIENT id="105" name="Bourgeois" description="" deletable="false" />
+	<INGREDIENT id="106" name="Bourgogne" description="" deletable="false" />
+	<INGREDIENT id="107" name="Bourguignon" description="" deletable="false" />
+	<INGREDIENT id="108" name="Bourrache" description="" deletable="false" />
+	<INGREDIENT id="109" name="Boursault" description="" deletable="false" />
+	<INGREDIENT id="110" name="Boursin" description="" deletable="false" />
+	<INGREDIENT id="111" name="Bresaola" description="" deletable="false" />
+	<INGREDIENT id="112" name="Brick" description="" deletable="false" />
+	<INGREDIENT id="113" name="Brie de meaux" description="" deletable="false" />
+	<INGREDIENT id="114" name="Brillat-savarin" description="" deletable="false" />
+	<INGREDIENT id="115" name="Brioche" description="" deletable="false" />
+	<INGREDIENT id="116" name="Brique" description="" deletable="false" />
+	<INGREDIENT id="117" name="Brocciu" description="" deletable="false" />
+	<INGREDIENT id="118" name="Brochet" description="" deletable="false" />
+	<INGREDIENT id="119" name="Brocoli" description="" deletable="false" />
+	<INGREDIENT id="120" name="Brousse" description="" deletable="false" />
+	<INGREDIENT id="121" name="Brugnon" description="" deletable="false" />
+	<INGREDIENT id="122" name="Bulot" description="" deletable="false" />
+	<INGREDIENT id="123" name="Butternut" description="" deletable="false" />
+	<INGREDIENT id="124" name="Cabillaud" description="" deletable="false" />
+	<INGREDIENT id="125" name="Cacao" description="" deletable="false" />
+	<INGREDIENT id="126" name="Café" description="" deletable="false" />
+	<INGREDIENT id="127" name="Café soluble" description="" deletable="false" />
+	<INGREDIENT id="128" name="Caille" description="" deletable="false" />
+	<INGREDIENT id="129" name="Caillette" description="" deletable="false" />
+	<INGREDIENT id="130" name="Calamar" description="" deletable="false" />
+	<INGREDIENT id="131" name="Calvados" description="" deletable="false" />
+	<INGREDIENT id="132" name="Camembert" description="" deletable="false" />
+	<INGREDIENT id="133" name="Canard" description="" deletable="false" />
+	<INGREDIENT id="134" name="Cancoillotte" description="" deletable="false" />
+	<INGREDIENT id="135" name="Canette" description="" deletable="false" />
+	<INGREDIENT id="136" name="Canneberge" description="" deletable="false" />
+	<INGREDIENT id="137" name="Cannelle" description="" deletable="false" />
+	<INGREDIENT id="138" name="Canneloni" description="" deletable="false" />
+	<INGREDIENT id="139" name="Cantal" description="" deletable="false" />
+	<INGREDIENT id="140" name="Capelan" description="" deletable="false" />
+	<INGREDIENT id="141" name="Câpres" description="" deletable="false" />
+	<INGREDIENT id="142" name="Caprice des dieux" description="" deletable="false" />
+	<INGREDIENT id="143" name="Capucine" description="" deletable="false" />
+	<INGREDIENT id="144" name="Carambole" description="" deletable="false" />
+	<INGREDIENT id="145" name="Caramel" description="" deletable="false" />
+	<INGREDIENT id="146" name="Caramel au beurre salé" description="" deletable="false" />
+	<INGREDIENT id="147" name="Cardamome" description="" deletable="false" />
+	<INGREDIENT id="148" name="Cardon" description="" deletable="false" />
+	<INGREDIENT id="149" name="Carotte" description="" deletable="false" />
+	<INGREDIENT id="150" name="Carpe" description="" deletable="false" />
+	<INGREDIENT id="151" name="Carré d'agneau" description="" deletable="false" />
+	<INGREDIENT id="152" name="Carré frais" description="" deletable="false" />
+	<INGREDIENT id="153" name="Carrelet" description="" deletable="false" />
+	<INGREDIENT id="154" name="Cassis" description="" deletable="false" />
+	<INGREDIENT id="155" name="Cassonade" description="" deletable="false" />
+	<INGREDIENT id="156" name="Caviar" description="" deletable="false" />
+	<INGREDIENT id="157" name="Caviar d'aubergine" description="" deletable="false" />
+	<INGREDIENT id="158" name="Cédrat" description="" deletable="false" />
+	<INGREDIENT id="159" name="Céleri" description="" deletable="false" />
+	<INGREDIENT id="160" name="Céleri-rave" description="" deletable="false" />
+	<INGREDIENT id="161" name="Cèpe" description="" deletable="false" />
+	<INGREDIENT id="162" name="Céréale" description="" deletable="false" />
+	<INGREDIENT id="163" name="Cerf" description="" deletable="false" />
+	<INGREDIENT id="164" name="Cerfeuil" description="" deletable="false" />
+	<INGREDIENT id="165" name="Cerise" description="" deletable="false" />
+	<INGREDIENT id="166" name="Cerise de terre" description="" deletable="false" />
+	<INGREDIENT id="167" name="Cervelas" description="" deletable="false" />
+	<INGREDIENT id="168" name="Cervelle" description="" deletable="false" />
+	<INGREDIENT id="169" name="Chabichou" description="" deletable="false" />
+	<INGREDIENT id="170" name="Chair à saucisse" description="" deletable="false" />
+	<INGREDIENT id="171" name="Champagne" description="" deletable="false" />
+	<INGREDIENT id="172" name="Champignon" description="" deletable="false" />
+	<INGREDIENT id="173" name="Champignon frais" description="" deletable="false" />
+	<INGREDIENT id="174" name="Champignon noir" description="" deletable="false" />
+	<INGREDIENT id="175" name="Chanterelle" description="" deletable="false" />
+	<INGREDIENT id="176" name="Chaource" description="" deletable="false" />
+	<INGREDIENT id="177" name="Chapelure" description="" deletable="false" />
+	<INGREDIENT id="178" name="Chapon" description="" deletable="false" />
+	<INGREDIENT id="179" name="Charolais" description="" deletable="false" />
+	<INGREDIENT id="180" name="Châtaigne" description="" deletable="false" />
+	<INGREDIENT id="181" name="Chayote" description="" deletable="false" />
+	<INGREDIENT id="182" name="Cheddar" description="" deletable="false" />
+	<INGREDIENT id="183" name="Chêne" description="" deletable="false" />
+	<INGREDIENT id="184" name="Chermoula" description="" deletable="false" />
+	<INGREDIENT id="185" name="Chèvre" description="" deletable="false" />
+	<INGREDIENT id="186" name="Chevreau" description="" deletable="false" />
+	<INGREDIENT id="187" name="Chevreuil" description="" deletable="false" />
+	<INGREDIENT id="188" name="Chicon" description="" deletable="false" />
+	<INGREDIENT id="189" name="Chili" description="" deletable="false" />
+	<INGREDIENT id="190" name="Chipiron" description="" deletable="false" />
+	<INGREDIENT id="191" name="Chipolata" description="" deletable="false" />
+	<INGREDIENT id="192" name="Chips" description="" deletable="false" />
+	<INGREDIENT id="193" name="Chocolat" description="" deletable="false" />
+	<INGREDIENT id="194" name="Chocolat à tartiner" description="" deletable="false" />
+	<INGREDIENT id="195" name="Chocolat amer" description="" deletable="false" />
+	<INGREDIENT id="196" name="Chocolat au lait" description="" deletable="false" />
+	<INGREDIENT id="197" name="Chocolat au riz soufflé" description="" deletable="false" />
+	<INGREDIENT id="198" name="Chocolat aux noisettes" description="" deletable="false" />
+	<INGREDIENT id="199" name="Chocolat blanc" description="" deletable="false" />
+	<INGREDIENT id="200" name="Chocolat de couverture" description="" deletable="false" />
+	<INGREDIENT id="201" name="Chocolat en poudre" description="" deletable="false" />
+	<INGREDIENT id="202" name="Chocolat noir" description="" deletable="false" />
+	<INGREDIENT id="203" name="Chocolat pâtissier" description="" deletable="false" />
+	<INGREDIENT id="204" name="Chorizo" description="" deletable="false" />
+	<INGREDIENT id="205" name="Chou" description="" deletable="false" />
+	<INGREDIENT id="206" name="Chou chinois" description="" deletable="false" />
+	<INGREDIENT id="207" name="Chou de bruxelles" description="" deletable="false" />
+	<INGREDIENT id="208" name="Chou romanesco" description="" deletable="false" />
+	<INGREDIENT id="209" name="Chouchou" description="" deletable="false" />
+	<INGREDIENT id="210" name="Chou-fleur" description="" deletable="false" />
+	<INGREDIENT id="211" name="Christophine" description="" deletable="false" />
+	<INGREDIENT id="212" name="Ciboule" description="" deletable="false" />
+	<INGREDIENT id="213" name="Ciboulette" description="" deletable="false" />
+	<INGREDIENT id="214" name="Cidre" description="" deletable="false" />
+	<INGREDIENT id="215" name="Cigale de mer" description="" deletable="false" />
+	<INGREDIENT id="216" name="Cigarette russe" description="" deletable="false" />
+	<INGREDIENT id="217" name="Cinq parfums" description="" deletable="false" />
+	<INGREDIENT id="218" name="Cinq-épices" description="" deletable="false" />
+	<INGREDIENT id="219" name="Citron" description="" deletable="false" />
+	<INGREDIENT id="220" name="Citron confit" description="" deletable="false" />
+	<INGREDIENT id="221" name="Citron vert" description="" deletable="false" />
+	<INGREDIENT id="222" name="Citronnelle" description="" deletable="false" />
+	<INGREDIENT id="223" name="Citrouille" description="" deletable="false" />
+	<INGREDIENT id="224" name="Clams" description="" deletable="false" />
+	<INGREDIENT id="225" name="Clémentine" description="" deletable="false" />
+	<INGREDIENT id="226" name="Clou de girofle" description="" deletable="false" />
+	<INGREDIENT id="227" name="Coeur" description="" deletable="false" />
+	<INGREDIENT id="228" name="Coeur d'artichaut" description="" deletable="false" />
+	<INGREDIENT id="229" name="Cognac" description="" deletable="false" />
+	<INGREDIENT id="230" name="Coing" description="" deletable="false" />
+	<INGREDIENT id="231" name="Collier d'agneau" description="" deletable="false" />
+	<INGREDIENT id="232" name="Colorant" description="" deletable="false" />
+	<INGREDIENT id="233" name="Colorant alimentaire" description="" deletable="false" />
+	<INGREDIENT id="234" name="Combava" description="" deletable="false" />
+	<INGREDIENT id="235" name="Compote" description="" deletable="false" />
+	<INGREDIENT id="236" name="Comté" description="" deletable="false" />
+	<INGREDIENT id="237" name="Concentré de tomate" description="" deletable="false" />
+	<INGREDIENT id="238" name="Conchiglione" description="" deletable="false" />
+	<INGREDIENT id="239" name="Concombre" description="" deletable="false" />
+	<INGREDIENT id="240" name="Confit de canard" description="" deletable="false" />
+	<INGREDIENT id="241" name="Confit d'oignon" description="" deletable="false" />
+	<INGREDIENT id="242" name="Confiture" description="" deletable="false" />
+	<INGREDIENT id="243" name="Congre" description="" deletable="false" />
+	<INGREDIENT id="244" name="Cookie" description="" deletable="false" />
+	<INGREDIENT id="245" name="Coppa" description="" deletable="false" />
+	<INGREDIENT id="246" name="Coq" description="" deletable="false" />
+	<INGREDIENT id="247" name="Coque" description="" deletable="false" />
+	<INGREDIENT id="248" name="Coquelet" description="" deletable="false" />
+	<INGREDIENT id="249" name="Coquille saint-jacques" description="" deletable="false" />
+	<INGREDIENT id="250" name="Coquillettes" description="" deletable="false" />
+	<INGREDIENT id="251" name="Coriandre" description="" deletable="false" />
+	<INGREDIENT id="252" name="Corn flakes" description="" deletable="false" />
+	<INGREDIENT id="253" name="Cornichons" description="" deletable="false" />
+	<INGREDIENT id="254" name="Côtelettes d'agneau" description="" deletable="false" />
+	<INGREDIENT id="255" name="Côtes d'agneau" description="" deletable="false" />
+	<INGREDIENT id="256" name="Côtes de porc" description="" deletable="false" />
+	<INGREDIENT id="257" name="Couche" description="" deletable="false" />
+	<INGREDIENT id="258" name="Coude" description="" deletable="false" />
+	<INGREDIENT id="259" name="Coulis de tomate" description="" deletable="false" />
+	<INGREDIENT id="260" name="Coulommier" description="" deletable="false" />
+	<INGREDIENT id="261" name="Courge" description="" deletable="false" />
+	<INGREDIENT id="262" name="Courge musquée" description="" deletable="false" />
+	<INGREDIENT id="263" name="Courge spaghetti" description="" deletable="false" />
+	<INGREDIENT id="264" name="Courgette" description="" deletable="false" />
+	<INGREDIENT id="265" name="Court bouillon" description="" deletable="false" />
+	<INGREDIENT id="266" name="Court-bouillon" description="" deletable="false" />
+	<INGREDIENT id="267" name="Couscous" description="" deletable="false" />
+	<INGREDIENT id="268" name="Couteau" description="" deletable="false" />
+	<INGREDIENT id="269" name="Crabe" description="" deletable="false" />
+	<INGREDIENT id="270" name="Cranberrie" description="" deletable="false" />
+	<INGREDIENT id="271" name="Cream cheese" description="" deletable="false" />
+	<INGREDIENT id="272" name="Crémant" description="" deletable="false" />
+	<INGREDIENT id="273" name="Crème" description="" deletable="false" />
+	<INGREDIENT id="274" name="Crème anglaise" description="" deletable="false" />
+	<INGREDIENT id="275" name="Crème chantilly" description="" deletable="false" />
+	<INGREDIENT id="276" name="Crème de soja" description="" deletable="false" />
+	<INGREDIENT id="277" name="Crème épaisse" description="" deletable="false" />
+	<INGREDIENT id="278" name="Crème fouettée" description="" deletable="false" />
+	<INGREDIENT id="279" name="Crème fraîche allégée" description="" deletable="false" />
+	<INGREDIENT id="280" name="Crème fraîche épaisse" description="" deletable="false" />
+	<INGREDIENT id="281" name="Crème liquide" description="" deletable="false" />
+	<INGREDIENT id="282" name="Crème semi-épaisse" description="" deletable="false" />
+	<INGREDIENT id="283" name="Crêpe" description="" deletable="false" />
+	<INGREDIENT id="284" name="Cresson" description="" deletable="false" />
+	<INGREDIENT id="285" name="Crevette" description="" deletable="false" />
+	<INGREDIENT id="286" name="Crevette bouquet" description="" deletable="false" />
+	<INGREDIENT id="287" name="Crevette rose" description="" deletable="false" />
+	<INGREDIENT id="288" name="Crevette tigrée" description="" deletable="false" />
+	<INGREDIENT id="289" name="Crevettes grises" description="" deletable="false" />
+	<INGREDIENT id="290" name="Croissant" description="" deletable="false" />
+	<INGREDIENT id="291" name="Crosne de fougère" description="" deletable="false" />
+	<INGREDIENT id="292" name="Crottins de chavignol" description="" deletable="false" />
+	<INGREDIENT id="293" name="Croûtons" description="" deletable="false" />
+	<INGREDIENT id="294" name="Cuisse de canard" description="" deletable="false" />
+	<INGREDIENT id="295" name="Cuisse de dinde" description="" deletable="false" />
+	<INGREDIENT id="296" name="Cuisse de poulet" description="" deletable="false" />
+	<INGREDIENT id="297" name="Cuisses de lapin" description="" deletable="false" />
+	<INGREDIENT id="298" name="Cumin" description="" deletable="false" />
+	<INGREDIENT id="299" name="Curcuma" description="" deletable="false" />
+	<INGREDIENT id="300" name="Curé nantais" description="" deletable="false" />
+	<INGREDIENT id="301" name="Curry" description="" deletable="false" />
+	<INGREDIENT id="302" name="Dachine" description="" deletable="false" />
+	<INGREDIENT id="303" name="Daikon" description="" deletable="false" />
+	<INGREDIENT id="304" name="Daim" description="" deletable="false" />
+	<INGREDIENT id="305" name="Datte" description="" deletable="false" />
+	<INGREDIENT id="306" name="Décor en sucre" description="" deletable="false" />
+	<INGREDIENT id="307" name="Dinde" description="" deletable="false" />
+	<INGREDIENT id="308" name="Dindonneau" description="" deletable="false" />
+	<INGREDIENT id="309" name="Diot" description="" deletable="false" />
+	<INGREDIENT id="310" name="Dorade" description="" deletable="false" />
+	<INGREDIENT id="311" name="Doré" description="" deletable="false" />
+	<INGREDIENT id="312" name="Earl grey" description="" deletable="false" />
+	<INGREDIENT id="313" name="Eau" description="" deletable="false" />
+	<INGREDIENT id="314" name="Échalote" description="" deletable="false" />
+	<INGREDIENT id="315" name="Échine de porc" description="" deletable="false" />
+	<INGREDIENT id="316" name="Écorces d'oranges confites" description="" deletable="false" />
+	<INGREDIENT id="317" name="Edam" description="" deletable="false" />
+	<INGREDIENT id="318" name="Edelzwicker" description="" deletable="false" />
+	<INGREDIENT id="319" name="Édulcorant" description="" deletable="false" />
+	<INGREDIENT id="320" name="Églefin" description="" deletable="false" />
+	<INGREDIENT id="321" name="Emmental" description="" deletable="false" />
+	<INGREDIENT id="322" name="Emmenthal" description="" deletable="false" />
+	<INGREDIENT id="323" name="Encornet" description="" deletable="false" />
+	<INGREDIENT id="324" name="Endive" description="" deletable="false" />
+	<INGREDIENT id="325" name="Entrecôte" description="" deletable="false" />
+	<INGREDIENT id="326" name="Épaule d'agneau" description="" deletable="false" />
+	<INGREDIENT id="327" name="Épeautre" description="" deletable="false" />
+	<INGREDIENT id="328" name="Éperlan" description="" deletable="false" />
+	<INGREDIENT id="329" name="Épinard" description="" deletable="false" />
+	<INGREDIENT id="330" name="Époisse" description="" deletable="false" />
+	<INGREDIENT id="331" name="Érable" description="" deletable="false" />
+	<INGREDIENT id="332" name="Escalope" description="" deletable="false" />
+	<INGREDIENT id="333" name="Escalope de dinde" description="" deletable="false" />
+	<INGREDIENT id="334" name="Escalope de poulet" description="" deletable="false" />
+	<INGREDIENT id="335" name="Escargot" description="" deletable="false" />
+	<INGREDIENT id="336" name="Espadon" description="" deletable="false" />
+	<INGREDIENT id="337" name="Estomac" description="" deletable="false" />
+	<INGREDIENT id="338" name="Estragon" description="" deletable="false" />
+	<INGREDIENT id="339" name="Esturgeon" description="" deletable="false" />
+	<INGREDIENT id="340" name="Etorki" description="" deletable="false" />
+	<INGREDIENT id="341" name="Étrilles" description="" deletable="false" />
+	<INGREDIENT id="342" name="Faisan" description="" deletable="false" />
+	<INGREDIENT id="343" name="Faisselle" description="" deletable="false" />
+	<INGREDIENT id="344" name="Fajitas" description="" deletable="false" />
+	<INGREDIENT id="345" name="Farce" description="" deletable="false" />
+	<INGREDIENT id="346" name="Farfalle" description="" deletable="false" />
+	<INGREDIENT id="347" name="Farine" description="" deletable="false" />
+	<INGREDIENT id="348" name="Farine de blé" description="" deletable="false" />
+	<INGREDIENT id="349" name="Farine de blé noir" description="" deletable="false" />
+	<INGREDIENT id="350" name="Farine de chataîgne" description="" deletable="false" />
+	<INGREDIENT id="351" name="Farine de maïs" description="" deletable="false" />
+	<INGREDIENT id="352" name="Fécule" description="" deletable="false" />
+	<INGREDIENT id="353" name="Fécule de maïs" description="" deletable="false" />
+	<INGREDIENT id="354" name="Fécule de pomme de terre" description="" deletable="false" />
+	<INGREDIENT id="355" name="Fenouil" description="" deletable="false" />
+	<INGREDIENT id="356" name="Fenouil en grains" description="" deletable="false" />
+	<INGREDIENT id="357" name="Féra" description="" deletable="false" />
+	<INGREDIENT id="358" name="Feta" description="" deletable="false" />
+	<INGREDIENT id="359" name="Feuille de brick" description="" deletable="false" />
+	<INGREDIENT id="360" name="Feuille de menthe" description="" deletable="false" />
+	<INGREDIENT id="361" name="Feuillet" description="" deletable="false" />
+	<INGREDIENT id="362" name="Feuillets à raviolis" description="" deletable="false" />
+	<INGREDIENT id="363" name="Fève" description="" deletable="false" />
+	<INGREDIENT id="364" name="Figue" description="" deletable="false" />
+	<INGREDIENT id="365" name="Figue de barbarie" description="" deletable="false" />
+	<INGREDIENT id="366" name="Filet de poulet" description="" deletable="false" />
+	<INGREDIENT id="367" name="Filo" description="" deletable="false" />
+	<INGREDIENT id="368" name="Flageolet" description="" deletable="false" />
+	<INGREDIENT id="369" name="Flétan" description="" deletable="false" />
+	<INGREDIENT id="370" name="Fleur de sel" description="" deletable="false" />
+	<INGREDIENT id="371" name="Foie" description="" deletable="false" />
+	<INGREDIENT id="372" name="Foie gras" description="" deletable="false" />
+	<INGREDIENT id="373" name="Fond de veau" description="" deletable="false" />
+	<INGREDIENT id="374" name="Fond de volaille" description="" deletable="false" />
+	<INGREDIENT id="375" name="Fonds" description="" deletable="false" />
+	<INGREDIENT id="376" name="Fourme d'ambert" description="" deletable="false" />
+	<INGREDIENT id="377" name="Fourme de montbrison" description="" deletable="false" />
+	<INGREDIENT id="378" name="Fraise" description="" deletable="false" />
+	<INGREDIENT id="379" name="Fraise des bois" description="" deletable="false" />
+	<INGREDIENT id="380" name="Fraise gariguette" description="" deletable="false" />
+	<INGREDIENT id="381" name="Framboise" description="" deletable="false" />
+	<INGREDIENT id="382" name="Fribourg" description="" deletable="false" />
+	<INGREDIENT id="383" name="Frisée" description="" deletable="false" />
+	<INGREDIENT id="384" name="Fromage ail et fines herbes" description="" deletable="false" />
+	<INGREDIENT id="385" name="Fromage blanc" description="" deletable="false" />
+	<INGREDIENT id="386" name="Fromage blanc sucré" description="" deletable="false" />
+	<INGREDIENT id="387" name="Fromage râpé" description="" deletable="false" />
+	<INGREDIENT id="388" name="Fromages italiens" description="" deletable="false" />
+	<INGREDIENT id="389" name="Fromages suisses" description="" deletable="false" />
+	<INGREDIENT id="390" name="Fructose" description="" deletable="false" />
+	<INGREDIENT id="391" name="Fruit à pain" description="" deletable="false" />
+	<INGREDIENT id="392" name="Fruit confit" description="" deletable="false" />
+	<INGREDIENT id="393" name="Fruit de la passion" description="" deletable="false" />
+	<INGREDIENT id="394" name="Fruit de mer" description="" deletable="false" />
+	<INGREDIENT id="395" name="Fruit rouge" description="" deletable="false" />
+	<INGREDIENT id="396" name="Fusilli" description="" deletable="false" />
+	<INGREDIENT id="397" name="Galette" description="" deletable="false" />
+	<INGREDIENT id="398" name="Galettes (bretonnes)" description="" deletable="false" />
+	<INGREDIENT id="399" name="Galettes de riz" description="" deletable="false" />
+	<INGREDIENT id="400" name="Gambas" description="" deletable="false" />
+	<INGREDIENT id="401" name="Gaperon" description="" deletable="false" />
+	<INGREDIENT id="402" name="Garam massala" description="" deletable="false" />
+	<INGREDIENT id="403" name="Gâteaux" description="" deletable="false" />
+	<INGREDIENT id="404" name="Gaufre" description="" deletable="false" />
+	<INGREDIENT id="405" name="Gaufrette" description="" deletable="false" />
+	<INGREDIENT id="406" name="Gavotte" description="" deletable="false" />
+	<INGREDIENT id="407" name="Gélatine" description="" deletable="false" />
+	<INGREDIENT id="408" name="Gélatine en poudre" description="" deletable="false" />
+	<INGREDIENT id="409" name="Gelée" description="" deletable="false" />
+	<INGREDIENT id="410" name="Gelée au madère" description="" deletable="false" />
+	<INGREDIENT id="411" name="Genièvre" description="" deletable="false" />
+	<INGREDIENT id="412" name="Génoise" description="" deletable="false" />
+	<INGREDIENT id="413" name="Germes de soja" description="" deletable="false" />
+	<INGREDIENT id="414" name="Gésiers" description="" deletable="false" />
+	<INGREDIENT id="415" name="Gewurztraminer" description="" deletable="false" />
+	<INGREDIENT id="416" name="Gigot d'agneau" description="" deletable="false" />
+	<INGREDIENT id="417" name="Gin" description="" deletable="false" />
+	<INGREDIENT id="418" name="Gingembre" description="" deletable="false" />
+	<INGREDIENT id="419" name="Gingembre confit" description="" deletable="false" />
+	<INGREDIENT id="420" name="Giraumon" description="" deletable="false" />
+	<INGREDIENT id="421" name="Girofle" description="" deletable="false" />
+	<INGREDIENT id="422" name="Girolle" description="" deletable="false" />
+	<INGREDIENT id="423" name="Gîte" description="" deletable="false" />
+	<INGREDIENT id="424" name="Glace pilée" description="" deletable="false" />
+	<INGREDIENT id="425" name="Glace vanille" description="" deletable="false" />
+	<INGREDIENT id="426" name="Glaçon" description="" deletable="false" />
+	<INGREDIENT id="427" name="Glaçons" description="" deletable="false" />
+	<INGREDIENT id="428" name="Gnocchi" description="" deletable="false" />
+	<INGREDIENT id="429" name="Golden sirup" description="" deletable="false" />
+	<INGREDIENT id="430" name="Gombo" description="" deletable="false" />
+	<INGREDIENT id="431" name="Gomme de xanthane" description="" deletable="false" />
+	<INGREDIENT id="432" name="Gorgonzola" description="" deletable="false" />
+	<INGREDIENT id="433" name="Gouda" description="" deletable="false" />
+	<INGREDIENT id="434" name="Goyave" description="" deletable="false" />
+	<INGREDIENT id="435" name="Graines de tournesol" description="" deletable="false" />
+	<INGREDIENT id="436" name="Graisse d'oie" description="" deletable="false" />
+	<INGREDIENT id="437" name="Grana padano" description="" deletable="false" />
+	<INGREDIENT id="438" name="Grand-marnier" description="" deletable="false" />
+	<INGREDIENT id="439" name="Grenade" description="" deletable="false" />
+	<INGREDIENT id="440" name="Grenadier" description="" deletable="false" />
+	<INGREDIENT id="441" name="Grenadin" description="" deletable="false" />
+	<INGREDIENT id="442" name="Grenaille" description="" deletable="false" />
+	<INGREDIENT id="443" name="Gressin" description="" deletable="false" />
+	<INGREDIENT id="444" name="Grondin" description="" deletable="false" />
+	<INGREDIENT id="445" name="Gros sel" description="" deletable="false" />
+	<INGREDIENT id="446" name="Groseille" description="" deletable="false" />
+	<INGREDIENT id="447" name="Groseille à maquereaux" description="" deletable="false" />
+	<INGREDIENT id="448" name="Gruyère" description="" deletable="false" />
+	<INGREDIENT id="449" name="Guacamole" description="" deletable="false" />
+	<INGREDIENT id="450" name="Haddock" description="" deletable="false" />
+	<INGREDIENT id="451" name="Hampe" description="" deletable="false" />
+	<INGREDIENT id="452" name="Hareng" description="" deletable="false" />
+	<INGREDIENT id="453" name="Haricot beurre" description="" deletable="false" />
+	<INGREDIENT id="454" name="Haricot blanc" description="" deletable="false" />
+	<INGREDIENT id="455" name="Haricot coco" description="" deletable="false" />
+	<INGREDIENT id="456" name="Haricot de lima" description="" deletable="false" />
+	<INGREDIENT id="457" name="Haricot de soissons" description="" deletable="false" />
+	<INGREDIENT id="458" name="Haricot lingot" description="" deletable="false" />
+	<INGREDIENT id="459" name="Haricot mange-tout" description="" deletable="false" />
+	<INGREDIENT id="460" name="Haricot mungo" description="" deletable="false" />
+	<INGREDIENT id="461" name="Haricot noir" description="" deletable="false" />
+	<INGREDIENT id="462" name="Haricot pinto" description="" deletable="false" />
+	<INGREDIENT id="463" name="Haricot plat" description="" deletable="false" />
+	<INGREDIENT id="464" name="Haricot rouge" description="" deletable="false" />
+	<INGREDIENT id="465" name="Haricot sec" description="" deletable="false" />
+	<INGREDIENT id="466" name="Haricot tarbais" description="" deletable="false" />
+	<INGREDIENT id="467" name="Haricot vert" description="" deletable="false" />
+	<INGREDIENT id="468" name="Harissa" description="" deletable="false" />
+	<INGREDIENT id="469" name="Herbes de provence" description="" deletable="false" />
+	<INGREDIENT id="470" name="Homard" description="" deletable="false" />
+	<INGREDIENT id="471" name="Houblon" description="" deletable="false" />
+	<INGREDIENT id="472" name="Huile" description="" deletable="false" />
+	<INGREDIENT id="473" name="Huile d'arachide" description="" deletable="false" />
+	<INGREDIENT id="474" name="Huile de colza" description="" deletable="false" />
+	<INGREDIENT id="475" name="Huile de noisette" description="" deletable="false" />
+	<INGREDIENT id="476" name="Huile de palme" description="" deletable="false" />
+	<INGREDIENT id="477" name="Huile de pépin de raisin" description="" deletable="false" />
+	<INGREDIENT id="478" name="Huile de sésame" description="" deletable="false" />
+	<INGREDIENT id="479" name="Huile de tournesol" description="" deletable="false" />
+	<INGREDIENT id="480" name="Huile d'olive" description="" deletable="false" />
+	<INGREDIENT id="481" name="Huître" description="" deletable="false" />
+	<INGREDIENT id="482" name="Iceberg" description="" deletable="false" />
+	<INGREDIENT id="483" name="Igname" description="" deletable="false" />
+	<INGREDIENT id="484" name="Jambon" description="" deletable="false" />
+	<INGREDIENT id="485" name="Jambon blanc" description="" deletable="false" />
+	<INGREDIENT id="486" name="Jambon de bayonne" description="" deletable="false" />
+	<INGREDIENT id="487" name="Jambon de parme" description="" deletable="false" />
+	<INGREDIENT id="488" name="Jambon de vendée" description="" deletable="false" />
+	<INGREDIENT id="489" name="Jambon de virginie" description="" deletable="false" />
+	<INGREDIENT id="490" name="Jambon fumé" description="" deletable="false" />
+	<INGREDIENT id="491" name="Jambon persillé" description="" deletable="false" />
+	<INGREDIENT id="492" name="Jambon sec" description="" deletable="false" />
+	<INGREDIENT id="493" name="Jambonneau" description="" deletable="false" />
+	<INGREDIENT id="494" name="Jarret de veau" description="" deletable="false" />
+	<INGREDIENT id="495" name="Jésus" description="" deletable="false" />
+	<INGREDIENT id="496" name="Joue" description="" deletable="false" />
+	<INGREDIENT id="497" name="Joue de lotte" description="" deletable="false" />
+	<INGREDIENT id="498" name="Julienne" description="" deletable="false" />
+	<INGREDIENT id="499" name="Jus de citron" description="" deletable="false" />
+	<INGREDIENT id="500" name="Jus d'orange" description="" deletable="false" />
+	<INGREDIENT id="501" name="Kaki" description="" deletable="false" />
+	<INGREDIENT id="502" name="Kangourou" description="" deletable="false" />
+	<INGREDIENT id="503" name="Kefalotiri" description="" deletable="false" />
+	<INGREDIENT id="504" name="Ketchup" description="" deletable="false" />
+	<INGREDIENT id="505" name="Kirsch" description="" deletable="false" />
+	<INGREDIENT id="506" name="Kiwi" description="" deletable="false" />
+	<INGREDIENT id="507" name="Knacki" description="" deletable="false" />
+	<INGREDIENT id="508" name="Kumquat" description="" deletable="false" />
+	<INGREDIENT id="509" name="Lait" description="" deletable="false" />
+	<INGREDIENT id="510" name="Lait concentré" description="" deletable="false" />
+	<INGREDIENT id="511" name="Lait concentré non sucré" description="" deletable="false" />
+	<INGREDIENT id="512" name="Lait concentré sucré" description="" deletable="false" />
+	<INGREDIENT id="513" name="Lait de chèvre" description="" deletable="false" />
+	<INGREDIENT id="514" name="Lait de coco" description="" deletable="false" />
+	<INGREDIENT id="515" name="Lait de soja" description="" deletable="false" />
+	<INGREDIENT id="516" name="Lait écrémé" description="" deletable="false" />
+	<INGREDIENT id="517" name="Lait en poudre" description="" deletable="false" />
+	<INGREDIENT id="518" name="Lait en poudre écrémé" description="" deletable="false" />
+	<INGREDIENT id="519" name="Lait en poudre entier" description="" deletable="false" />
+	<INGREDIENT id="520" name="Lait entier" description="" deletable="false" />
+	<INGREDIENT id="521" name="Lait entier concentré" description="" deletable="false" />
+	<INGREDIENT id="522" name="Lait fermenté" description="" deletable="false" />
+	<INGREDIENT id="523" name="Laitue" description="" deletable="false" />
+	<INGREDIENT id="524" name="Langouste" description="" deletable="false" />
+	<INGREDIENT id="525" name="Langoustine" description="" deletable="false" />
+	<INGREDIENT id="526" name="Langres" description="" deletable="false" />
+	<INGREDIENT id="527" name="Langue" description="" deletable="false" />
+	<INGREDIENT id="528" name="Langue de chat" description="" deletable="false" />
+	<INGREDIENT id="529" name="Lapin" description="" deletable="false" />
+	<INGREDIENT id="530" name="Lapin entier" description="" deletable="false" />
+	<INGREDIENT id="531" name="Lard" description="" deletable="false" />
+	<INGREDIENT id="532" name="Lardons" description="" deletable="false" />
+	<INGREDIENT id="533" name="Lardons fumés" description="" deletable="false" />
+	<INGREDIENT id="534" name="Lasagnes" description="" deletable="false" />
+	<INGREDIENT id="535" name="Laurier" description="" deletable="false" />
+	<INGREDIENT id="536" name="Lavande" description="" deletable="false" />
+	<INGREDIENT id="537" name="Légine australe" description="" deletable="false" />
+	<INGREDIENT id="538" name="Lemon curd" description="" deletable="false" />
+	<INGREDIENT id="539" name="Lentille" description="" deletable="false" />
+	<INGREDIENT id="540" name="Lentille corail" description="" deletable="false" />
+	<INGREDIENT id="541" name="Lentille verte" description="" deletable="false" />
+	<INGREDIENT id="542" name="Lentin" description="" deletable="false" />
+	<INGREDIENT id="543" name="Levure" description="" deletable="false" />
+	<INGREDIENT id="544" name="Levure chimique" description="" deletable="false" />
+	<INGREDIENT id="545" name="Levure de boulanger fraîche" description="" deletable="false" />
+	<INGREDIENT id="546" name="Levure de boulanger sèche" description="" deletable="false" />
+	<INGREDIENT id="547" name="Lieu jaune" description="" deletable="false" />
+	<INGREDIENT id="548" name="Lieu noir" description="" deletable="false" />
+	<INGREDIENT id="549" name="Limande" description="" deletable="false" />
+	<INGREDIENT id="550" name="Lingue" description="" deletable="false" />
+	<INGREDIENT id="551" name="Linguine" description="" deletable="false" />
+	<INGREDIENT id="552" name="Liseron d'eau" description="" deletable="false" />
+	<INGREDIENT id="553" name="Livarot" description="" deletable="false" />
+	<INGREDIENT id="554" name="Livèche" description="" deletable="false" />
+	<INGREDIENT id="555" name="Lotte" description="" deletable="false" />
+	<INGREDIENT id="556" name="Lotus" description="" deletable="false" />
+	<INGREDIENT id="557" name="Loup" description="" deletable="false" />
+	<INGREDIENT id="558" name="Loup de mer" description="" deletable="false" />
+	<INGREDIENT id="559" name="Maasdam" description="" deletable="false" />
+	<INGREDIENT id="560" name="Macaroni" description="" deletable="false" />
+	<INGREDIENT id="561" name="Mâche" description="" deletable="false" />
+	<INGREDIENT id="562" name="Madeleine" description="" deletable="false" />
+	<INGREDIENT id="563" name="Magret de canard" description="" deletable="false" />
+	<INGREDIENT id="564" name="Magret de canard fumé" description="" deletable="false" />
+	<INGREDIENT id="565" name="Mahi mahi" description="" deletable="false" />
+	<INGREDIENT id="566" name="Maïs" description="" deletable="false" />
+	<INGREDIENT id="567" name="Maïzena" description="" deletable="false" />
+	<INGREDIENT id="568" name="Manchego" description="" deletable="false" />
+	<INGREDIENT id="569" name="Mandarine" description="" deletable="false" />
+	<INGREDIENT id="570" name="Mangue" description="" deletable="false" />
+	<INGREDIENT id="571" name="Manioc" description="" deletable="false" />
+	<INGREDIENT id="572" name="Manouri" description="" deletable="false" />
+	<INGREDIENT id="573" name="Maquereau" description="" deletable="false" />
+	<INGREDIENT id="574" name="Margarine" description="" deletable="false" />
+	<INGREDIENT id="575" name="Marjolaine" description="" deletable="false" />
+	<INGREDIENT id="576" name="Maroilles" description="" deletable="false" />
+	<INGREDIENT id="577" name="Marrons" description="" deletable="false" />
+	<INGREDIENT id="578" name="Mascarpone" description="" deletable="false" />
+	<INGREDIENT id="579" name="Massala" description="" deletable="false" />
+	<INGREDIENT id="580" name="Mayonnaise" description="" deletable="false" />
+	<INGREDIENT id="581" name="Mélisse" description="" deletable="false" />
+	<INGREDIENT id="582" name="Melon" description="" deletable="false" />
+	<INGREDIENT id="583" name="Melon d'eau" description="" deletable="false" />
+	<INGREDIENT id="584" name="Menthe" description="" deletable="false" />
+	<INGREDIENT id="585" name="Merguez" description="" deletable="false" />
+	<INGREDIENT id="586" name="Meringue" description="" deletable="false" />
+	<INGREDIENT id="587" name="Merlan" description="" deletable="false" />
+	<INGREDIENT id="588" name="Merlu" description="" deletable="false" />
+	<INGREDIENT id="589" name="Mesclun" description="" deletable="false" />
+	<INGREDIENT id="590" name="Miel" description="" deletable="false" />
+	<INGREDIENT id="591" name="Miel liquide" description="" deletable="false" />
+	<INGREDIENT id="592" name="Miette de crabe" description="" deletable="false" />
+	<INGREDIENT id="593" name="Millet" description="" deletable="false" />
+	<INGREDIENT id="594" name="Mimolette" description="" deletable="false" />
+	<INGREDIENT id="595" name="Mirabelle" description="" deletable="false" />
+	<INGREDIENT id="596" name="Mirin" description="" deletable="false" />
+	<INGREDIENT id="597" name="Miso" description="" deletable="false" />
+	<INGREDIENT id="598" name="Mogette" description="" deletable="false" />
+	<INGREDIENT id="599" name="Mont d'or" description="" deletable="false" />
+	<INGREDIENT id="600" name="Montasio" description="" deletable="false" />
+	<INGREDIENT id="601" name="Morbier" description="" deletable="false" />
+	<INGREDIENT id="602" name="Morille" description="" deletable="false" />
+	<INGREDIENT id="603" name="Mortadelle" description="" deletable="false" />
+	<INGREDIENT id="604" name="Morue" description="" deletable="false" />
+	<INGREDIENT id="605" name="Moules" description="" deletable="false" />
+	<INGREDIENT id="606" name="Mousse de foie" description="" deletable="false" />
+	<INGREDIENT id="607" name="Mousseron" description="" deletable="false" />
+	<INGREDIENT id="608" name="Moutarde" description="" deletable="false" />
+	<INGREDIENT id="609" name="Moutarde à l'ancienne" description="" deletable="false" />
+	<INGREDIENT id="610" name="Moutarde de dijon" description="" deletable="false" />
+	<INGREDIENT id="611" name="Moutarde de meaux" description="" deletable="false" />
+	<INGREDIENT id="612" name="Mouton" description="" deletable="false" />
+	<INGREDIENT id="613" name="Mozzarella" description="" deletable="false" />
+	<INGREDIENT id="614" name="Mozzarella di buffala" description="" deletable="false" />
+	<INGREDIENT id="615" name="Muesli" description="" deletable="false" />
+	<INGREDIENT id="616" name="Munster" description="" deletable="false" />
+	<INGREDIENT id="617" name="Mûre" description="" deletable="false" />
+	<INGREDIENT id="618" name="Muscade" description="" deletable="false" />
+	<INGREDIENT id="619" name="Muscat" description="" deletable="false" />
+	<INGREDIENT id="620" name="Museau" description="" deletable="false" />
+	<INGREDIENT id="621" name="Myrtille" description="" deletable="false" />
+	<INGREDIENT id="622" name="Navarin d'agneau" description="" deletable="false" />
+	<INGREDIENT id="623" name="Navet" description="" deletable="false" />
+	<INGREDIENT id="624" name="Nectarine" description="" deletable="false" />
+	<INGREDIENT id="625" name="Nèfle" description="" deletable="false" />
+	<INGREDIENT id="626" name="Niébé" description="" deletable="false" />
+	<INGREDIENT id="627" name="Noisette" description="" deletable="false" />
+	<INGREDIENT id="628" name="Noisette d'agneau" description="" deletable="false" />
+	<INGREDIENT id="629" name="Noix" description="" deletable="false" />
+	<INGREDIENT id="630" name="Noix de cajou" description="" deletable="false" />
+	<INGREDIENT id="631" name="Noix de coco" description="" deletable="false" />
+	<INGREDIENT id="632" name="Noix de coco rapée" description="" deletable="false" />
+	<INGREDIENT id="633" name="Nopal" description="" deletable="false" />
+	<INGREDIENT id="634" name="Nori" description="" deletable="false" />
+	<INGREDIENT id="635" name="Nougat" description="" deletable="false" />
+	<INGREDIENT id="636" name="Nougatine" description="" deletable="false" />
+	<INGREDIENT id="637" name="Nouilles" description="" deletable="false" />
+	<INGREDIENT id="638" name="Nouilles chinoises" description="" deletable="false" />
+	<INGREDIENT id="639" name="Nouilles de riz" description="" deletable="false" />
+	<INGREDIENT id="640" name="Nouilles soba" description="" deletable="false" />
+	<INGREDIENT id="641" name="Nuoc mam" description="" deletable="false" />
+	<INGREDIENT id="642" name="Nutella" description="" deletable="false" />
+	<INGREDIENT id="643" name="Oeuf" description="" deletable="false" />
+	<INGREDIENT id="644" name="Oeuf de caille" description="" deletable="false" />
+	<INGREDIENT id="645" name="Oeuf d'oie" description="" deletable="false" />
+	<INGREDIENT id="646" name="Oeufs de saumon" description="" deletable="false" />
+	<INGREDIENT id="647" name="Oie" description="" deletable="false" />
+	<INGREDIENT id="648" name="Oignon" description="" deletable="false" />
+	<INGREDIENT id="649" name="Oignon blanc" description="" deletable="false" />
+	<INGREDIENT id="650" name="Oignon nouveau" description="" deletable="false" />
+	<INGREDIENT id="651" name="Oignon rouge" description="" deletable="false" />
+	<INGREDIENT id="652" name="Oka" description="" deletable="false" />
+	<INGREDIENT id="653" name="Okra" description="" deletable="false" />
+	<INGREDIENT id="654" name="Olives" description="" deletable="false" />
+	<INGREDIENT id="655" name="Omble chevalier" description="" deletable="false" />
+	<INGREDIENT id="656" name="Ombre" description="" deletable="false" />
+	<INGREDIENT id="657" name="Onglet" description="" deletable="false" />
+	<INGREDIENT id="658" name="Orange" description="" deletable="false" />
+	<INGREDIENT id="659" name="Orange amère" description="" deletable="false" />
+	<INGREDIENT id="660" name="Orechiette" description="" deletable="false" />
+	<INGREDIENT id="661" name="Oreilles" description="" deletable="false" />
+	<INGREDIENT id="662" name="Oréo" description="" deletable="false" />
+	<INGREDIENT id="663" name="Orge" description="" deletable="false" />
+	<INGREDIENT id="664" name="Origan" description="" deletable="false" />
+	<INGREDIENT id="665" name="Ormeau" description="" deletable="false" />
+	<INGREDIENT id="666" name="Oronge" description="" deletable="false" />
+	<INGREDIENT id="667" name="Oseille" description="" deletable="false" />
+	<INGREDIENT id="668" name="Ossau iraty" description="" deletable="false" />
+	<INGREDIENT id="669" name="Ossau-iraty" description="" deletable="false" />
+	<INGREDIENT id="670" name="Oursin" description="" deletable="false" />
+	<INGREDIENT id="671" name="Ourson en guimauve" description="" deletable="false" />
+	<INGREDIENT id="672" name="Pain" description="" deletable="false" />
+	<INGREDIENT id="673" name="Pain au lait" description="" deletable="false" />
+	<INGREDIENT id="674" name="Pain aux céréales" description="" deletable="false" />
+	<INGREDIENT id="675" name="Pain brioché" description="" deletable="false" />
+	<INGREDIENT id="676" name="Pain complet" description="" deletable="false" />
+	<INGREDIENT id="677" name="Pain de campagne" description="" deletable="false" />
+	<INGREDIENT id="678" name="Pain de mie" description="" deletable="false" />
+	<INGREDIENT id="679" name="Pain de seigle" description="" deletable="false" />
+	<INGREDIENT id="680" name="Pain d'épice" description="" deletable="false" />
+	<INGREDIENT id="681" name="Pain indien naan" description="" deletable="false" />
+	<INGREDIENT id="682" name="Pain pita" description="" deletable="false" />
+	<INGREDIENT id="683" name="Pain pour hamburger" description="" deletable="false" />
+	<INGREDIENT id="684" name="Pain viennois" description="" deletable="false" />
+	<INGREDIENT id="685" name="Palets bretons" description="" deletable="false" />
+	<INGREDIENT id="686" name="Palombe" description="" deletable="false" />
+	<INGREDIENT id="687" name="Palourde" description="" deletable="false" />
+	<INGREDIENT id="688" name="Pamplemousse" description="" deletable="false" />
+	<INGREDIENT id="689" name="Panais" description="" deletable="false" />
+	<INGREDIENT id="690" name="Pancetta" description="" deletable="false" />
+	<INGREDIENT id="691" name="Panga" description="" deletable="false" />
+	<INGREDIENT id="692" name="Pangasius" description="" deletable="false" />
+	<INGREDIENT id="693" name="Panse" description="" deletable="false" />
+	<INGREDIENT id="694" name="Pansette" description="" deletable="false" />
+	<INGREDIENT id="695" name="Papaye" description="" deletable="false" />
+	<INGREDIENT id="696" name="Papier sulfurisé" description="" deletable="false" />
+	<INGREDIENT id="697" name="Papillons" description="" deletable="false" />
+	<INGREDIENT id="698" name="Pappardelles" description="" deletable="false" />
+	<INGREDIENT id="699" name="Paprika" description="" deletable="false" />
+	<INGREDIENT id="700" name="Parmesan" description="" deletable="false" />
+	<INGREDIENT id="701" name="Pastèque" description="" deletable="false" />
+	<INGREDIENT id="702" name="Pastis" description="" deletable="false" />
+	<INGREDIENT id="703" name="Patate douce" description="" deletable="false" />
+	<INGREDIENT id="704" name="Pâte" description="" deletable="false" />
+	<INGREDIENT id="705" name="Pâté" description="" deletable="false" />
+	<INGREDIENT id="706" name="Pâte à pizza" description="" deletable="false" />
+	<INGREDIENT id="707" name="Pâte à raviolis" description="" deletable="false" />
+	<INGREDIENT id="708" name="Pâte à tartiner" description="" deletable="false" />
+	<INGREDIENT id="709" name="Pâte brisée" description="" deletable="false" />
+	<INGREDIENT id="710" name="Pâté de campagne" description="" deletable="false" />
+	<INGREDIENT id="711" name="Pâte de curry" description="" deletable="false" />
+	<INGREDIENT id="712" name="Pâté de foie" description="" deletable="false" />
+	<INGREDIENT id="713" name="Pâte feuilletée" description="" deletable="false" />
+	<INGREDIENT id="714" name="Pâte sablée" description="" deletable="false" />
+	<INGREDIENT id="715" name="Pâtes" description="" deletable="false" />
+	<INGREDIENT id="716" name="Pâtes fraîches" description="" deletable="false" />
+	<INGREDIENT id="717" name="Pâtisson" description="" deletable="false" />
+	<INGREDIENT id="718" name="Pavot" description="" deletable="false" />
+	<INGREDIENT id="719" name="Pêche" description="" deletable="false" />
+	<INGREDIENT id="720" name="Pecorino pepato" description="" deletable="false" />
+	<INGREDIENT id="721" name="Pecorino romano" description="" deletable="false" />
+	<INGREDIENT id="722" name="Pélardon" description="" deletable="false" />
+	<INGREDIENT id="723" name="Penne" description="" deletable="false" />
+	<INGREDIENT id="724" name="Pensée" description="" deletable="false" />
+	<INGREDIENT id="725" name="Pérail" description="" deletable="false" />
+	<INGREDIENT id="726" name="Perche" description="" deletable="false" />
+	<INGREDIENT id="727" name="Perche du nil" description="" deletable="false" />
+	<INGREDIENT id="728" name="Persil" description="" deletable="false" />
+	<INGREDIENT id="729" name="Pesto" description="" deletable="false" />
+	<INGREDIENT id="730" name="Pesto rosso" description="" deletable="false" />
+	<INGREDIENT id="731" name="Petit beurre" description="" deletable="false" />
+	<INGREDIENT id="732" name="Petit pois" description="" deletable="false" />
+	<INGREDIENT id="733" name="Petit salé" description="" deletable="false" />
+	<INGREDIENT id="734" name="Petit suisse" description="" deletable="false" />
+	<INGREDIENT id="735" name="Pétoncle" description="" deletable="false" />
+	<INGREDIENT id="736" name="Picodon" description="" deletable="false" />
+	<INGREDIENT id="737" name="Pied-de-mouton" description="" deletable="false" />
+	<INGREDIENT id="738" name="Pieds" description="" deletable="false" />
+	<INGREDIENT id="739" name="Pieds de mouton" description="" deletable="false" />
+	<INGREDIENT id="740" name="Pieuvre" description="" deletable="false" />
+	<INGREDIENT id="741" name="Pigeon" description="" deletable="false" />
+	<INGREDIENT id="742" name="Pignon" description="" deletable="false" />
+	<INGREDIENT id="743" name="Pilon de poulet" description="" deletable="false" />
+	<INGREDIENT id="744" name="Piment" description="" deletable="false" />
+	<INGREDIENT id="745" name="Piment de Cayenne" description="" deletable="false" />
+	<INGREDIENT id="746" name="Piment d'espelette" description="" deletable="false" />
+	<INGREDIENT id="747" name="Piments mexicains" description="" deletable="false" />
+	<INGREDIENT id="748" name="Pineau des charentes" description="" deletable="false" />
+	<INGREDIENT id="749" name="Pinot noir" description="" deletable="false" />
+	<INGREDIENT id="750" name="Pintade" description="" deletable="false" />
+	<INGREDIENT id="751" name="Piquillo" description="" deletable="false" />
+	<INGREDIENT id="752" name="Pissenlit" description="" deletable="false" />
+	<INGREDIENT id="753" name="Pistache" description="" deletable="false" />
+	<INGREDIENT id="754" name="Pistou" description="" deletable="false" />
+	<INGREDIENT id="755" name="Plantain" description="" deletable="false" />
+	<INGREDIENT id="756" name="Pleurote" description="" deletable="false" />
+	<INGREDIENT id="757" name="Plie" description="" deletable="false" />
+	<INGREDIENT id="758" name="Poire" description="" deletable="false" />
+	<INGREDIENT id="759" name="Poireau" description="" deletable="false" />
+	<INGREDIENT id="760" name="Pois cassés" description="" deletable="false" />
+	<INGREDIENT id="761" name="Pois chiche" description="" deletable="false" />
+	<INGREDIENT id="762" name="Poitrine d'agneau" description="" deletable="false" />
+	<INGREDIENT id="763" name="Poitrine fumée" description="" deletable="false" />
+	<INGREDIENT id="764" name="Poivrade" description="" deletable="false" />
+	<INGREDIENT id="765" name="Poivre" description="" deletable="false" />
+	<INGREDIENT id="766" name="Poivre de sichuan" description="" deletable="false" />
+	<INGREDIENT id="767" name="Poivre long" description="" deletable="false" />
+	<INGREDIENT id="768" name="Poivre vert" description="" deletable="false" />
+	<INGREDIENT id="769" name="Poivron" description="" deletable="false" />
+	<INGREDIENT id="770" name="Polenta" description="" deletable="false" />
+	<INGREDIENT id="771" name="Pomme" description="" deletable="false" />
+	<INGREDIENT id="772" name="Pomme de terre" description="" deletable="false" />
+	<INGREDIENT id="773" name="Pommeau" description="" deletable="false" />
+	<INGREDIENT id="774" name="Porc" description="" deletable="false" />
+	<INGREDIENT id="775" name="Porto" description="" deletable="false" />
+	<INGREDIENT id="776" name="Port-salut" description="" deletable="false" />
+	<INGREDIENT id="777" name="Potimarron" description="" deletable="false" />
+	<INGREDIENT id="778" name="Potiron" description="" deletable="false" />
+	<INGREDIENT id="779" name="Poudre de colombo" description="" deletable="false" />
+	<INGREDIENT id="780" name="Poularde" description="" deletable="false" />
+	<INGREDIENT id="781" name="Poule" description="" deletable="false" />
+	<INGREDIENT id="782" name="Poulet" description="" deletable="false" />
+	<INGREDIENT id="783" name="Poulet entier" description="" deletable="false" />
+	<INGREDIENT id="784" name="Poulpe" description="" deletable="false" />
+	<INGREDIENT id="785" name="Poumons" description="" deletable="false" />
+	<INGREDIENT id="786" name="Pourpier" description="" deletable="false" />
+	<INGREDIENT id="787" name="Poutargue" description="" deletable="false" />
+	<INGREDIENT id="788" name="Praire" description="" deletable="false" />
+	<INGREDIENT id="789" name="Pralin" description="" deletable="false" />
+	<INGREDIENT id="790" name="Pralinoise" description="" deletable="false" />
+	<INGREDIENT id="791" name="Provolone" description="" deletable="false" />
+	<INGREDIENT id="792" name="Prune" description="" deletable="false" />
+	<INGREDIENT id="793" name="Pruneaux" description="" deletable="false" />
+	<INGREDIENT id="794" name="Pulpe de tomate" description="" deletable="false" />
+	<INGREDIENT id="795" name="Purée" description="" deletable="false" />
+	<INGREDIENT id="796" name="Purée de piment" description="" deletable="false" />
+	<INGREDIENT id="797" name="Pyrénées" description="" deletable="false" />
+	<INGREDIENT id="798" name="Quatre-épices" description="" deletable="false" />
+	<INGREDIENT id="799" name="Quatre-quarts" description="" deletable="false" />
+	<INGREDIENT id="800" name="Quenelle" description="" deletable="false" />
+	<INGREDIENT id="801" name="Quetsche" description="" deletable="false" />
+	<INGREDIENT id="802" name="Queue" description="" deletable="false" />
+	<INGREDIENT id="803" name="Quinoa" description="" deletable="false" />
+	<INGREDIENT id="804" name="Râble de lapin" description="" deletable="false" />
+	<INGREDIENT id="805" name="Raclette" description="" deletable="false" />
+	<INGREDIENT id="806" name="Radis" description="" deletable="false" />
+	<INGREDIENT id="807" name="Raie" description="" deletable="false" />
+	<INGREDIENT id="808" name="Raifort" description="" deletable="false" />
+	<INGREDIENT id="809" name="Raisin" description="" deletable="false" />
+	<INGREDIENT id="810" name="Raisins secs" description="" deletable="false" />
+	<INGREDIENT id="811" name="Ras el Hanout" description="" deletable="false" />
+	<INGREDIENT id="812" name="Rascasse" description="" deletable="false" />
+	<INGREDIENT id="813" name="Ras-el-hanout" description="" deletable="false" />
+	<INGREDIENT id="814" name="Ratatouille" description="" deletable="false" />
+	<INGREDIENT id="815" name="Rate" description="" deletable="false" />
+	<INGREDIENT id="816" name="Ratte" description="" deletable="false" />
+	<INGREDIENT id="817" name="Ravioli" description="" deletable="false" />
+	<INGREDIENT id="818" name="Reblochon" description="" deletable="false" />
+	<INGREDIENT id="819" name="Réglisse" description="" deletable="false" />
+	<INGREDIENT id="820" name="Renne" description="" deletable="false" />
+	<INGREDIENT id="821" name="Requin" description="" deletable="false" />
+	<INGREDIENT id="822" name="Rhubarbe" description="" deletable="false" />
+	<INGREDIENT id="823" name="Rhum" description="" deletable="false" />
+	<INGREDIENT id="824" name="Ricotta" description="" deletable="false" />
+	<INGREDIENT id="825" name="Riesling" description="" deletable="false" />
+	<INGREDIENT id="826" name="Rillettes" description="" deletable="false" />
+	<INGREDIENT id="827" name="Rillons" description="" deletable="false" />
+	<INGREDIENT id="828" name="Ris de veau" description="" deletable="false" />
+	<INGREDIENT id="829" name="Risotto" description="" deletable="false" />
+	<INGREDIENT id="830" name="Riz" description="" deletable="false" />
+	<INGREDIENT id="831" name="Riz basmati" description="" deletable="false" />
+	<INGREDIENT id="832" name="Riz gluant" description="" deletable="false" />
+	<INGREDIENT id="833" name="Riz long" description="" deletable="false" />
+	<INGREDIENT id="834" name="Riz rond" description="" deletable="false" />
+	<INGREDIENT id="835" name="Riz sauvage" description="" deletable="false" />
+	<INGREDIENT id="836" name="Riz surinam" description="" deletable="false" />
+	<INGREDIENT id="837" name="Riz thaï" description="" deletable="false" />
+	<INGREDIENT id="838" name="Rocamadour" description="" deletable="false" />
+	<INGREDIENT id="839" name="Rognons" description="" deletable="false" />
+	<INGREDIENT id="840" name="Romaine" description="" deletable="false" />
+	<INGREDIENT id="841" name="Romarin" description="" deletable="false" />
+	<INGREDIENT id="842" name="Roquefort" description="" deletable="false" />
+	<INGREDIENT id="843" name="Roquette" description="" deletable="false" />
+	<INGREDIENT id="844" name="Rosbif" description="" deletable="false" />
+	<INGREDIENT id="845" name="Rose" description="" deletable="false" />
+	<INGREDIENT id="846" name="Rosé" description="" deletable="false" />
+	<INGREDIENT id="847" name="Rosette" description="" deletable="false" />
+	<INGREDIENT id="848" name="Roti de boeuf" description="" deletable="false" />
+	<INGREDIENT id="849" name="Roti de porc" description="" deletable="false" />
+	<INGREDIENT id="850" name="Rôti de veau" description="" deletable="false" />
+	<INGREDIENT id="851" name="Rougail" description="" deletable="false" />
+	<INGREDIENT id="852" name="Rouget" description="" deletable="false" />
+	<INGREDIENT id="853" name="Rouille" description="" deletable="false" />
+	<INGREDIENT id="854" name="Rumsteck" description="" deletable="false" />
+	<INGREDIENT id="855" name="Sablés" description="" deletable="false" />
+	<INGREDIENT id="856" name="Sabodet" description="" deletable="false" />
+	<INGREDIENT id="857" name="Safran" description="" deletable="false" />
+	<INGREDIENT id="858" name="Saindoux" description="" deletable="false" />
+	<INGREDIENT id="859" name="Sainte-maure de Touraine" description="" deletable="false" />
+	<INGREDIENT id="860" name="Saint-florentin" description="" deletable="false" />
+	<INGREDIENT id="861" name="Saint-marcellin" description="" deletable="false" />
+	<INGREDIENT id="862" name="Saint-nectaire" description="" deletable="false" />
+	<INGREDIENT id="863" name="Saint-paulin" description="" deletable="false" />
+	<INGREDIENT id="864" name="Saint-pierre" description="" deletable="false" />
+	<INGREDIENT id="865" name="Saké" description="" deletable="false" />
+	<INGREDIENT id="866" name="Salade" description="" deletable="false" />
+	<INGREDIENT id="867" name="Salami" description="" deletable="false" />
+	<INGREDIENT id="868" name="Salers" description="" deletable="false" />
+	<INGREDIENT id="869" name="Salicorne" description="" deletable="false" />
+	<INGREDIENT id="870" name="Salsifi" description="" deletable="false" />
+	<INGREDIENT id="871" name="Sancerre" description="" deletable="false" />
+	<INGREDIENT id="872" name="Sandre" description="" deletable="false" />
+	<INGREDIENT id="873" name="Sanglier" description="" deletable="false" />
+	<INGREDIENT id="874" name="Sardine" description="" deletable="false" />
+	<INGREDIENT id="875" name="Sarrasin" description="" deletable="false" />
+	<INGREDIENT id="876" name="Sarriette" description="" deletable="false" />
+	<INGREDIENT id="877" name="Saté" description="" deletable="false" />
+	<INGREDIENT id="878" name="Sauce d'huître" description="" deletable="false" />
+	<INGREDIENT id="879" name="Sauce nuoc mam" description="" deletable="false" />
+	<INGREDIENT id="880" name="Sauce piquante" description="" deletable="false" />
+	<INGREDIENT id="881" name="Sauce soja" description="" deletable="false" />
+	<INGREDIENT id="882" name="Sauce tomate" description="" deletable="false" />
+	<INGREDIENT id="883" name="Sauce worcestershire" description="" deletable="false" />
+	<INGREDIENT id="884" name="Saucisse de Francfort" description="" deletable="false" />
+	<INGREDIENT id="885" name="Saucisse de Montbéliard" description="" deletable="false" />
+	<INGREDIENT id="886" name="Saucisse de morteau" description="" deletable="false" />
+	<INGREDIENT id="887" name="Saucisse de Strasboug" description="" deletable="false" />
+	<INGREDIENT id="888" name="Saucisse de Toulouse" description="" deletable="false" />
+	<INGREDIENT id="889" name="Saucisse sèche" description="" deletable="false" />
+	<INGREDIENT id="890" name="Saucisses" description="" deletable="false" />
+	<INGREDIENT id="891" name="Saucisson" description="" deletable="false" />
+	<INGREDIENT id="892" name="Saucisson sec" description="" deletable="false" />
+	<INGREDIENT id="893" name="Sauge" description="" deletable="false" />
+	<INGREDIENT id="894" name="Saumon" description="" deletable="false" />
+	<INGREDIENT id="895" name="Saumon fumé" description="" deletable="false" />
+	<INGREDIENT id="896" name="Sauté" description="" deletable="false" />
+	<INGREDIENT id="897" name="Sauté de porc" description="" deletable="false" />
+	<INGREDIENT id="898" name="Sbrinz" description="" deletable="false" />
+	<INGREDIENT id="899" name="Scampi" description="" deletable="false" />
+	<INGREDIENT id="900" name="Scarole" description="" deletable="false" />
+	<INGREDIENT id="901" name="Seiche" description="" deletable="false" />
+	<INGREDIENT id="902" name="Seigle" description="" deletable="false" />
+	<INGREDIENT id="903" name="Sel" description="" deletable="false" />
+	<INGREDIENT id="904" name="Sel de céleri" description="" deletable="false" />
+	<INGREDIENT id="905" name="Sel et poivre" description="" deletable="false" />
+	<INGREDIENT id="906" name="Selle d'agneau" description="" deletable="false" />
+	<INGREDIENT id="907" name="Semoule" description="" deletable="false" />
+	<INGREDIENT id="908" name="Semoule fine" description="" deletable="false" />
+	<INGREDIENT id="909" name="Semoule moyenne" description="" deletable="false" />
+	<INGREDIENT id="910" name="Séré" description="" deletable="false" />
+	<INGREDIENT id="911" name="Serpolet" description="" deletable="false" />
+	<INGREDIENT id="912" name="Sésame" description="" deletable="false" />
+	<INGREDIENT id="913" name="Shortbread" description="" deletable="false" />
+	<INGREDIENT id="914" name="Silure" description="" deletable="false" />
+	<INGREDIENT id="915" name="Sirop de canne" description="" deletable="false" />
+	<INGREDIENT id="916" name="Sirop de Liège" description="" deletable="false" />
+	<INGREDIENT id="917" name="Sirop d'érable" description="" deletable="false" />
+	<INGREDIENT id="918" name="Soja" description="" deletable="false" />
+	<INGREDIENT id="919" name="Sole" description="" deletable="false" />
+	<INGREDIENT id="920" name="Sorgho" description="" deletable="false" />
+	<INGREDIENT id="921" name="Soucis" description="" deletable="false" />
+	<INGREDIENT id="922" name="Soumaintrain" description="" deletable="false" />
+	<INGREDIENT id="923" name="Souris d'agneau" description="" deletable="false" />
+	<INGREDIENT id="924" name="Spaghetti" description="" deletable="false" />
+	<INGREDIENT id="925" name="Spätzle" description="" deletable="false" />
+	<INGREDIENT id="926" name="Spéculoos" description="" deletable="false" />
+	<INGREDIENT id="927" name="Sprat" description="" deletable="false" />
+	<INGREDIENT id="928" name="Steak" description="" deletable="false" />
+	<INGREDIENT id="929" name="Steak haché" description="" deletable="false" />
+	<INGREDIENT id="930" name="Stilton" description="" deletable="false" />
+	<INGREDIENT id="931" name="Sucre" description="" deletable="false" />
+	<INGREDIENT id="932" name="Sucre de canne" description="" deletable="false" />
+	<INGREDIENT id="933" name="Sucre en poudre" description="" deletable="false" />
+	<INGREDIENT id="934" name="Sucre roux" description="" deletable="false" />
+	<INGREDIENT id="935" name="Sucre vanillé" description="" deletable="false" />
+	<INGREDIENT id="936" name="Sucre vanilliné" description="" deletable="false" />
+	<INGREDIENT id="937" name="Sumac" description="" deletable="false" />
+	<INGREDIENT id="938" name="Surimi" description="" deletable="false" />
+	<INGREDIENT id="939" name="Sylvaner" description="" deletable="false" />
+	<INGREDIENT id="940" name="Tabasco" description="" deletable="false" />
+	<INGREDIENT id="941" name="Tacaud" description="" deletable="false" />
+	<INGREDIENT id="942" name="Tagliatelle" description="" deletable="false" />
+	<INGREDIENT id="943" name="Tamarin" description="" deletable="false" />
+	<INGREDIENT id="944" name="Tandoori" description="" deletable="false" />
+	<INGREDIENT id="945" name="Tapenade" description="" deletable="false" />
+	<INGREDIENT id="946" name="Tapenade noire" description="" deletable="false" />
+	<INGREDIENT id="947" name="Tapenade verte" description="" deletable="false" />
+	<INGREDIENT id="948" name="Tarama" description="" deletable="false" />
+	<INGREDIENT id="949" name="Tellines" description="" deletable="false" />
+	<INGREDIENT id="950" name="Tête de moine" description="" deletable="false" />
+	<INGREDIENT id="951" name="Tête de veau" description="" deletable="false" />
+	<INGREDIENT id="952" name="Tétine" description="" deletable="false" />
+	<INGREDIENT id="953" name="Thé" description="" deletable="false" />
+	<INGREDIENT id="954" name="Thon" description="" deletable="false" />
+	<INGREDIENT id="955" name="Thon blanc" description="" deletable="false" />
+	<INGREDIENT id="956" name="Thon rouge" description="" deletable="false" />
+	<INGREDIENT id="957" name="Thym" description="" deletable="false" />
+	<INGREDIENT id="958" name="Tilleul" description="" deletable="false" />
+	<INGREDIENT id="959" name="Tobiko" description="" deletable="false" />
+	<INGREDIENT id="960" name="Tofu" description="" deletable="false" />
+	<INGREDIENT id="961" name="Tofu soyeux" description="" deletable="false" />
+	<INGREDIENT id="962" name="Tomate" description="" deletable="false" />
+	<INGREDIENT id="963" name="Tomate cerise" description="" deletable="false" />
+	<INGREDIENT id="964" name="Tomate pelée" description="" deletable="false" />
+	<INGREDIENT id="965" name="Tome" description="" deletable="false" />
+	<INGREDIENT id="966" name="Tome piemontaise" description="" deletable="false" />
+	<INGREDIENT id="967" name="Tomme" description="" deletable="false" />
+	<INGREDIENT id="968" name="Tomme vaudoise" description="" deletable="false" />
+	<INGREDIENT id="969" name="Tonka (fève)" description="" deletable="false" />
+	<INGREDIENT id="970" name="Topinambour" description="" deletable="false" />
+	<INGREDIENT id="971" name="Torsades" description="" deletable="false" />
+	<INGREDIENT id="972" name="Torsette" description="" deletable="false" />
+	<INGREDIENT id="973" name="Tortellini" description="" deletable="false" />
+	<INGREDIENT id="974" name="Tortilla" description="" deletable="false" />
+	<INGREDIENT id="975" name="Tortilla chips" description="" deletable="false" />
+	<INGREDIENT id="976" name="Tournedos" description="" deletable="false" />
+	<INGREDIENT id="977" name="Tourteau" description="" deletable="false" />
+	<INGREDIENT id="978" name="Trévise" description="" deletable="false" />
+	<INGREDIENT id="979" name="Tripes" description="" deletable="false" />
+	<INGREDIENT id="980" name="Trompette de la mort" description="" deletable="false" />
+	<INGREDIENT id="981" name="Truffe" description="" deletable="false" />
+	<INGREDIENT id="982" name="Truffe blanche d'alba" description="" deletable="false" />
+	<INGREDIENT id="983" name="Truffe d'été" description="" deletable="false" />
+	<INGREDIENT id="984" name="Truffe noire de bourgogne" description="" deletable="false" />
+	<INGREDIENT id="985" name="Truite" description="" deletable="false" />
+	<INGREDIENT id="986" name="Truite saumonée" description="" deletable="false" />
+	<INGREDIENT id="987" name="Turbot" description="" deletable="false" />
+	<INGREDIENT id="988" name="Tzatziki" description="" deletable="false" />
+	<INGREDIENT id="989" name="Vache qui rit" description="" deletable="false" />
+	<INGREDIENT id="990" name="Vanille" description="" deletable="false" />
+	<INGREDIENT id="991" name="Veau" description="" deletable="false" />
+	<INGREDIENT id="992" name="Végétaline" description="" deletable="false" />
+	<INGREDIENT id="993" name="Vergeoise" description="" deletable="false" />
+	<INGREDIENT id="994" name="Vergeoise blonde" description="" deletable="false" />
+	<INGREDIENT id="995" name="Vergeoise brune" description="" deletable="false" />
+	<INGREDIENT id="996" name="Vermicelles" description="" deletable="false" />
+	<INGREDIENT id="997" name="Vermicelles de riz" description="" deletable="false" />
+	<INGREDIENT id="998" name="Vermicelles de soja" description="" deletable="false" />
+	<INGREDIENT id="999" name="Vieux lille" description="" deletable="false" />
+	<INGREDIENT id="1000" name="Vieux pané" description="" deletable="false" />
+	<INGREDIENT id="1001" name="Vin blanc" description="" deletable="false" />
+	<INGREDIENT id="1002" name="Vin rouge" description="" deletable="false" />
+	<INGREDIENT id="1003" name="Vinaigre" description="" deletable="false" />
+	<INGREDIENT id="1004" name="Vinaigre aromatisé" description="" deletable="false" />
+	<INGREDIENT id="1005" name="Vinaigre balsamique" description="" deletable="false" />
+	<INGREDIENT id="1006" name="Vinaigre d'alcool" description="" deletable="false" />
+	<INGREDIENT id="1007" name="Vinaigre de cidre" description="" deletable="false" />
+	<INGREDIENT id="1008" name="Vinaigre de datte" description="" deletable="false" />
+	<INGREDIENT id="1009" name="Vinaigre de framboise" description="" deletable="false" />
+	<INGREDIENT id="1010" name="Vinaigre de riz" description="" deletable="false" />
+	<INGREDIENT id="1011" name="Vinaigre de vin" description="" deletable="false" />
+	<INGREDIENT id="1012" name="Vinaigre de xeres" description="" deletable="false" />
+	<INGREDIENT id="1013" name="Vodka" description="" deletable="false" />
+	<INGREDIENT id="1014" name="Wasabi" description="" deletable="false" />
+	<INGREDIENT id="1015" name="Whisky" description="" deletable="false" />
+	<INGREDIENT id="1016" name="Yaourt à la grecque" description="" deletable="false" />
+	<INGREDIENT id="1017" name="Yaourt allégé" description="" deletable="false" />
+	<INGREDIENT id="1018" name="Yaourt aromatisé" description="" deletable="false" />
+	<INGREDIENT id="1019" name="Yaourt aux fruits" description="" deletable="false" />
+	<INGREDIENT id="1020" name="Yaourt brassé" description="" deletable="false" />
+	<INGREDIENT id="1021" name="Yaourt nature" description="" deletable="false" />
+	<INGREDIENT id="1022" name="Yaourts" description="" deletable="false" />
+</dataset>

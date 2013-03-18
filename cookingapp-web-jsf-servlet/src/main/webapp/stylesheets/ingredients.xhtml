@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/stylesheets/template.xhtml">
+	<ui:define name="content">
+        <h:form id="dataForm">
+		  <fieldset class="row-fluid">
+			<legend>
+				<span class="h1">Ingrédients</span>
+				<p:outputPanel id="actions" styleClass="pull-right">
+					<ul class="list-inline no-margin">
+						<li>
+							<p:inputText id="globalFilter" type="search" value="#{ingredientController.filter}" styleClass="input-small">
+								<p:ajax event="keyup" update="ingredientsList" />
+							</p:inputText>
+						</li>
+						<li rel="tooltip"
+							title="Ajouter un ingrédient">
+							<a href="#" 
+								onclick="addIngredient.show();" 
+								class="btn btn-success">
+								<span class="icon-plus" />
+							</a>
+						</li>
+						<li rel="tooltip"
+							title="Importer une liste depuis un fichier">
+							<a href="#" class="btn btn-inverse">
+								<span class="icon-upload-alt" />
+							</a>
+						</li>
+						<li rel="tooltip"
+							title="Supprimer le(s) ingrédient(s) sélectionné(s)">
+							<p:commandLink actionListener="#{ingredientController.deleteIngredients}"
+											update="ingredientsList,actions"
+											styleClass="btn btn-danger"
+											rendered="#{not empty ingredientController.ingredients}">
+								<span class="icon-trash" />
+							</p:commandLink>
+						</li>
+					</ul>
+				</p:outputPanel>
+			</legend>
+			<p:dataTable id="ingredientsList" widgetVar="ingredientsList"
+						 value="#{ingredientController.ingredients}" 
+						 selection="#{ingredientController.selectedIngredients}"
+						 var="ingredient" 
+						 rowKey="#{ingredient.name}">
+				<p:column selectionMode="multiple" style="width:2%" /> 
+				<p:column headerText="Nom">
+					#{ingredient.name}
+				</p:column>
+				<p:column headerText="Description">
+					#{ingredient.description}
+				</p:column>
+			</p:dataTable>
+		  </fieldset>
+        </h:form>
+
+
+        <ui:include src="/stylesheets/_include/_ingredients/add.xhtml" />
+        <p:socket channel="/ingredients">
+            <p:ajax event="message" update=":dataForm:ingredientsList" />
+        </p:socket>
+
+    </ui:define>
+</ui:composition>

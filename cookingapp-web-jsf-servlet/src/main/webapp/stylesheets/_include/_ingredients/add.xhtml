@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+    <!-- Add dialog -->
+    <h:form id="addForm" styleClass="horizontal-form">
+        <p:remoteCommand name="setAddFormDisabled" autoRun="true" immediate="true" update="addFormButtons">
+            <f:setPropertyActionListener value="#{true}" target="#{ingredientController.addFormDisabled}" />
+        </p:remoteCommand>
+        <p:dialog id="addDialog" header="Ajouter un ingrédient" modal="true"
+            closable="false" closeOnEscape="true" resizable="false"
+            widgetVar="addIngredient" styleClass="modal">
+            <p:outputPanel layout="block" styleClass="modal-body">
+                <div class="control-group">
+                    <p:outputLabel for="newIngredientName" value="Nom"
+                        styleClass="control-label" />
+                    <div class="controls">
+                        <p:inputText id="newIngredientName"
+                            value="#{ingredientController.newIngredient.name}"
+                            required="true" maxlength="255">
+                            <p:ajax event="keyup"
+                                listener="#{ingredientController.checkIfAddable}"
+                                update="addFormButtons,@(.control-label)" />
+                        </p:inputText>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <p:outputLabel for="newIngredientDesc"
+                        value="Description" styleClass="control-label" />
+                    <div class="controls">
+                        <p:inputTextarea id="newIngredientDesc"
+                            value="#{ingredientController.newIngredient.description}" />
+                    </div>
+                </div>
+            </p:outputPanel>
+            <p:outputPanel id="addFormButtons" layout="block"
+                styleClass="modal-footer">
+                <p:commandLink value="Annuler" tabindex="-1"
+                    actionListener="#{ingredientController.init}"
+                    update=":dataForm:ingredientsList,:dataForm:actions,:addForm" immediate="true"
+                    onclick="addIngredient.hide();" styleClass="btn">
+                    <p:resetInput
+                        target="newIngredientName,newIngredientDesc" />
+                </p:commandLink>
+                <p:commandLink value="Enregistrer"
+                    disabled="#{ingredientController.addFormDisabled}"
+                    actionListener="#{ingredientController.addIngredient}"
+                    update=":dataForm:ingredientsList,:dataForm:actions,:addForm"
+                    onclick="addIngredient.hide();"
+                    styleClass="btn btn-primary" />
+            </p:outputPanel>
+        </p:dialog>
+    </h:form>
+</ui:composition>
