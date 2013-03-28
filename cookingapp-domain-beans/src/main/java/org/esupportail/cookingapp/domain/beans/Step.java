@@ -107,8 +107,8 @@ public class Step implements Serializable {
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(final Long id) {
-		this.id = id;
+	public void setId(final Long _id) {
+		this.id = _id;
 	}
 
 	/**
@@ -122,8 +122,8 @@ public class Step implements Serializable {
 	 * @param recipe
 	 *            the recipe to set
 	 */
-	public void setRecipe(final Recipe recipe) {
-		this.recipe = recipe;
+	public void setRecipe(final Recipe _recipe) {
+		this.recipe = _recipe;
 	}
 
 	/**
@@ -131,8 +131,8 @@ public class Step implements Serializable {
 	 *            the recipe to set
 	 * @return the {@link Step}
 	 */
-	public Step withRecipe(final Recipe recipe) {
-		this.recipe = recipe;
+	public Step withRecipe(final Recipe _recipe) {
+		this.recipe = _recipe;
 		return this;
 	}
 
@@ -147,8 +147,8 @@ public class Step implements Serializable {
 	 * @param instructions
 	 *            the instructions to set
 	 */
-	public void setInstructions(final String instructions) {
-		this.instructions = instructions;
+	public void setInstructions(final String _instructions) {
+		this.instructions = _instructions;
 	}
 
 	/**
@@ -156,8 +156,8 @@ public class Step implements Serializable {
 	 *            the instructions to set
 	 * @return the {@link Step}
 	 */
-	public Step withInstructions(final String instructions) {
-		this.instructions = instructions;
+	public Step withInstructions(final String _instructions) {
+		this.instructions = _instructions;
 		return this;
 	}
 
@@ -181,8 +181,8 @@ public class Step implements Serializable {
 	 *            the stepIngredients to set
 	 * @return the {@link Step}
 	 */
-	public Step withStepIngredients(final List<StepIngredient> stepIngredients) {
-		this.stepIngredients = stepIngredients;
+	public Step withStepIngredients(final List<StepIngredient> _stepIngredients) {
+		this.stepIngredients = _stepIngredients;
 		return this;
 	}
 

@@ -6,7 +6,6 @@ package org.esupportail.cookingapp.domain.beans;
 import java.io.Serializable;
 
 import javax.persistence.Basic;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -47,19 +46,11 @@ public class Ingredient implements Serializable {
 	private String description;
 
 	/**
-	 * Whether the ingredient is deletable.
-	 */
-	@Basic
-	@Column(nullable = false)
-	private boolean deletable;
-
-	/**
 	 * Constructor.
 	 */
 	public Ingredient() {
 		name = "";
 		description = "";
-		deletable = true;
 	}
 
 	/**
@@ -70,7 +61,6 @@ public class Ingredient implements Serializable {
 	public Ingredient(final String name) {
 		this.name = name;
 		description = "";
-		deletable = false;
 	}
 
 	@Override
@@ -114,8 +104,8 @@ public class Ingredient implements Serializable {
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(final Long id) {
-		this.id = id;
+	public void setId(final Long _id) {
+		this.id = _id;
 	}
 
 	/**
@@ -129,8 +119,8 @@ public class Ingredient implements Serializable {
 	 * @param name
 	 *            the name to set
 	 */
-	public void setName(final String name) {
-		this.name = name;
+	public void setName(final String _name) {
+		this.name = _name;
 	}
 
 	/**
@@ -138,8 +128,8 @@ public class Ingredient implements Serializable {
 	 *            the name to set
 	 * @return the {@link Ingredient}
 	 */
-	public Ingredient withName(final String name) {
-		this.name = name;
+	public Ingredient withName(final String _name) {
+		this.name = _name;
 		return this;
 	}
 
@@ -154,8 +144,8 @@ public class Ingredient implements Serializable {
 	 * @param description
 	 *            the description to set
 	 */
-	public void setDescription(final String description) {
-		this.description = description;
+	public void setDescription(final String _description) {
+		this.description = _description;
 	}
 
 	/**
@@ -163,33 +153,8 @@ public class Ingredient implements Serializable {
 	 *            the description to set
 	 * @return the {@link Ingredient}
 	 */
-	public Ingredient withDescription(final String description) {
-		this.description = description;
-		return this;
-	}
-
-	/**
-	 * @return the deleletable
-	 */
-	public boolean isDeletable() {
-		return deletable;
-	}
-
-	/**
-	 * @param deleletable
-	 *            the deleletable to set
-	 */
-	public void setDeletable(final boolean deletable) {
-		this.deletable = deletable;
-	}
-
-	/**
-	 * @param deleletable
-	 *            the deleletable to set
-	 * @return the {@link Ingredient}
-	 */
-	public Ingredient withDeletable(final boolean deletable) {
-		this.deletable = deletable;
+	public Ingredient withDescription(final String _description) {
+		this.description = _description;
 		return this;
 	}
 

@@ -10,19 +10,20 @@
         <h:form id="dataForm">
 		  <fieldset class="row-fluid">
 			<legend>
-				<span class="h1">Ingrédients</span>
+				<span class="h3">Ingrédients</span>
 				<p:outputPanel id="actions" styleClass="pull-right">
 					<ul class="list-inline no-margin">
+                        <li>
+                            <p:outputLabel for="globalFilter" value="Filtrer :"/>
+                        </li>
 						<li>
-							<p:inputText id="globalFilter" type="search" value="#{ingredientController.filter}" styleClass="input-small">
+							<p:inputText id="globalFilter" value="#{ingredientController.filter}" styleClass="input-small">
 								<p:ajax event="keyup" update="ingredientsList" />
 							</p:inputText>
 						</li>
 						<li rel="tooltip"
 							title="Ajouter un ingrédient">
-							<a href="#" 
-								onclick="addIngredient.show();" 
-								class="btn btn-success">
+							<a href="/ingredients/add" class="btn btn-success">
 								<span class="icon-plus" />
 							</a>
 						</li>
@@ -48,7 +49,10 @@
 						 value="#{ingredientController.ingredients}" 
 						 selection="#{ingredientController.selectedIngredients}"
 						 var="ingredient" 
+                         rows="2" paginator="true"
+                         paginatorAlwaysVisible="false"
 						 rowKey="#{ingredient.name}">
+                <p:ajax event="page" process="@this,:dataForm:globalFilter" partialUpdate="true" />
 				<p:column selectionMode="multiple" style="width:2%" /> 
 				<p:column headerText="Nom">
 					#{ingredient.name}
@@ -61,7 +65,7 @@
         </h:form>
 
 
-        <ui:include src="/stylesheets/_include/_ingredients/add.xhtml" />
+<!--         <ui:include src="/stylesheets/_include/_ingredients/add.xhtml" /> -->
         <p:socket channel="/ingredients">
             <p:ajax event="message" update=":dataForm:ingredientsList" />
         </p:socket>

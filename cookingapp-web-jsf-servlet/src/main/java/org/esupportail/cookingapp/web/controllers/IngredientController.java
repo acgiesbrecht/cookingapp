@@ -3,11 +3,12 @@
  */
 package org.esupportail.cookingapp.web.controllers;
 
+import static fj.Ord.ord;
+import static fj.Ord.stringOrd;
 import static fj.data.Array.array;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
-import static fj.Ord.*;
 import static org.springframework.util.StringUtils.hasText;
 
 import java.util.ArrayList;

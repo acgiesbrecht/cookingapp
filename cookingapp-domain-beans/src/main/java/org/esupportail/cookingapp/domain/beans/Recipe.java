@@ -114,8 +114,8 @@ public class Recipe implements Serializable {
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(final Long id) {
-		this.id = id;
+	public void setId(final Long _id) {
+		this.id = _id;
 	}
 
 	/**
@@ -129,8 +129,8 @@ public class Recipe implements Serializable {
 	 * @param name
 	 *            the name to set
 	 */
-	public void setName(final String name) {
-		this.name = name;
+	public void setName(final String _name) {
+		this.name = _name;
 	}
 
 	/**
@@ -138,8 +138,8 @@ public class Recipe implements Serializable {
 	 *            the name to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withName(final String name) {
-		this.name = name;
+	public Recipe withName(final String _name) {
+		this.name = _name;
 		return this;
 	}
 
@@ -154,8 +154,8 @@ public class Recipe implements Serializable {
 	 * @param description
 	 *            the description to set
 	 */
-	public void setDescription(final String description) {
-		this.description = description;
+	public void setDescription(final String _description) {
+		this.description = _description;
 	}
 
 	/**
@@ -163,8 +163,8 @@ public class Recipe implements Serializable {
 	 *            the description to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withDescription(final String description) {
-		this.description = description;
+	public Recipe withDescription(final String _description) {
+		this.description = _description;
 		return this;
 	}
 
@@ -179,8 +179,8 @@ public class Recipe implements Serializable {
 	 * @param alternatives
 	 *            the alternatives to set
 	 */
-	public void setAlternatives(final List<Recipe> alternatives) {
-		this.alternatives = alternatives;
+	public void setAlternatives(final List<Recipe> _alternatives) {
+		this.alternatives = _alternatives;
 	}
 
 	/**
@@ -188,8 +188,8 @@ public class Recipe implements Serializable {
 	 *            the alternatives to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withAlternatives(final List<Recipe> alternatives) {
-		this.alternatives = alternatives;
+	public Recipe withAlternatives(final List<Recipe> _alternatives) {
+		this.alternatives = _alternatives;
 		return this;
 	}
 
@@ -204,8 +204,8 @@ public class Recipe implements Serializable {
 	 * @param steps
 	 *            the steps to set
 	 */
-	public void setSteps(final List<Step> steps) {
-		this.steps = steps;
+	public void setSteps(final List<Step> _steps) {
+		this.steps = _steps;
 	}
 
 	/**
@@ -213,8 +213,8 @@ public class Recipe implements Serializable {
 	 *            the steps to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withSteps(final List<Step> steps) {
-		this.steps = steps;
+	public Recipe withSteps(final List<Step> _steps) {
+		this.steps = _steps;
 		return this;
 	}
 

@@ -48,11 +48,6 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.faces</url-pattern>
-		<url-pattern>/faces/*</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 
@@ -60,6 +55,7 @@
     <servlet>
         <servlet-name>Push Servlet</servlet-name>
         <servlet-class>org.primefaces.push.PushServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>Push Servlet</servlet-name>
@@ -75,6 +71,23 @@
 	<listener>
 		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
+    
+    <!-- PRETTY FACES -->
+<!--     <filter> -->
+<!--         <filter-name>Pretty Filter</filter-name> -->
+<!--         <filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class> -->
+<!--         <async-supported>true</async-supported> -->
+<!--     </filter> -->
+
+<!--     <filter-mapping> -->
+<!--         <filter-name>Pretty Filter</filter-name> -->
+<!--         <url-pattern>/*</url-pattern> -->
+<!--         <dispatcher>FORWARD</dispatcher> -->
+<!--         <dispatcher>REQUEST</dispatcher> -->
+<!--         <dispatcher>ERROR</dispatcher> -->
+<!--         <dispatcher>ASYNC</dispatcher> -->
+<!--     </filter-mapping> -->
+    
 	<welcome-file-list>
 		<welcome-file>stylesheets/welcome.xhtml</welcome-file>
 	</welcome-file-list>

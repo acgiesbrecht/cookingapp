@@ -115,8 +115,8 @@ public class StepIngredient implements Serializable {
 	 * @param step
 	 *            the step to set
 	 */
-	public void setStep(final Step step) {
-		this.step = step;
+	public void setStep(final Step _step) {
+		this.step = _step;
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class StepIngredient implements Serializable {
 	 *            the step to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withStep(final Step step) {
-		this.step = step;
+	public StepIngredient withStep(final Step _step) {
+		this.step = _step;
 		return this;
 	}
 
@@ -140,8 +140,8 @@ public class StepIngredient implements Serializable {
 	 * @param ingredient
 	 *            the ingredient to set
 	 */
-	public void setIngredient(final Ingredient ingredient) {
-		this.ingredient = ingredient;
+	public void setIngredient(final Ingredient _ingredient) {
+		this.ingredient = _ingredient;
 	}
 
 	/**
@@ -149,8 +149,8 @@ public class StepIngredient implements Serializable {
 	 *            the ingredient to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withIngredient(final Ingredient ingredient) {
-		this.ingredient = ingredient;
+	public StepIngredient withIngredient(final Ingredient _ingredient) {
+		this.ingredient = _ingredient;
 		return this;
 	}
 
@@ -165,8 +165,8 @@ public class StepIngredient implements Serializable {
 	 * @param quantity
 	 *            the quantity to set
 	 */
-	public void setQuantity(final int quantity) {
-		this.quantity = quantity;
+	public void setQuantity(final int _quantity) {
+		this.quantity = _quantity;
 	}
 
 	/**
@@ -174,8 +174,8 @@ public class StepIngredient implements Serializable {
 	 *            the quantity to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withQuantity(final int quantity) {
-		this.quantity = quantity;
+	public StepIngredient withQuantity(final int _quantity) {
+		this.quantity = _quantity;
 		return this;
 	}
 
@@ -190,8 +190,8 @@ public class StepIngredient implements Serializable {
 	 * @param measuringUnit
 	 *            the measuringUnit to set
 	 */
-	public void setMeasuringUnit(final String measuringUnit) {
-		this.measuringUnit = measuringUnit;
+	public void setMeasuringUnit(final String _measuringUnit) {
+		this.measuringUnit = _measuringUnit;
 	}
 
 	/**
@@ -199,8 +199,8 @@ public class StepIngredient implements Serializable {
 	 *            the quantity to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withMeasuringUnit(final String measuringUnit) {
-		this.measuringUnit = measuringUnit;
+	public StepIngredient withMeasuringUnit(final String _measuringUnit) {
+		this.measuringUnit = _measuringUnit;
 		return this;
 	}
 }

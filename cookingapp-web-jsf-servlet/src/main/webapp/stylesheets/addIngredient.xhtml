@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    template="/stylesheets/template.xhtml">
+    <ui:define name="content">
+        <h:form id="addForm" styleClass="form-horizontal">
+            <fieldset class="row-fluid">
+                <legend>
+                    <span class="h3">Ajouter un ingrédient</span>
+                </legend>
+                <div class="control-group">
+                    <p:outputLabel for="newIngredientName" value="Nom"
+                        styleClass="control-label" />
+                    <div class="controls">
+                        <p:inputText id="newIngredientName"
+                            value="#{ingredientController.newIngredient.name}"
+                            required="true" maxlength="255">
+                            <p:ajax event="keyup"
+                                listener="#{ingredientController.checkIfAddable}"
+                                update="addFormButtons,@(.control-label)" />
+                        </p:inputText>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <p:outputLabel for="newIngredientDesc"
+                        value="Description" styleClass="control-label" />
+                    <div class="controls">
+                        <p:inputTextarea id="newIngredientDesc"
+                            value="#{ingredientController.newIngredient.description}" />
+                    </div>
+                </div>
+                <p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions">
+                    <p:commandLink value="Annuler" immediate="true"
+                        action="pretty:ingredients"
+                        styleClass="btn">
+                    </p:commandLink>
+                    <p:commandLink value="Enregistrer"
+                        disabled="#{ingredientController.addFormDisabled}"
+                        actionListener="#{ingredientController.addIngredient}"
+                        action="pretty:ingredients"
+                        styleClass="btn btn-primary" />
+                </p:outputPanel>
+            </fieldset>
+        </h:form>
+    </ui:define>
+</ui:composition>

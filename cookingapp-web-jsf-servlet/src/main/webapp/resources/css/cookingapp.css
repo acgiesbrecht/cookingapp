@@ -43,3 +43,7 @@ ol.list-inline > li {
 .no-margin {
 	margin: 0;
 }
+
+.h3 {
+	line-height: inherit;
+}
