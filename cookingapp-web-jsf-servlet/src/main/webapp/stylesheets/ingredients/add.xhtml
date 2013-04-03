@@ -17,9 +17,6 @@
                         <p:inputText id="newIngredientName"
                             value="#{ingredientController.newIngredient.name}"
                             required="true" maxlength="255">
-                            <p:ajax event="keyup"
-                                listener="#{ingredientController.checkIfAddable}"
-                                update="addFormButtons,@(.control-label)" />
                         </p:inputText>
                     </div>
                 </div>
@@ -32,15 +29,15 @@
                     </div>
                 </div>
                 <p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions">
-                    <p:commandLink value="Annuler" immediate="true"
-                        action="pretty:ingredients"
-                        styleClass="btn">
-                    </p:commandLink>
-                    <p:commandLink value="Enregistrer"
-                        disabled="#{ingredientController.addFormDisabled}"
-                        actionListener="#{ingredientController.addIngredient}"
-                        action="pretty:ingredients"
-                        styleClass="btn btn-primary" />
+                    <div class="actions pull-right">
+                        <p:commandLink value="Annuler" immediate="true"
+                            action="#{ingredientController.goList}"
+                            styleClass="m-btn rnd">
+                        </p:commandLink>
+                        <p:commandLink value="Enregistrer" update="@form"
+                            action="#{ingredientController.addIngredient}" 
+                            styleClass="m-btn blue rnd" />
+                    </div>
                 </p:outputPanel>
             </fieldset>
         </h:form>

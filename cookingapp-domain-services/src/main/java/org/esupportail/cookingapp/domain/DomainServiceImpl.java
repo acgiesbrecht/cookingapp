@@ -104,13 +104,12 @@ public class DomainServiceImpl implements DomainService {
 
 	@Override
 	public void deleteIngredients(final Ingredient... ingredients) {
-		fromNull(ingredients).foreach(new F<Ingredient[], Unit>() {
+		fromNull(ingredients).option(unit(), new F<Ingredient[], Unit>() {
 			@Override
-			public Unit f(final Ingredient[] t) {
-				deleteIngredients(array(t).toCollection());
+			public Unit f(final Ingredient[] a) {
+				deleteIngredients(array(a).toCollection());
 				return unit();
-			}
-		});
+			}});
 	}
 
 	@Override

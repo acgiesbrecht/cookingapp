@@ -30,20 +30,22 @@ ol.list-inline > li {
 	top : 60px;
 }
 
-.ui-widget-content .btn {
-	color: #ffffff;
-}
-
-.ui-state-disabled.btn-primary, 
-.ui-widget-content .ui-state-disabled.btn-primary, 
-.ui-widget-header .ui-state-disabled.btn-primary {
-	background-color: #0044CC;
-}
-
 .no-margin {
-	margin: 0;
+    margin: 0;
+}
+
+.form-actions .actions .btn,
+.form-actions .actions .m-btn {
+    margin: 0 .2rem;
 }
 
 .h3 {
-	line-height: inherit;
+	line-height: 40px;
+}
+
+.content-404 .message-404 {
+	background: url('/resources/images/404.png') top center no-repeat transparent;
+	text-align: center;
+	margin-top: 20px;
+	padding-top: 355px;
 }

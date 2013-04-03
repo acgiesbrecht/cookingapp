@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -17,25 +16,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><h:outputText value="#{applicationService.name}" /></title>
 		
+        <link href="/resources/css/m-buttons.css" rel="stylesheet" type="text/css" />
         <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" />
 		<link href="/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<link href="/resources/css/font-awesome-corp.css" rel="stylesheet" type="text/css" />
 		<link href="/resources/css/font-awesome-ext.css" rel="stylesheet" type="text/css" />
 		<link href="/resources/css/font-awesome-social.css" rel="stylesheet" type="text/css" />
 		<link href="/resources/css/cookingapp.css" rel="stylesheet" type="text/css" />
-		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css" />
-		<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
-
-		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-			<link href="/resources/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
-			<link href="/resources/css/font-awesome-more-ie7.min.css" rel="stylesheet" type="text/css" />
-	    <![endif]-->
+<!-- 		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" /> -->
 	</h:head>
 	<h:body id="body">
 		<header>
-			<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar navbar-fixed-top">
 				<div class="navbar-inner">
 					<div class="container">
                         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -49,7 +42,8 @@
                         <a href="/" class="navbar-brand">cookingapp</a>
                         <div class="nav-collapse collapse navbar-responsive-collapse">
         					<ul class="nav">
-        						<li><a href="/ingredients">Ingrédients</a></li>
+        						<li><a href="/recettes" class="stripe purple no-margin">Recettes</a></li>
+        						<li><a href="/ingredients" class="stripe red no-margin">Ingrédients</a></li>
         					</ul>
                         </div>
 					</div>
@@ -57,12 +51,15 @@
 			</div>
 		</header>
 		<div class="visible-mobile" style="margin-top:60px;" />
+		<p:growl id="messages" showSummary="true" autoUpdate="true" sticky="true" escape="false" />
 		<div class="container">
-            <p:growl id="messages" showSummary="false" showDetail="true" autoUpdate="true" sticky="true" />
         	<ui:insert name="content" />
         </div>
         <script src="/resources/js/bootstrap.min.js" type="text/javascript"></script>
-		<script>
+		<!--[if lt IE 9]>
+        	<script src="/resources/js/modernizr.js" type="text/javascript"></script>
+	    <![endif]-->
+		<script type="text/javascript">
 			$('[rel=tooltip]').tooltip();
 			$('[rel=popover]').popover();
 		</script>

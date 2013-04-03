@@ -10,6 +10,7 @@ import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
 import static org.springframework.util.StringUtils.hasText;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,11 +69,6 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 	 */
 	private String filter;
 	
-	/**
-	 * Disable state of the add form.
-	 */
-	private boolean addFormDisabled = false;
-	
 	@PostConstruct
 	public void init() {
 		ingredients = domainService.getIngredients();
@@ -121,46 +117,60 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 		return new ArrayList<Ingredient>(iterableList(ingredients)
 				.filter(filtering).sort(ord(ordering)).toCollection());
 	}
+	
 	/**
 	 * @return the addable
 	 */
 	public boolean checkIfAddable() {
 		final boolean addable = hasText(newIngredient.getName())
 			&& fromNull(domainService.getIngredient(newIngredient.getName())).isNone();
-		addFormDisabled = !addable;
-		if (addFormDisabled && hasText(newIngredient.getName())) {
-			addErrorMessage(null, "ERROR.INGREDIENT.ADD");
-		}
 		return addable;
 	}
 	
 	/**
 	 * Add an {@link Ingredient}.
 	 */
-	public void addIngredient() {
+	public String addIngredient() {
 		if (checkIfAddable()) {
-			domainService.addIngredient(newIngredient);
-			init();
+			ingredients.add(domainService.addIngredient(newIngredient));
 			pushIngredients();
 			addInfoMessage(null, "INFO.INGREDIENT.ADD", newIngredient.getName());
-		} else {
-			addErrorMessage(null, "ERROR.INGREDIENT.ADD", newIngredient.getName());
+			return goList();
 		}
+		addErrorMessage(null, "ERROR.INGREDIENT.ADD");
+		return null;
 	}
 
 	
 	/**
 	 * Delete selected {@link Ingredient}.
 	 */
-	public void deleteIngredients() {
+	public String deleteIngredients() {
 		if (array(selectedIngredients).isNotEmpty()) {
 			domainService.deleteIngredients(selectedIngredients);
+			ingredients.removeAll(array(selectedIngredients).toCollection());
 			addInfoMessage(null, "INFO.INGREDIENT.DELETE");
-			init();
-			pushIngredients();
 		}
+		pushIngredients();
+		return null;
+	}
+	
+	/**
+	 * Adding callback.
+	 * @return
+	 */
+	public String goAdd() {
+		return INGREDIENT_ADD + REDIRECT;
 	}
 
+	/**
+	 * Listing callback.
+	 * @return
+	 */
+	public String goList() {
+		return INGREDIENTS_LIST + REDIRECT;
+	}
+	
 	/**
 	 * @return the newIngredient
 	 */
@@ -208,19 +218,5 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 	 */
 	public void setFilter(String filter) {
 		this.filter = filter;
-	}
-
-	/**
-	 * @return the addFormDisabled
-	 */
-	public boolean isAddFormDisabled() {
-		return addFormDisabled;
-	}
-
-	/**
-	 * @param addFormDisabled the addFormDisabled to set
-	 */
-	public void setAddFormDisabled(boolean addFormDisabled) {
-		this.addFormDisabled = addFormDisabled;
 	}
 }
