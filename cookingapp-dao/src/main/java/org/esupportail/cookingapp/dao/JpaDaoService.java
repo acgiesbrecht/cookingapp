@@ -89,6 +89,13 @@ public class JpaDaoService implements DaoService {
 	}
 
 	@Override
+	public List<Recipe> getRecipes() {
+		final QRecipe recipe = QRecipe.recipe;
+		return from(recipe)
+				.listDistinct(recipe);
+	}
+
+	@Override
 	public List<Recipe> getRecipes(final String name) {
 		final QRecipe recipe = QRecipe.recipe;
 		return from(recipe)

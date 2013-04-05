@@ -57,6 +57,12 @@ public class Recipe implements Serializable {
 	 */
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, mappedBy = "recipe")
 	private List<Step> steps = new ArrayList<>();
+	
+	/**
+	 * Constructor.
+	 */
+	public Recipe() {		
+	}
 
 	/**
 	 * Constructor.

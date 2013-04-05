@@ -157,12 +157,17 @@ public class DomainServiceImpl implements DomainService {
 
 	@Override
 	public Recipe getRecipe(final Long id) {
-		return getRecipe(id);
+		return daoService.getRecipe(id);
+	}
+
+	@Override
+	public List<Recipe> getRecipes() {
+		return daoService.getRecipes();
 	}
 
 	@Override
 	public List<Recipe> getRecipes(final String name) {
-		return getRecipes(name);
+		return daoService.getRecipes(name);
 	}
 
 	@Override

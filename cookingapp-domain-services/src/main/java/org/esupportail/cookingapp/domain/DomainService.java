@@ -108,6 +108,13 @@ public interface DomainService extends Serializable {
 	Recipe getRecipe(Long id);
 	
 	/**
+	 * Finds the list of all {@link Recipe}.
+	 * @param name
+	 * @return
+	 */
+	List<Recipe> getRecipes();
+	
+	/**
 	 * Finds the list of {@link Recipe} which name match the parameter.
 	 * @param name
 	 * @return
