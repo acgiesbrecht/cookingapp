@@ -6,13 +6,13 @@ package org.esupportail.cookingapp.web.controllers;
 import static fj.Ord.ord;
 import static fj.Ord.stringOrd;
 import static fj.data.Array.array;
+import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
-import static fj.data.Option.iif;
-import static org.springframework.util.StringUtils.hasText;
+import static fj.data.Option.fromString;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.*;
+import static org.springframework.util.StringUtils.hasText;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -87,12 +87,6 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 	 * @return
 	 */
 	public List<Recipe> getRecipes() {
-		final F<String, Option<String>> isNotEmpty = new F<String, Option<String>>() {
-			@Override
-			public Option<String> f(final String term) {
-				return iif(hasText(term), term);
-			}
-		};
 		
 		final F<Recipe, F<Recipe, Ordering>> ordering = 
 				new F<Recipe, F<Recipe, Ordering>>() {
@@ -105,17 +99,17 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 			};
 		};
 
-		final Option<String> letter = isNotEmpty.f(filter);
+		final Option<String> letter = fromString(filter);
 		
 		final F<Recipe, Boolean> filtering = new F<Recipe, Boolean>() {
 			@Override
-			public Boolean f(final Recipe i) {
-				return letter.isSome() ? i.getName()
+			public Boolean f(final Recipe r) {
+				return letter.isSome() ? r.getName()
 						.startsWith(letter.some()) : Boolean.TRUE;
 			}
 		};
-		return new ArrayList<Recipe>(iterableList(recipes)
-				.filter(filtering).sort(ord(ordering)).toCollection());
+		return wrap(iterableList(recipes)
+				.filter(filtering).sort(ord(ordering))).toStandardList();
 	}
 	
 	/**
@@ -161,7 +155,7 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 	 * @return
 	 */
 	public String goAdd() {
-		return INGREDIENT_ADD + REDIRECT;
+		return RECIPE_ADD + REDIRECT;
 	}
 
 	/**
@@ -169,7 +163,7 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 	 * @return
 	 */
 	public String goList() {
-		return INGREDIENTS_LIST + REDIRECT;
+		return RECIPES_LIST + REDIRECT;
 	}
 	
 	/**
@@ -217,7 +211,7 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 	/**
 	 * @param filter the filter to set
 	 */
-	public void setFilter(String filter) {
+	public void setFilter(final String filter) {
 		this.filter = filter;
 	}
 }

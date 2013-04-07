@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pe="http://primefaces.org/ui/extensions"
+    template="/stylesheets/template.xhtml">
+    <ui:define name="content">
+        <h:form id="addForm" styleClass="form-horizontal">
+            <fieldset class="row">
+                <legend>
+                    <span class="h3">Ajouter une recette</span>
+                </legend>
+                <pe:masterDetail showBreadcrumb="false">
+                	<pe:masterDetailLevel level="1">
+		                <div class="control-group">
+		                    <p:outputLabel for="newRecipeName" value="Nom"
+		                        styleClass="control-label" />
+		                    <div class="controls">
+		                        <p:inputText id="newRecipeName"
+		                            value="#{recipeController.newRecipe.name}"
+		                            required="true" maxlength="255" />
+		                    </div>
+		                </div>
+		                <div class="control-group">
+		                    <p:outputLabel for="newRecipeDesc"
+		                        value="Description" styleClass="control-label" />
+		                    <div class="controls">
+		                        <p:inputTextarea id="newRecipeDesc"
+		                            value="#{recipeController.newRecipe.description}" />
+		                    </div>
+		                </div>
+	                	<p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions navbar-fixed-bottom no-margin">
+		                    <div class="actions pull-right">
+		                        <p:commandLink value="Annuler" immediate="true"
+		                            action="#{recipeController.goList}"
+		                            styleClass="m-btn rnd">
+		                        </p:commandLink>
+		                		<p:commandLink styleClass="m-btn blue rnd" value="Ajouter une étape">
+		                			<span class="icon-plus" />
+		                		</p:commandLink>
+		                    </div>
+		                </p:outputPanel>
+	                </pe:masterDetailLevel>
+	                    
+<!-- 	                <p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions"> -->
+<!-- 	                    <div class="actions pull-right"> -->
+<!-- 	                        <p:commandLink value="Annuler" immediate="true" -->
+<!-- 	                            action="#{recipeController.goList}" -->
+<!-- 	                            styleClass="m-btn rnd"> -->
+<!-- 	                        </p:commandLink> -->
+<!-- 	                        <p:commandLink value="Enregistrer" update="@form" -->
+<!-- 	                            action="#{recipeController.addRecipe}"  -->
+<!-- 	                            styleClass="m-btn blue rnd" /> -->
+<!-- 	                    </div> -->
+<!-- 	                </p:outputPanel> -->
+                </pe:masterDetail>
+            </fieldset>
+        </h:form>
+    </ui:define>
+</ui:composition>

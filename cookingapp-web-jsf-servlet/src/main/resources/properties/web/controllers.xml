@@ -21,5 +21,9 @@
     <bean id="ingredientController" parent="defaultController"
         class="org.esupportail.cookingapp.web.controllers.IngredientController"
         scope="request" />
+        
+    <bean id="recipeController" parent="defaultController"
+        class="org.esupportail.cookingapp.web.controllers.RecipeController"
+        scope="request" />
 
 </beans>
