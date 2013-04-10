@@ -30,14 +30,15 @@
 		                            value="#{recipeController.newRecipe.description}" />
 		                    </div>
 		                </div>
-	                	<p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions navbar-fixed-bottom no-margin">
+	                	<p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions navbar-fixed-bottom container ">
 		                    <div class="actions pull-right">
 		                        <p:commandLink value="Annuler" immediate="true"
 		                            action="#{recipeController.goList}"
 		                            styleClass="m-btn rnd">
 		                        </p:commandLink>
-		                		<p:commandLink styleClass="m-btn blue rnd" value="Ajouter une étape">
-		                			<span class="icon-plus" />
+		                		<p:commandLink styleClass="m-btn blue rnd">
+                                    Ajouter des étapes
+		                			<span class="icon-chevron-right" style="margin-left: 5px;margin-left: .5rem;" />
 		                		</p:commandLink>
 		                    </div>
 		                </p:outputPanel>

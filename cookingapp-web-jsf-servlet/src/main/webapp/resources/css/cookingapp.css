@@ -43,6 +43,10 @@ ol.list-inline > li {
     margin: 0 .2rem;
 }
 
+.form-actions.navbar-fixed-bottom {
+	margin-bottom: 0;
+}
+
 .h3 {
 	line-height: 40px;
 }
