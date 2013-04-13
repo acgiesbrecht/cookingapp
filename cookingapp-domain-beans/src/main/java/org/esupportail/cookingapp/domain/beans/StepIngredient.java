@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -30,38 +31,40 @@ public class StepIngredient implements Serializable {
 	 */
 	@Id
 	@ManyToOne(cascade = CascadeType.MERGE, optional = false)
-	private Step step;
+	private Step _step;
 
 	/**
 	 * The ingredient.
 	 */
 	@Id
 	@ManyToOne(cascade = CascadeType.MERGE, optional = false)
-	private Ingredient ingredient;
+	private Ingredient _ingredient;
 
 	/**
 	 * Quantity of the ingredient.
 	 */
 	@Basic(optional = false)
-	private int quantity = 0;
+	@Column(name = "quantity")
+	private int _quantity = 0;
 
 	/**
 	 * The measuring unit.
 	 */
 	// FIXME replace type.
 	@Basic(optional = false)
-	private String measuringUnit;
+	@Column(name = "measuringUnit")
+	private String _measuringUnit;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((step == null) ? 0 : step.hashCode());
+		result = prime * result + ((_step == null) ? 0 : _step.hashCode());
 		result = prime * result
-				+ ((ingredient == null) ? 0 : ingredient.hashCode());
+				+ ((_ingredient == null) ? 0 : _ingredient.hashCode());
 		result = prime * result
-				+ ((measuringUnit == null) ? 0 : measuringUnit.hashCode());
-		result = prime * result + quantity;
+				+ ((_measuringUnit == null) ? 0 : _measuringUnit.hashCode());
+		result = prime * result + _quantity;
 		return result;
 	}
 
@@ -77,28 +80,28 @@ public class StepIngredient implements Serializable {
 			return false;
 		}
 		final StepIngredient other = (StepIngredient) obj;
-		if (step == null) {
-			if (other.step != null) {
+		if (_step == null) {
+			if (other._step != null) {
 				return false;
 			}
-		} else if (!step.equals(other.step)) {
+		} else if (!_step.equals(other._step)) {
 			return false;
 		}
-		if (ingredient == null) {
-			if (other.ingredient != null) {
+		if (_ingredient == null) {
+			if (other._ingredient != null) {
 				return false;
 			}
-		} else if (!ingredient.equals(other.ingredient)) {
+		} else if (!_ingredient.equals(other._ingredient)) {
 			return false;
 		}
-		if (measuringUnit == null) {
-			if (other.measuringUnit != null) {
+		if (_measuringUnit == null) {
+			if (other._measuringUnit != null) {
 				return false;
 			}
-		} else if (!measuringUnit.equals(other.measuringUnit)) {
+		} else if (!_measuringUnit.equals(other._measuringUnit)) {
 			return false;
 		}
-		if (quantity != other.quantity) {
+		if (_quantity != other._quantity) {
 			return false;
 		}
 		return true;
@@ -108,15 +111,15 @@ public class StepIngredient implements Serializable {
 	 * @return the step
 	 */
 	public Step getStep() {
-		return step;
+		return _step;
 	}
 
 	/**
 	 * @param step
 	 *            the step to set
 	 */
-	public void setStep(final Step _step) {
-		this.step = _step;
+	public void setStep(final Step step) {
+		this._step = step;
 	}
 
 	/**
@@ -124,8 +127,8 @@ public class StepIngredient implements Serializable {
 	 *            the step to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withStep(final Step _step) {
-		this.step = _step;
+	public StepIngredient withStep(final Step step) {
+		this._step = step;
 		return this;
 	}
 
@@ -133,15 +136,15 @@ public class StepIngredient implements Serializable {
 	 * @return the ingredient
 	 */
 	public Ingredient getIngredient() {
-		return ingredient;
+		return _ingredient;
 	}
 
 	/**
 	 * @param ingredient
 	 *            the ingredient to set
 	 */
-	public void setIngredient(final Ingredient _ingredient) {
-		this.ingredient = _ingredient;
+	public void setIngredient(final Ingredient ingredient) {
+		this._ingredient = ingredient;
 	}
 
 	/**
@@ -149,8 +152,8 @@ public class StepIngredient implements Serializable {
 	 *            the ingredient to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withIngredient(final Ingredient _ingredient) {
-		this.ingredient = _ingredient;
+	public StepIngredient withIngredient(final Ingredient ingredient) {
+		this._ingredient = ingredient;
 		return this;
 	}
 
@@ -158,15 +161,15 @@ public class StepIngredient implements Serializable {
 	 * @return the quantity
 	 */
 	public int getQuantity() {
-		return quantity;
+		return _quantity;
 	}
 
 	/**
 	 * @param quantity
 	 *            the quantity to set
 	 */
-	public void setQuantity(final int _quantity) {
-		this.quantity = _quantity;
+	public void setQuantity(final int quantity) {
+		this._quantity = quantity;
 	}
 
 	/**
@@ -174,8 +177,8 @@ public class StepIngredient implements Serializable {
 	 *            the quantity to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withQuantity(final int _quantity) {
-		this.quantity = _quantity;
+	public StepIngredient withQuantity(final int quantity) {
+		this._quantity = quantity;
 		return this;
 	}
 
@@ -183,15 +186,15 @@ public class StepIngredient implements Serializable {
 	 * @return the measuringUnit
 	 */
 	public String getMeasuringUnit() {
-		return measuringUnit;
+		return _measuringUnit;
 	}
 
 	/**
 	 * @param measuringUnit
 	 *            the measuringUnit to set
 	 */
-	public void setMeasuringUnit(final String _measuringUnit) {
-		this.measuringUnit = _measuringUnit;
+	public void setMeasuringUnit(final String measuringUnit) {
+		this._measuringUnit = measuringUnit;
 	}
 
 	/**
@@ -199,8 +202,8 @@ public class StepIngredient implements Serializable {
 	 *            the quantity to set
 	 * @return the {@link StepIngredient}
 	 */
-	public StepIngredient withMeasuringUnit(final String _measuringUnit) {
-		this.measuringUnit = _measuringUnit;
+	public StepIngredient withMeasuringUnit(final String measuringUnit) {
+		this._measuringUnit = measuringUnit;
 		return this;
 	}
 }

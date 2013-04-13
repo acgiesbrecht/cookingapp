@@ -9,10 +9,12 @@ import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 /**
@@ -31,52 +33,57 @@ public class Recipe implements Serializable {
 	 * Database id.
 	 */
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long _id;
 
 	/**
 	 * Recipe's name.
 	 */
 	@Basic
-	private String name = "";
+	@Column(name = "name")
+	private String _name = "";
 
 	/**
 	 * Recipe's description.
 	 */
 	@Basic
-	private String description = "";
+	@Column(name = "description")
+	private String _description = "";
 
 	/**
 	 * Alternatives for this recipe.
 	 */
+	@JoinColumn(name = "alternatives")
 	@OneToMany(cascade = CascadeType.MERGE)
-	private List<Recipe> alternatives = new ArrayList<>();
+	private List<Recipe> _alternatives = new ArrayList<>();
 
 	/**
 	 * Steps of this recipe.
 	 */
-	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, mappedBy = "recipe")
-	private List<Step> steps = new ArrayList<>();
-	
+	@JoinColumn(name = "steps")
+	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, mappedBy = "_recipe")
+	private List<Step> _steps = new ArrayList<>();
+
 	/**
 	 * Constructor.
 	 */
-	public Recipe() {		
+	public Recipe() {
 	}
 
 	/**
 	 * Constructor.
 	 */
 	public Recipe(final String name) {
-		this.name = name;
+		this._name = name;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((_id == null) ? 0 : _id.hashCode());
+		result = prime * result + ((_name == null) ? 0 : _name.hashCode());
 		return result;
 	}
 
@@ -92,18 +99,18 @@ public class Recipe implements Serializable {
 			return false;
 		}
 		final Recipe other = (Recipe) obj;
-		if (id == null) {
-			if (other.id != null) {
+		if (_id == null) {
+			if (other._id != null) {
 				return false;
 			}
-		} else if (!id.equals(other.id)) {
+		} else if (!_id.equals(other._id)) {
 			return false;
 		}
-		if (name == null) {
-			if (other.name != null) {
+		if (_name == null) {
+			if (other._name != null) {
 				return false;
 			}
-		} else if (!name.equals(other.name)) {
+		} else if (!_name.equals(other._name)) {
 			return false;
 		}
 		return true;
@@ -113,30 +120,30 @@ public class Recipe implements Serializable {
 	 * @return the id
 	 */
 	public Long getId() {
-		return id;
+		return _id;
 	}
 
 	/**
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(final Long _id) {
-		this.id = _id;
+	public void setId(final Long id) {
+		this._id = id;
 	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return _name;
 	}
 
 	/**
 	 * @param name
 	 *            the name to set
 	 */
-	public void setName(final String _name) {
-		this.name = _name;
+	public void setName(final String name) {
+		this._name = name;
 	}
 
 	/**
@@ -144,8 +151,8 @@ public class Recipe implements Serializable {
 	 *            the name to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withName(final String _name) {
-		this.name = _name;
+	public Recipe withName(final String name) {
+		this._name = name;
 		return this;
 	}
 
@@ -153,15 +160,15 @@ public class Recipe implements Serializable {
 	 * @return the description
 	 */
 	public String getDescription() {
-		return description;
+		return _description;
 	}
 
 	/**
 	 * @param description
 	 *            the description to set
 	 */
-	public void setDescription(final String _description) {
-		this.description = _description;
+	public void setDescription(final String description) {
+		this._description = description;
 	}
 
 	/**
@@ -169,8 +176,8 @@ public class Recipe implements Serializable {
 	 *            the description to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withDescription(final String _description) {
-		this.description = _description;
+	public Recipe withDescription(final String description) {
+		this._description = description;
 		return this;
 	}
 
@@ -178,15 +185,15 @@ public class Recipe implements Serializable {
 	 * @return the alternatives
 	 */
 	public List<Recipe> getAlternatives() {
-		return alternatives;
+		return _alternatives;
 	}
 
 	/**
 	 * @param alternatives
 	 *            the alternatives to set
 	 */
-	public void setAlternatives(final List<Recipe> _alternatives) {
-		this.alternatives = _alternatives;
+	public void setAlternatives(final List<Recipe> alternatives) {
+		this._alternatives = alternatives;
 	}
 
 	/**
@@ -194,8 +201,8 @@ public class Recipe implements Serializable {
 	 *            the alternatives to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withAlternatives(final List<Recipe> _alternatives) {
-		this.alternatives = _alternatives;
+	public Recipe withAlternatives(final List<Recipe> alternatives) {
+		this._alternatives = alternatives;
 		return this;
 	}
 
@@ -203,15 +210,15 @@ public class Recipe implements Serializable {
 	 * @return the steps
 	 */
 	public List<Step> getSteps() {
-		return steps;
+		return _steps;
 	}
 
 	/**
 	 * @param steps
 	 *            the steps to set
 	 */
-	public void setSteps(final List<Step> _steps) {
-		this.steps = _steps;
+	public void setSteps(final List<Step> steps) {
+		this._steps = steps;
 	}
 
 	/**
@@ -219,8 +226,8 @@ public class Recipe implements Serializable {
 	 *            the steps to set
 	 * @return the {@link Recipe}
 	 */
-	public Recipe withSteps(final List<Step> _steps) {
-		this.steps = _steps;
+	public Recipe withSteps(final List<Step> steps) {
+		this._steps = steps;
 		return this;
 	}
 

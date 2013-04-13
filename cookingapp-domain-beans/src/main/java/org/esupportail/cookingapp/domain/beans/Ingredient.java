@@ -6,19 +6,17 @@ package org.esupportail.cookingapp.domain.beans;
 import java.io.Serializable;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
 /**
  * @author llevague
  * 
  */
 @Entity
-@Table(uniqueConstraints = { @UniqueConstraint(columnNames = "name") })
 public class Ingredient implements Serializable {
 
 	/**
@@ -30,27 +28,30 @@ public class Ingredient implements Serializable {
 	 * Database id.
 	 */
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long _id;
 
 	/**
 	 * Ingredient's name.
 	 */
 	@Basic
-	private String name;
+	@Column(name = "name", unique = true)
+	private String _name;
 
 	/**
 	 * Ingredient's description.
 	 */
 	@Basic
-	private String description;
+	@Column(name = "description")
+	private String _description;
 
 	/**
 	 * Constructor.
 	 */
 	public Ingredient() {
-		name = "";
-		description = "";
+		_name = "";
+		_description = "";
 	}
 
 	/**
@@ -59,15 +60,15 @@ public class Ingredient implements Serializable {
 	 * @param name
 	 */
 	public Ingredient(final String name) {
-		this.name = name;
-		description = "";
+		_name = name;
+		_description = "";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((_name == null) ? 0 : _name.hashCode());
 		return result;
 	}
 
@@ -83,11 +84,11 @@ public class Ingredient implements Serializable {
 			return false;
 		}
 		final Ingredient other = (Ingredient) obj;
-		if (name == null) {
-			if (other.name != null) {
+		if (_name == null) {
+			if (other._name != null) {
 				return false;
 			}
-		} else if (!name.equals(other.name)) {
+		} else if (!_name.equals(other._name)) {
 			return false;
 		}
 		return true;
@@ -97,30 +98,30 @@ public class Ingredient implements Serializable {
 	 * @return the id
 	 */
 	public Long getId() {
-		return id;
+		return _id;
 	}
 
 	/**
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(final Long _id) {
-		this.id = _id;
+	public void setId(final Long id) {
+		this._id = id;
 	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return _name;
 	}
 
 	/**
 	 * @param name
 	 *            the name to set
 	 */
-	public void setName(final String _name) {
-		this.name = _name;
+	public void setName(final String name) {
+		this._name = name;
 	}
 
 	/**
@@ -128,8 +129,8 @@ public class Ingredient implements Serializable {
 	 *            the name to set
 	 * @return the {@link Ingredient}
 	 */
-	public Ingredient withName(final String _name) {
-		this.name = _name;
+	public Ingredient withName(final String name) {
+		this._name = name;
 		return this;
 	}
 
@@ -137,15 +138,15 @@ public class Ingredient implements Serializable {
 	 * @return the description
 	 */
 	public String getDescription() {
-		return description;
+		return _description;
 	}
 
 	/**
 	 * @param description
 	 *            the description to set
 	 */
-	public void setDescription(final String _description) {
-		this.description = _description;
+	public void setDescription(final String description) {
+		this._description = description;
 	}
 
 	/**
@@ -153,8 +154,8 @@ public class Ingredient implements Serializable {
 	 *            the description to set
 	 * @return the {@link Ingredient}
 	 */
-	public Ingredient withDescription(final String _description) {
-		this.description = _description;
+	public Ingredient withDescription(final String description) {
+		this._description = description;
 		return this;
 	}
 
