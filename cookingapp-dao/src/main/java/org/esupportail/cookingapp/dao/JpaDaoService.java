@@ -37,7 +37,7 @@ public class JpaDaoService implements DaoService {
 	public Ingredient getIngredient(final String name) {
 		final QIngredient ingredient = QIngredient.ingredient;
 		return from(ingredient)
-				.where(ingredient.name.eq(name))
+				.where(ingredient._name.eq(name))
 				.uniqueResult(ingredient);
 	}
 	
@@ -51,7 +51,7 @@ public class JpaDaoService implements DaoService {
 	public Step getStep(final Long id) {
 		final QStep step = QStep.step;
 		return from(step)
-				.where(step.id.eq(id))
+				.where(step._id.eq(id))
 				.uniqueResult(step);
 	}
 
@@ -59,7 +59,7 @@ public class JpaDaoService implements DaoService {
 	public StepIngredient getStepIngredient(final Step step) {
 		final QStepIngredient stepIngredient = QStepIngredient.stepIngredient;
 		return from(stepIngredient)
-				.where(stepIngredient.step.eq(step))
+				.where(stepIngredient._step.eq(step))
 				.uniqueResult(stepIngredient);
 	}
 
@@ -67,7 +67,7 @@ public class JpaDaoService implements DaoService {
 	public StepIngredient getStepIngredient(final Ingredient ingredient) {
 		final QStepIngredient stepIngredient = QStepIngredient.stepIngredient;
 		return from(stepIngredient)
-				.where(stepIngredient.ingredient.eq(ingredient))
+				.where(stepIngredient._ingredient.eq(ingredient))
 				.uniqueResult(stepIngredient);
 	}
 
@@ -75,8 +75,8 @@ public class JpaDaoService implements DaoService {
 	public StepIngredient getStepIngredient(final Step step, Ingredient ingredient) {
 		final QStepIngredient stepIngredient = QStepIngredient.stepIngredient;
 		return from(stepIngredient)
-				.where(stepIngredient.step.eq(step)
-					.and(stepIngredient.ingredient.eq(ingredient)))
+				.where(stepIngredient._step.eq(step)
+					.and(stepIngredient._ingredient.eq(ingredient)))
 				.uniqueResult(stepIngredient);
 	}
 
@@ -84,7 +84,7 @@ public class JpaDaoService implements DaoService {
 	public Recipe getRecipe(final Long id) {
 		final QRecipe recipe = QRecipe.recipe;
 		return from(recipe)
-				.where(recipe.id.eq(id))
+				.where(recipe._id.eq(id))
 				.uniqueResult(recipe);
 	}
 
@@ -99,7 +99,7 @@ public class JpaDaoService implements DaoService {
 	public List<Recipe> getRecipes(final String name) {
 		final QRecipe recipe = QRecipe.recipe;
 		return from(recipe)
-				.where(recipe.name.eq(name))
+				.where(recipe._name.eq(name))
 				.listDistinct(recipe);
 	}
 	

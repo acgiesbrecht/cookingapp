@@ -5,6 +5,8 @@ package org.esupportail.cookingapp.domain.beans;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+
 /**
  * @author llevague
  * 
@@ -19,20 +21,22 @@ public class StepIngredientId implements Serializable {
 	/**
 	 * The step.
 	 */
-	private Step step;
+	@Column(name = "step")
+	private Step _step;
 
 	/**
 	 * The ingredient.
 	 */
-	private Ingredient ingredient;
+	@Column(name = "ingredient")
+	private Ingredient _ingredient;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((ingredient == null) ? 0 : ingredient.hashCode());
-		result = prime * result + ((step == null) ? 0 : step.hashCode());
+				+ ((_ingredient == null) ? 0 : _ingredient.hashCode());
+		result = prime * result + ((_step == null) ? 0 : _step.hashCode());
 		return result;
 	}
 
@@ -48,18 +52,18 @@ public class StepIngredientId implements Serializable {
 			return false;
 		}
 		final StepIngredientId other = (StepIngredientId) obj;
-		if (ingredient == null) {
-			if (other.ingredient != null) {
+		if (_ingredient == null) {
+			if (other._ingredient != null) {
 				return false;
 			}
-		} else if (!ingredient.equals(other.ingredient)) {
+		} else if (!_ingredient.equals(other._ingredient)) {
 			return false;
 		}
-		if (step == null) {
-			if (other.step != null) {
+		if (_step == null) {
+			if (other._step != null) {
 				return false;
 			}
-		} else if (!step.equals(other.step)) {
+		} else if (!_step.equals(other._step)) {
 			return false;
 		}
 		return true;
@@ -69,7 +73,7 @@ public class StepIngredientId implements Serializable {
 	 * @return the step
 	 */
 	public Step getStep() {
-		return step;
+		return _step;
 	}
 
 	/**
@@ -77,14 +81,14 @@ public class StepIngredientId implements Serializable {
 	 *            the step to set
 	 */
 	public void setStep(final Step step) {
-		this.step = step;
+		this._step = step;
 	}
 
 	/**
 	 * @return the ingredient
 	 */
 	public Ingredient getIngredient() {
-		return ingredient;
+		return _ingredient;
 	}
 
 	/**
@@ -92,7 +96,7 @@ public class StepIngredientId implements Serializable {
 	 *            the ingredient to set
 	 */
 	public void setIngredient(final Ingredient ingredient) {
-		this.ingredient = ingredient;
+		this._ingredient = ingredient;
 	}
 
 }

@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.Client;
 import org.esupportail.commons.services.logging.Logger;
@@ -22,6 +25,7 @@ import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
 import org.esupportail.cookingapp.domain.beans.Step;
 import org.esupportail.cookingapp.domain.beans.StepIngredient;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,6 +38,7 @@ import fj.Unit;
  * @author llevague
  * 
  */
+@Component
 public class DomainServiceImpl implements DomainService {
 
 	/**
@@ -60,11 +65,15 @@ public class DomainServiceImpl implements DomainService {
 	/**
 	 * The DAO service.
 	 */
+	@Inject
+	@Named("daoService")
 	private DaoService daoService;
 	
 	/**
 	 * An elasticSearch client.
 	 */
+	@Inject
+	@Named("esClient")
 	private Client clientES;
 	
 	/**

@@ -8,10 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -31,39 +33,43 @@ public class Step implements Serializable {
 	 * Database id.
 	 */
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long _id;
 
 	/**
 	 * The recipe.
 	 */
+	@JoinColumn(name = "recipe")
 	@ManyToOne(cascade = CascadeType.MERGE, optional = false)
-	private Recipe recipe;
+	private Recipe _recipe;
 
 	/**
 	 * Instructions to follow.
 	 */
-	private String instructions;
+	@Column(name = "instructions")
+	private String _instructions;
 
 	/**
 	 * Mandatory ingredients with their quantity.
 	 */
+	@JoinColumn(name = "stepIngredients")
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE })
-	private List<StepIngredient> stepIngredients = new ArrayList<>();
+	private List<StepIngredient> _stepIngredients = new ArrayList<>();
 
 	/**
 	 * Constructor.
 	 */
 	public Step() {
-		instructions = "";
+		_instructions = "";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((recipe == null) ? 0 : recipe.hashCode());
+		result = prime * result + ((_id == null) ? 0 : _id.hashCode());
+		result = prime * result + ((_recipe == null) ? 0 : _recipe.hashCode());
 		return result;
 	}
 
@@ -79,18 +85,18 @@ public class Step implements Serializable {
 			return false;
 		}
 		final Step other = (Step) obj;
-		if (id == null) {
-			if (other.id != null) {
+		if (_id == null) {
+			if (other._id != null) {
 				return false;
 			}
-		} else if (!id.equals(other.id)) {
+		} else if (!_id.equals(other._id)) {
 			return false;
 		}
-		if (recipe == null) {
-			if (other.recipe != null) {
+		if (_recipe == null) {
+			if (other._recipe != null) {
 				return false;
 			}
-		} else if (!recipe.equals(other.recipe)) {
+		} else if (!_recipe.equals(other._recipe)) {
 			return false;
 		}
 		return true;
@@ -100,30 +106,30 @@ public class Step implements Serializable {
 	 * @return the id
 	 */
 	public Long getId() {
-		return id;
+		return _id;
 	}
 
 	/**
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(final Long _id) {
-		this.id = _id;
+	public void setId(final Long id) {
+		this._id = id;
 	}
 
 	/**
 	 * @return the recipe
 	 */
 	public Recipe getRecipe() {
-		return recipe;
+		return _recipe;
 	}
 
 	/**
 	 * @param recipe
 	 *            the recipe to set
 	 */
-	public void setRecipe(final Recipe _recipe) {
-		this.recipe = _recipe;
+	public void setRecipe(final Recipe recipe) {
+		this._recipe = recipe;
 	}
 
 	/**
@@ -131,8 +137,8 @@ public class Step implements Serializable {
 	 *            the recipe to set
 	 * @return the {@link Step}
 	 */
-	public Step withRecipe(final Recipe _recipe) {
-		this.recipe = _recipe;
+	public Step withRecipe(final Recipe recipe) {
+		this._recipe = recipe;
 		return this;
 	}
 
@@ -140,15 +146,15 @@ public class Step implements Serializable {
 	 * @return the instructions
 	 */
 	public String getInstructions() {
-		return instructions;
+		return _instructions;
 	}
 
 	/**
 	 * @param instructions
 	 *            the instructions to set
 	 */
-	public void setInstructions(final String _instructions) {
-		this.instructions = _instructions;
+	public void setInstructions(final String instructions) {
+		this._instructions = instructions;
 	}
 
 	/**
@@ -156,8 +162,8 @@ public class Step implements Serializable {
 	 *            the instructions to set
 	 * @return the {@link Step}
 	 */
-	public Step withInstructions(final String _instructions) {
-		this.instructions = _instructions;
+	public Step withInstructions(final String instructions) {
+		this._instructions = instructions;
 		return this;
 	}
 
@@ -165,7 +171,7 @@ public class Step implements Serializable {
 	 * @return the stepIngredients
 	 */
 	public List<StepIngredient> getStepIngredients() {
-		return stepIngredients;
+		return _stepIngredients;
 	}
 
 	/**
@@ -173,7 +179,7 @@ public class Step implements Serializable {
 	 *            the stepIngredients to set
 	 */
 	public void setStepIngredients(final List<StepIngredient> stepIngredients) {
-		this.stepIngredients = stepIngredients;
+		this._stepIngredients = stepIngredients;
 	}
 
 	/**
@@ -181,8 +187,8 @@ public class Step implements Serializable {
 	 *            the stepIngredients to set
 	 * @return the {@link Step}
 	 */
-	public Step withStepIngredients(final List<StepIngredient> _stepIngredients) {
-		this.stepIngredients = _stepIngredients;
+	public Step withStepIngredients(final List<StepIngredient> stepIngredients) {
+		this._stepIngredients = stepIngredients;
 		return this;
 	}
 

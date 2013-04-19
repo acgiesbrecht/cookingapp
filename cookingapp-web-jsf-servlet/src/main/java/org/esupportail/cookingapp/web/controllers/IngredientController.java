@@ -6,7 +6,8 @@ package org.esupportail.cookingapp.web.controllers;
 import static fj.Ord.ord;
 import static fj.Ord.stringOrd;
 import static fj.data.Array.array;
-import static fj.data.List.iterableList;
+import static fj.data.IterableW.wrap;
+import static fj.data.List.*;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
@@ -14,7 +15,6 @@ import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
 import static org.springframework.util.StringUtils.hasText;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -72,7 +72,8 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 	
 	@PostConstruct
 	public void init() {
-		ingredients = domainService.getIngredients();
+//		ingredients = domainService.getIngredients();
+		ingredients = wrap(fj.data.List.<Ingredient>nil()).toStandardList();
 		selectedIngredients = new Ingredient[0];
 		newIngredient = new Ingredient();
 		filter = new String();
@@ -115,8 +116,8 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 						.startsWith(letter.some()) : Boolean.TRUE;
 			}
 		};
-		return new ArrayList<Ingredient>(iterableList(ingredients)
-				.filter(filtering).sort(ord(ordering)).toCollection());
+		return wrap(iterableList(ingredients)
+				.filter(filtering).sort(ord(ordering))).toStandardList();
 	}
 	
 	/**
