@@ -11,21 +11,21 @@
 					<span class="h3">Ingrédients</span>
 					<p:outputPanel id="actions">
 						<ul class="list-inline pull-right">
-							<li>
-								<p:outputLabel for="globalFilter" value="Filtrer :" />
-							</li>
 							<li class="form-search">
-								<p:inputText id="globalFilter"
-									value="#{ingredientController.filter}">
+								<p:inputText id="globalFilter" type="search"
+									value="#{ingredientController.filter}" styleClass="input-small">
 									<p:ajax event="keyup" update="ingredientsList" />
-								</p:inputText></li>
+								</p:inputText>
+                                <p:watermark for="globalFilter" value="Filtrer" />
+                            </li>
 							<li>
-								<p:commandLink action="#{ingredientController.goAdd}"
-									styleClass="m-btn green rnd"
-									rel="tooltip" ajax="false"
-									title="Ajouter un ingrédient">
-									<span class="icon-plus" />
-								</p:commandLink></li>
+								<a href="/ingredients/add"
+                                    class="btn btn-mini btn-success"
+                                    rel="tooltip"
+                                    title="Ajouter un ingrédient">
+                                    <span class="icon-plus" />
+                                </a>
+                            </li>
 <!-- 							<li> -->
 <!-- 								<a href="#" class="m-btn purple rnd" rel="tooltip" -->
 <!-- 									title="Importer une liste depuis un fichier"> -->
@@ -37,7 +37,7 @@
 									title="Supprimer le(s) ingrédient(s) sélectionné(s)"
 									update="ingredientsList,actions" ajax="false"
 									action="#{ingredientController.deleteIngredients}"
-									styleClass="m-btn red rnd"
+									styleClass="btn btn-mini btn-danger"
 									rendered="#{not empty ingredientController.ingredients}">
 									<span class="icon-trash" />
 								</p:commandLink></li>
@@ -66,6 +66,6 @@
 		<p:socket channel="/ingredients" >
 			<p:ajax event="message" update=":dataForm:ingredientsList" />
 		</p:socket>
-
+        
 	</ui:define>
 </ui:composition>

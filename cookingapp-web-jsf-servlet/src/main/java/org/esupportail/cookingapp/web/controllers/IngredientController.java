@@ -9,8 +9,10 @@ import static fj.data.Array.array;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_ADD;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
 import static org.springframework.util.StringUtils.hasText;
-import static org.esupportail.cookingapp.web.rewrite.NavigationRules.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,6 @@ import javax.inject.Inject;
 import org.esupportail.commons.beans.AbstractJsfMessagesAwareBean;
 import org.esupportail.cookingapp.domain.DomainService;
 import org.esupportail.cookingapp.domain.beans.Ingredient;
-import org.primefaces.push.PushContext;
 import org.primefaces.push.PushContextFactory;
 
 import fj.F;
@@ -78,8 +79,8 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 	}
 	
 	public synchronized void pushIngredients() {
-		PushContext pc = PushContextFactory.getDefault().getPushContext();
-		pc.push("/ingredients", ingredients);
+		PushContextFactory.getDefault().getPushContext()
+				.push("/ingredients", ingredients);
 	}
 	
 	/**
@@ -150,8 +151,8 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 			domainService.deleteIngredients(selectedIngredients);
 			ingredients.removeAll(array(selectedIngredients).toCollection());
 			addInfoMessage(null, "INFO.INGREDIENT.DELETE");
+			pushIngredients();
 		}
-		pushIngredients();
 		return null;
 	}
 	
