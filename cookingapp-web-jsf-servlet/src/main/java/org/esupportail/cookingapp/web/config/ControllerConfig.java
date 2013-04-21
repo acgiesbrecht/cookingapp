@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import org.esupportail.commons.services.application.ApplicationService;
 import org.esupportail.commons.services.i18n.I18nService;
 import org.esupportail.cookingapp.web.controllers.IngredientController;
+import org.esupportail.cookingapp.web.controllers.RecipeController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -19,11 +20,20 @@ public class ControllerConfig {
 	
 	@Inject
 	private ApplicationService applicationService;
-	
+
 	@Bean
 	@Scope("request")
 	public IngredientController ingredientController() {
 		IngredientController c = new IngredientController();
+		c.setApplicationService(applicationService);
+		c.setI18nService(i18nService);
+		return c;
+	}
+	
+	@Bean
+	@Scope("request")
+	public RecipeController recipeController() {
+		RecipeController c = new RecipeController();
 		c.setApplicationService(applicationService);
 		c.setI18nService(i18nService);
 		return c;

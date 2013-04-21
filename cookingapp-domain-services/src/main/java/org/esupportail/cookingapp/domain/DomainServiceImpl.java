@@ -4,10 +4,10 @@
 package org.esupportail.cookingapp.domain;
 
 
-import static fj.data.Array.array; 
+import static fj.Unit.unit;
+import static fj.data.Array.array;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
-import static fj.Unit.unit;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,7 +25,6 @@ import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
 import org.esupportail.cookingapp.domain.beans.Step;
 import org.esupportail.cookingapp.domain.beans.StepIngredient;
-import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,7 +37,7 @@ import fj.Unit;
  * @author llevague
  * 
  */
-@Component
+@Named
 public class DomainServiceImpl implements DomainService {
 
 	/**
@@ -92,7 +91,7 @@ public class DomainServiceImpl implements DomainService {
 
 	@Override
 	public List<Ingredient> getIngredients() {
-		return daoService.getIngredients();
+		return fromNull(daoService.getIngredients()).orSome(new ArrayList<Ingredient>());
 	}
 
 	@Override
@@ -171,12 +170,12 @@ public class DomainServiceImpl implements DomainService {
 
 	@Override
 	public List<Recipe> getRecipes() {
-		return daoService.getRecipes();
+		return fromNull(daoService.getRecipes()).orSome(new ArrayList<Recipe>());
 	}
 
 	@Override
 	public List<Recipe> getRecipes(final String name) {
-		return daoService.getRecipes(name);
+		return fromNull(daoService.getRecipes(name)).orSome(new ArrayList<Recipe>());
 	}
 
 	@Override

@@ -72,8 +72,7 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 	
 	@PostConstruct
 	public void init() {
-//		ingredients = domainService.getIngredients();
-		ingredients = wrap(fj.data.List.<Ingredient>nil()).toStandardList();
+		ingredients = domainService.getIngredients();
 		selectedIngredients = new Ingredient[0];
 		newIngredient = new Ingredient();
 		filter = new String();
@@ -106,12 +105,11 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 				};
 			};
 		};
-
-		final Option<String> letter = isNotEmpty.f(filter);
 		
 		final F<Ingredient, Boolean> filtering = new F<Ingredient, Boolean>() {
 			@Override
 			public Boolean f(final Ingredient i) {
+				final Option<String> letter = isNotEmpty.f(filter);
 				return letter.isSome() ? i.getName()
 						.startsWith(letter.some()) : Boolean.TRUE;
 			}
@@ -151,10 +149,10 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 		if (array(selectedIngredients).isNotEmpty()) {
 			domainService.deleteIngredients(selectedIngredients);
 			ingredients.removeAll(array(selectedIngredients).toCollection());
-			addInfoMessage(null, "INFO.INGREDIENT.DELETE");
 			pushIngredients();
+			addInfoMessage(null, "INFO.INGREDIENT.DELETE");
 		}
-		return null;
+		return goList();
 	}
 	
 	/**

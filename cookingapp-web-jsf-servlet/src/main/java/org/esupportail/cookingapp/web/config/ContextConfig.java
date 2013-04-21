@@ -16,7 +16,7 @@ import org.springframework.core.io.Resource;
 			"classpath:properties/exceptionHandling/exceptionHandling.xml", 
 			"classpath:properties/cache/cache.xml",
 			"classpath:properties/smtp/smtp.xml",
-			"classpath:properties/web/controllers.xml"})
+			"classpath:properties/web/converters.xml"})
 @Import({I18nConfig.class, ApplicationConfig.class, DomainConfig.class, ControllerConfig.class})
 public class ContextConfig {
 	

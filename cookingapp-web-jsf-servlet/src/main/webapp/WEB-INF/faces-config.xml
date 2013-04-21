@@ -17,8 +17,10 @@
 			<supported-locale>en</supported-locale>
 		</locale-config>
 		<message-bundle>properties.i18n.bundles.JsfMessages</message-bundle>
-
 	</application>
+	<lifecycle>
+		<phase-listener>org.esupportail.cookingapp.web.rewrite.MultiPageMessagesSupport</phase-listener>
+	</lifecycle>
 	<factory>
 		<exception-handler-factory>org.esupportail.commons.exceptions.ExceptionHandlerFactory</exception-handler-factory>
 	</factory>

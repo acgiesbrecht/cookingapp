@@ -40,7 +40,8 @@
 									styleClass="btn btn-mini btn-danger"
 									rendered="#{not empty ingredientController.ingredients}">
 									<span class="icon-trash" />
-								</p:commandLink></li>
+								</p:commandLink>
+							</li>
 						</ul>
 					</p:outputPanel>
 				</legend>
@@ -48,10 +49,14 @@
 					value="#{ingredientController.ingredients}"
 					selection="#{ingredientController.selectedIngredients}"
 					var="ingredient" paginator="true" paginatorAlwaysVisible="false"
-					rowKey="#{ingredient.name}"
-					styleClass="">
+					rowKey="#{ingredient.name}">
 					<p:ajax event="page" process="@this,:dataForm:actions"
 						partialUpdate="true" />
+					<p:ajax event="rowSelect" update=":dataForm:actions" />
+					<p:ajax event="rowUnselect" update=":dataForm:actions" />
+					<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
+					<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
+					<p:ajax event="toggleSelect" update=":dataForm:actions" />
 					<p:column selectionMode="multiple" style="width:2%" />
 					<p:column headerText="Nom">
 						#{ingredient.name}
