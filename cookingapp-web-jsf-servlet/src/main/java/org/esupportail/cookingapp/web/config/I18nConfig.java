@@ -5,9 +5,11 @@ import org.esupportail.commons.services.i18n.ResourceBundleMessageSourceI18nServ
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 
 @Configuration
+@Lazy
 public class I18nConfig {
 	
 	public static final int CACHE_SECONDS = 60;

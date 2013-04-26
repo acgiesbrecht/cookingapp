@@ -22,9 +22,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
-import org.esupportail.commons.beans.AbstractJsfMessagesAwareBean;
 import org.esupportail.cookingapp.domain.DomainService;
 import org.esupportail.cookingapp.domain.beans.Recipe;
+import org.esupportail.cookingapp.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContext;
 import org.primefaces.push.PushContextFactory;
 
@@ -37,18 +37,19 @@ import fj.Ordering;
  */
 @ViewScoped
 @ManagedBean
-public class RecipeController extends AbstractJsfMessagesAwareBean {
-
-	/**
-	 * The serialization id.
-	 */
-	private static final long serialVersionUID = 7506035726291472336L;
+public class RecipeController {
 
 	/**
 	 * The service.
 	 */
 	@Inject
 	private DomainService domainService;
+	
+	/**
+	 * The jsf utilities.
+	 */
+	@Inject
+	private JsfMessagesUtils jsfMessagesUtils;
 	
 	/**
 	 * The {@link Recipe} list.
@@ -133,10 +134,10 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 			domainService.addRecipe(newRecipe);
 			recipes.add(newRecipe);
 			pushRecipes();
-			addInfoMessage(null, "INFO.INGREDIENT.ADD", newRecipe.getName());
+			jsfMessagesUtils.addInfoMessage(null, "INFO.INGREDIENT.ADD", null, newRecipe.getName());
 			return goList();
 		}
-		addErrorMessage(null, "ERROR.INGREDIENT.ADD");
+		jsfMessagesUtils.addErrorMessage(null, "ERROR.INGREDIENT.ADD", null);
 		return null;
 	}
 
@@ -148,7 +149,7 @@ public class RecipeController extends AbstractJsfMessagesAwareBean {
 		if (array(selectedRecipes).isNotEmpty()) {
 //			domainService.deleteRecipes(selectedRecipes);
 			recipes.removeAll(array(selectedRecipes).toCollection());
-			addInfoMessage(null, "INFO.INGREDIENT.DELETE");
+			jsfMessagesUtils.addInfoMessage(null, "INFO.INGREDIENT.DELETE", null);
 		}
 		pushRecipes();
 		return null;

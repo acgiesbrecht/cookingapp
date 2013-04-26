@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.Client;
 import org.esupportail.commons.services.logging.Logger;
@@ -25,6 +22,8 @@ import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
 import org.esupportail.cookingapp.domain.beans.Step;
 import org.esupportail.cookingapp.domain.beans.StepIngredient;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,7 +36,7 @@ import fj.Unit;
  * @author llevague
  * 
  */
-@Named
+@Transactional("txManager")
 public class DomainServiceImpl implements DomainService {
 
 	/**
@@ -64,15 +63,15 @@ public class DomainServiceImpl implements DomainService {
 	/**
 	 * The DAO service.
 	 */
-	@Inject
-	@Named("daoService")
+//	@Inject
+//	@Named("daoService")
 	private DaoService daoService;
 	
 	/**
 	 * An elasticSearch client.
 	 */
-	@Inject
-	@Named("esClient")
+//	@Inject
+//	@Named("esClient")
 	private Client clientES;
 	
 	/**
@@ -85,11 +84,13 @@ public class DomainServiceImpl implements DomainService {
 	}
 
 	@Override
+	@Transactional(propagation=Propagation.SUPPORTS, readOnly=true)
 	public Ingredient getIngredient(final String name) {
 		return daoService.getIngredient(name);
 	}
 
 	@Override
+	@Transactional(propagation=Propagation.SUPPORTS, readOnly=true)
 	public List<Ingredient> getIngredients() {
 		return fromNull(daoService.getIngredients()).orSome(new ArrayList<Ingredient>());
 	}

@@ -7,7 +7,7 @@ import static fj.Ord.ord;
 import static fj.Ord.stringOrd;
 import static fj.data.Array.array;
 import static fj.data.IterableW.wrap;
-import static fj.data.List.*;
+import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
@@ -22,9 +22,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
-import org.esupportail.commons.beans.AbstractJsfMessagesAwareBean;
 import org.esupportail.cookingapp.domain.DomainService;
 import org.esupportail.cookingapp.domain.beans.Ingredient;
+import org.esupportail.cookingapp.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContextFactory;
 
 import fj.F;
@@ -37,18 +37,19 @@ import fj.data.Option;
  */
 @ViewScoped
 @ManagedBean
-public class IngredientController extends AbstractJsfMessagesAwareBean {
-
-	/**
-	 * The serialization id.
-	 */
-	private static final long serialVersionUID = -9078806018655968253L;
+public class IngredientController {
 
 	/**
 	 * The service.
 	 */
 	@Inject
 	private DomainService domainService;
+	
+	/**
+	 * The jsf utilities.
+	 */
+	@Inject
+	private JsfMessagesUtils jsfMessagesUtils;
 	
 	/**
 	 * The {@link Ingredient} list.
@@ -108,6 +109,7 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 		
 		final F<Ingredient, Boolean> filtering = new F<Ingredient, Boolean>() {
 			@Override
+			@SuppressWarnings("synthetic-access")
 			public Boolean f(final Ingredient i) {
 				final Option<String> letter = isNotEmpty.f(filter);
 				return letter.isSome() ? i.getName()
@@ -134,10 +136,10 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 		if (checkIfAddable()) {
 			ingredients.add(domainService.addIngredient(newIngredient));
 			pushIngredients();
-			addInfoMessage(null, "INFO.INGREDIENT.ADD", newIngredient.getName());
+			jsfMessagesUtils.addInfoMessage(null, "INFO.INGREDIENT.ADD", null, newIngredient.getName());
 			return goList();
 		}
-		addErrorMessage(null, "ERROR.INGREDIENT.ADD");
+		jsfMessagesUtils.addErrorMessage(null, "ERROR.INGREDIENT.ADD", null);
 		return null;
 	}
 
@@ -150,7 +152,7 @@ public class IngredientController extends AbstractJsfMessagesAwareBean {
 			domainService.deleteIngredients(selectedIngredients);
 			ingredients.removeAll(array(selectedIngredients).toCollection());
 			pushIngredients();
-			addInfoMessage(null, "INFO.INGREDIENT.DELETE");
+			jsfMessagesUtils.addInfoMessage(null, "INFO.INGREDIENT.DELETE", null);
 		}
 		return goList();
 	}

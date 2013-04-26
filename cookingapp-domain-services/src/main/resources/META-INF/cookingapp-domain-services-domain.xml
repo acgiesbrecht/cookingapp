@@ -10,26 +10,26 @@
         http://www.pilato.fr/schema/elasticsearch http://www.pilato.fr/schema/elasticsearch/elasticsearch-0.1.xsd">
 
 <!-- in case of use of a database : manage transaction -->
-	<aop:config>
-		<aop:pointcut id="domainMethods"
-			expression="execution(* org.esupportail.*.domain.DomainServiceImpl.*(..))" />
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="domainMethods" />
-	</aop:config>
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut id="domainMethods" -->
+<!-- 			expression="execution(* org.esupportail.*.domain.DomainServiceImpl.*(..))" /> -->
+<!-- 		<aop:advisor advice-ref="txAdvice" pointcut-ref="domainMethods" /> -->
+<!-- 	</aop:config> -->
 
-	<tx:advice id="txAdvice" transaction-manager="txManager">
-		<tx:attributes>
-			<tx:method name="add*" propagation="REQUIRED" />
-			<tx:method name="delete*" propagation="REQUIRED" />
-			<tx:method name="update*" propagation="REQUIRED" />
-			<tx:method name="*" propagation="SUPPORTS" read-only="true" />
-		</tx:attributes>
-	</tx:advice>
+<!-- 	<tx:advice id="txAdvice" transaction-manager="txManager"> -->
+<!-- 		<tx:attributes> -->
+<!-- 			<tx:method name="add*" propagation="REQUIRED" /> -->
+<!-- 			<tx:method name="delete*" propagation="REQUIRED" /> -->
+<!-- 			<tx:method name="update*" propagation="REQUIRED" /> -->
+<!-- 			<tx:method name="*" propagation="SUPPORTS" read-only="true" /> -->
+<!-- 		</tx:attributes> -->
+<!-- 	</tx:advice> -->
 
-<!-- 	<bean id="domainService" class="org.esupportail.cookingapp.domain.DomainServiceImpl"> -->
-<!-- 		<aop:scoped-proxy /> -->
-<!-- 		<property name="clientES" ref="esClient" /> -->
-<!-- 		<property name="daoService" ref="daoService" /> -->
-<!-- 	</bean> -->
+	<bean id="domainService" class="org.esupportail.cookingapp.domain.DomainServiceImpl">
+		<aop:scoped-proxy />
+		<property name="clientES" ref="esClient" />
+		<property name="daoService" ref="daoService" />
+	</bean>
     
     
     <!-- ELASTIC SEARCH -->
