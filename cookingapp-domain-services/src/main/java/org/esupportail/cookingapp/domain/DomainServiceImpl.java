@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.Client;
 import org.esupportail.commons.services.logging.Logger;
@@ -63,15 +65,13 @@ public class DomainServiceImpl implements DomainService {
 	/**
 	 * The DAO service.
 	 */
-//	@Inject
-//	@Named("daoService")
+	@Inject
 	private DaoService daoService;
 	
 	/**
 	 * An elasticSearch client.
 	 */
-//	@Inject
-//	@Named("esClient")
+	@Inject
 	private Client clientES;
 	
 	/**
@@ -212,20 +212,5 @@ public class DomainServiceImpl implements DomainService {
 		} catch (JsonProcessingException e) {
 			throw new RuntimeException(e);
 		}
-	}
-
-	/**
-	 * @param daoService the daoService to set
-	 */
-	public void setDaoService(final DaoService daoService) {
-		this.daoService = daoService;
-	}
-
-	/**
-	 * @param clientES the clientES to set
-	 */
-	public void setClientES(final Client clientES) {
-		this.clientES = clientES;
-	}
-	
+	}	
 }

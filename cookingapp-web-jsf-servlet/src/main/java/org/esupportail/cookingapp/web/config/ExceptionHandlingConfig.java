@@ -1,6 +1,7 @@
 package org.esupportail.cookingapp.web.config;
 
-import static org.esupportail.cookingapp.web.rewrite.NavigationRules.*;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.NOTFOUND;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +14,6 @@ import org.esupportail.commons.services.exceptionHandling.CachingEmailExceptionS
 import org.esupportail.commons.services.exceptionHandling.ExceptionServiceFactory;
 import org.esupportail.commons.services.i18n.I18nService;
 import org.esupportail.commons.services.smtp.SmtpService;
-import org.esupportail.cookingapp.web.rewrite.NavigationRules;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
