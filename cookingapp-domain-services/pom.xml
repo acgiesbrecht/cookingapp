@@ -22,28 +22,9 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>fr.pilato.spring</groupId>
-            <artifactId>spring-elasticsearch</artifactId>
-            <version>0.0.2</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-context</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-aop</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-expression</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
-            <version>0.20.5</version>
+            <version>0.90.0.RC2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

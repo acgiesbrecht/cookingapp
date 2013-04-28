@@ -36,7 +36,7 @@ public class DomainConfig {
 	
 	@Bean
 	public Client esClient() {
-		return esNode().client();
+		return esNode().start().client();
 	}
 	
 	
