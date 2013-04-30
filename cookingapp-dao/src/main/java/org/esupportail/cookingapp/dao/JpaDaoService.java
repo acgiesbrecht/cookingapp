@@ -91,8 +91,7 @@ public class JpaDaoService implements DaoService {
 	@Override
 	public List<Recipe> getRecipes() {
 		final QRecipe recipe = QRecipe.recipe;
-		return from(recipe)
-				.listDistinct(recipe);
+		return from(recipe).list(recipe);
 	}
 
 	@Override
@@ -100,7 +99,7 @@ public class JpaDaoService implements DaoService {
 		final QRecipe recipe = QRecipe.recipe;
 		return from(recipe)
 				.where(recipe._name.eq(name))
-				.listDistinct(recipe);
+				.list(recipe);
 	}
 	
 	@Override

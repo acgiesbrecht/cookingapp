@@ -38,7 +38,7 @@ import fj.Unit;
  * @author llevague
  * 
  */
-@Transactional("txManager")
+@Transactional
 public class DomainServiceImpl implements DomainService {
 
 	/**
