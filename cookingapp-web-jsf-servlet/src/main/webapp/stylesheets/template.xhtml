@@ -16,19 +16,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><h:outputText value="#{applicationService.name}" /></title>
 		
-        <link href="/resources/css/m-buttons.css" rel="stylesheet" type="text/css" />
-        <link href="/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" />
 		<link href="/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-		<link href="/resources/css/font-awesome-corp.css" rel="stylesheet" type="text/css" />
-		<link href="/resources/css/font-awesome-ext.css" rel="stylesheet" type="text/css" />
-		<link href="/resources/css/font-awesome-social.css" rel="stylesheet" type="text/css" />
+<!-- 		<link href="/resources/css/font-awesome-corp.css" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="/resources/css/font-awesome-ext.css" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="/resources/css/font-awesome-social.css" rel="stylesheet" type="text/css" /> -->
 		<link href="/resources/css/cookingapp.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/css/cookingapp-buttons.css" rel="stylesheet" type="text/css" />
         <!--[if lt IE 9]>
             <script src="/resources/js/modernizr.js" type="text/javascript"></script>
         <![endif]-->
-        
-<!-- 		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css" /> -->
-<!-- 		<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" /> -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet" type="text/css" />
 	</h:head>
 	<h:body id="body">
 		<header>
@@ -43,7 +41,7 @@
                             <span class="icon-bar"></span>
                         </a>
                         
-                        <a href="/" class="navbar-brand">cookingapp</a>
+                        <a href="/" class="navbar-brand" style="padding: 5px;"><p:graphicImage value="/resources/images/logo.png" alt="cookingapp" /></a>
                         <div class="nav-collapse collapse navbar-responsive-collapse">
         					<ul class="nav">
         						<li><a href="/recipes" class="stripe purple no-margin">Recettes</a></li>
@@ -54,7 +52,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="visible-mobile" style="margin-top:60px;" />
+		<div style="margin-top:60px;" />
 		<p:growl id="messages" showSummary="true" autoUpdate="true" sticky="false" escape="false" />
 		<div class="container">
         	<ui:insert name="content" />

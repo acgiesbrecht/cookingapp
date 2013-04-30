@@ -6,40 +6,44 @@
     template="/stylesheets/template.xhtml">
     <ui:define name="content">
         <h:form id="addForm" styleClass="form-horizontal">
-            <fieldset class="row-fluid">
-                <legend>
-                    <span class="h3">Ajouter un ingrédient</span>
-                </legend>
-                <div class="control-group">
-                    <p:outputLabel for="newIngredientName" value="Nom"
-                        styleClass="control-label" />
-                    <div class="controls">
-                        <p:inputText id="newIngredientName"
-                            value="#{ingredientController.newIngredient.name}"
-                            required="true" maxlength="255">
-                        </p:inputText>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <p:outputLabel for="newIngredientDesc"
-                        value="Description" styleClass="control-label" />
-                    <div class="controls">
-                        <p:inputTextarea id="newIngredientDesc"
-                            value="#{ingredientController.newIngredient.description}" />
-                    </div>
-                </div>
-                <p:outputPanel id="addFormButtons" layout="block" styleClass="form-actions navbar-fixed-bottom container">
-                    <div class="actions pull-right">
-                        <p:commandLink value="Annuler" immediate="true"
-                            action="#{ingredientController.goList}"
-                            styleClass="m-btn rnd">
-                        </p:commandLink>
-                        <p:commandLink value="Enregistrer" update="@form"
-                            action="#{ingredientController.addIngredient}" 
-                            styleClass="m-btn blue rnd" />
-                    </div>
-                </p:outputPanel>
-            </fieldset>
+			<div class="row-fluid">
+				<div class="panel">
+					<div class="panel-heading">
+						Ajouter un ingrédient
+		                <p:outputPanel id="addFormButtons" layout="block" styleClass="actions pull-right">
+	                        <p:commandLink rel="tooltip" title="Annuler" immediate="true"
+	                            action="#{ingredientController.goList}"
+	                            styleClass="btn btn-small rnd">
+	                            <span class="icon-chevron-left" />
+	                        </p:commandLink>
+	                        <p:commandLink update="@form" rel="tooltip" title="Enregistrer"
+	                            action="#{ingredientController.addIngredient}" 
+	                            styleClass="btn btn-small rnd green">
+	                            <span class="icon-save" />
+                            </p:commandLink>
+		                </p:outputPanel>
+						
+					</div>
+	                <div class="control-group">
+	                    <p:outputLabel for="newIngredientName" value="Nom"
+	                        styleClass="control-label" />
+	                    <div class="controls">
+	                        <p:inputText id="newIngredientName"
+	                            value="#{ingredientController.newIngredient.name}"
+	                            required="true" maxlength="255">
+	                        </p:inputText>
+	                    </div>
+	                </div>
+	                <div class="control-group">
+	                    <p:outputLabel for="newIngredientDesc"
+	                        value="Description" styleClass="control-label" />
+	                    <div class="controls">
+	                        <p:inputTextarea id="newIngredientDesc"
+	                            value="#{ingredientController.newIngredient.description}" />
+	                    </div>
+	                </div>
+	            </div>
+            </div>
         </h:form>
     </ui:define>
 </ui:composition>

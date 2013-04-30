@@ -6,66 +6,52 @@
 	template="/stylesheets/template.xhtml">
 	<ui:define name="content">
 		<h:form id="dataForm">
-			<fieldset class="row-fluid">
-				<legend class="container">
-					<span class="h3">Ingrédients</span>
-					<p:outputPanel id="actions">
-						<ul class="list-inline pull-right">
-							<li class="form-search">
-								<p:inputText id="globalFilter" type="search"
-									value="#{ingredientController.filter}" styleClass="input-small">
-									<p:ajax event="keyup" update="ingredientsList" />
-								</p:inputText>
-                                <p:watermark for="globalFilter" value="Filtrer" />
-                            </li>
-							<li>
-								<a href="/ingredients/add"
-                                    class="btn btn-mini btn-success"
-                                    rel="tooltip"
-                                    title="Ajouter un ingrédient">
-                                    <span class="icon-plus" />
-                                </a>
-                            </li>
-<!-- 							<li> -->
-<!-- 								<a href="#" class="m-btn purple rnd" rel="tooltip" -->
-<!-- 									title="Importer une liste depuis un fichier"> -->
-<!-- 									<span class="icon-upload-alt" /> -->
-<!-- 								</a> -->
-<!-- 							</li> -->
-							<li>
-								<p:commandLink rel="tooltip"
-									title="Supprimer le(s) ingrédient(s) sélectionné(s)"
-									update="ingredientsList,actions" ajax="false"
-									action="#{ingredientController.deleteIngredients}"
-									styleClass="btn btn-mini btn-danger"
-									rendered="#{not empty ingredientController.ingredients}">
-									<span class="icon-trash" />
-								</p:commandLink>
-							</li>
-						</ul>
-					</p:outputPanel>
-				</legend>
-				<p:dataTable id="ingredientsList" widgetVar="ingredientsList"
-					value="#{ingredientController.ingredients}"
-					selection="#{ingredientController.selectedIngredients}"
-					var="ingredient" paginator="true" paginatorAlwaysVisible="false"
-					rowKey="#{ingredient.name}">
-					<p:ajax event="page" process="@this,:dataForm:actions"
-						partialUpdate="true" />
-					<p:ajax event="rowSelect" update=":dataForm:actions" />
-					<p:ajax event="rowUnselect" update=":dataForm:actions" />
-					<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
-					<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
-					<p:ajax event="toggleSelect" update=":dataForm:actions" />
-					<p:column selectionMode="multiple" style="width:2%" />
-					<p:column headerText="Nom">
-						#{ingredient.name}
-					</p:column>
-					<p:column headerText="Description">
-						#{ingredient.description}
-					</p:column>
-				</p:dataTable>
-			</fieldset>
+			<div class="row-fluid">
+				<div class="panel">
+					<div class="panel-heading">
+						Ingrédients
+						<p:outputPanel id="actions" layout="block" styleClass="pull-right">
+							<a href="/ingredients/add" title="Ajouter" rel="tooltip" class="btn btn-small rnd green">
+								<span class="icon-plus" />
+							</a>
+							<p:commandLink title="Supprimer" rel="tooltip"
+								update="ingredientsList,actions" ajax="false"
+								action="#{ingredientController.deleteIngredients}"
+								styleClass="btn btn-small rnd red"
+								rendered="#{not empty ingredientController.ingredients}">
+								<span class="icon-trash" />
+							</p:commandLink>
+						</p:outputPanel>
+						<div class="hidden-phone pull-right">
+							<p:inputText id="globalFilter" type="search"
+								value="#{ingredientController.filter}" styleClass="input-small">
+								<p:ajax event="keyup" update="ingredientsList" />
+							</p:inputText>
+							<p:watermark for="globalFilter" value="Filtrer" />
+						</div>
+					</div>
+					<p:dataTable id="ingredientsList" widgetVar="ingredientsList"
+						value="#{ingredientController.ingredients}"
+						selection="#{ingredientController.selectedIngredients}"
+						var="ingredient" paginator="true" paginatorAlwaysVisible="false"
+						rowKey="#{ingredient.name}">
+						<p:ajax event="page" process="@this,:dataForm:actions"
+							partialUpdate="true" />
+						<p:ajax event="rowSelect" update=":dataForm:actions" />
+						<p:ajax event="rowUnselect" update=":dataForm:actions" />
+						<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
+						<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
+						<p:ajax event="toggleSelect" update=":dataForm:actions" />
+						<p:column selectionMode="multiple" style="width:2%" />
+						<p:column headerText="Nom">
+							#{ingredient.name}
+						</p:column>
+						<p:column headerText="Description">
+							#{ingredient.description}
+						</p:column>
+					</p:dataTable>
+				</div>
+			</div>
 		</h:form>
 
 		<p:socket channel="/ingredients" >
