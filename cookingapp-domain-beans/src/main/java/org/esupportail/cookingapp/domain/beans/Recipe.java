@@ -61,7 +61,7 @@ public class Recipe implements Serializable {
 	/**
 	 * Steps of this recipe.
 	 */
-	@JoinColumn(name = "steps")
+	@Column(name = "steps")
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, mappedBy = "_recipe")
 	private List<Step> _steps = new ArrayList<>();
 
