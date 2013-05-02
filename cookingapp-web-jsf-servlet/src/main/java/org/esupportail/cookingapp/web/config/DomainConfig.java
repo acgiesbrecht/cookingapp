@@ -21,22 +21,22 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Import(DaoConfig.class)
 public class DomainConfig {
 	
-	private final String ES_CONFIG_FILE = "es.properties";
-	
+	private final String DEFAULT_ES_CONFIG_FILE = "es.properties";
+		
 	@Bean
 	public DomainService domainService() {
 		return new DomainServiceImpl();
 	}
 	
-	@Bean
+	@Lazy(false)
+	@Bean(destroyMethod="close")
 	public Node esNode() {
 		final Settings defaultSettings = settingsBuilder()
-				.loadFromClasspath(ES_CONFIG_FILE).build();
-		return nodeBuilder().settings(defaultSettings)
-				.build();
+				.loadFromClasspath(DEFAULT_ES_CONFIG_FILE).build();
+		return nodeBuilder().settings(defaultSettings).build();
 	}
 	
-	@Bean(destroyMethod="close")
+	@Bean
 	public Client esClient() {
 		return esNode().start().client();
 	}

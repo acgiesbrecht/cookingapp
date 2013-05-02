@@ -89,8 +89,21 @@ ol.list-inline > li {
 }
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-    background: rgba(77,144,254,1);
+    background: rgba(77,144,254,.9);
     color: #FFFFFF;
     text-decoration: none;
 }
 
+.page-heading-title {
+	
+}
+
+.ui-selection-column {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.ui-selection-column {
+		display: table-cell;
+	}
+}

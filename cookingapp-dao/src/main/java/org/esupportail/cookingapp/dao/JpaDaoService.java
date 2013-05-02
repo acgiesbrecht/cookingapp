@@ -37,68 +37,68 @@ public class JpaDaoService implements DaoService {
 	public Ingredient getIngredient(final String name) {
 		final QIngredient ingredient = QIngredient.ingredient;
 		return from(ingredient)
-				.where(ingredient._name.eq(name))
-				.uniqueResult(ingredient);
+				.where(ingredient.name.eq(name))
+				.singleResult(ingredient);
 	}
 	
 	@Override
 	public List<Ingredient> getIngredients() {
 		final QIngredient ingredient = QIngredient.ingredient;
-		return from(ingredient).list(ingredient);
+		return from(ingredient).distinct().list(ingredient);
 	}
 
 	@Override
 	public Step getStep(final Long id) {
 		final QStep step = QStep.step;
 		return from(step)
-				.where(step._id.eq(id))
-				.uniqueResult(step);
+				.where(step.id.eq(id))
+				.singleResult(step);
 	}
 
 	@Override
 	public StepIngredient getStepIngredient(final Step step) {
 		final QStepIngredient stepIngredient = QStepIngredient.stepIngredient;
 		return from(stepIngredient)
-				.where(stepIngredient._step.eq(step))
-				.uniqueResult(stepIngredient);
+				.where(stepIngredient.id.step.eq(step))
+				.singleResult(stepIngredient);
 	}
 
 	@Override
 	public StepIngredient getStepIngredient(final Ingredient ingredient) {
 		final QStepIngredient stepIngredient = QStepIngredient.stepIngredient;
 		return from(stepIngredient)
-				.where(stepIngredient._ingredient.eq(ingredient))
-				.uniqueResult(stepIngredient);
+				.where(stepIngredient.id.ingredient.eq(ingredient))
+				.singleResult(stepIngredient);
 	}
 
 	@Override
 	public StepIngredient getStepIngredient(final Step step, Ingredient ingredient) {
 		final QStepIngredient stepIngredient = QStepIngredient.stepIngredient;
 		return from(stepIngredient)
-				.where(stepIngredient._step.eq(step)
-					.and(stepIngredient._ingredient.eq(ingredient)))
-				.uniqueResult(stepIngredient);
+				.where(stepIngredient.id.step.eq(step)
+					.and(stepIngredient.id.ingredient.eq(ingredient)))
+				.singleResult(stepIngredient);
 	}
 
 	@Override
 	public Recipe getRecipe(final Long id) {
 		final QRecipe recipe = QRecipe.recipe;
 		return from(recipe)
-				.where(recipe._id.eq(id))
-				.uniqueResult(recipe);
+				.where(recipe.id.eq(id))
+				.singleResult(recipe);
 	}
 
 	@Override
 	public List<Recipe> getRecipes() {
 		final QRecipe recipe = QRecipe.recipe;
-		return from(recipe).list(recipe);
+		return from(recipe).distinct().list(recipe);
 	}
 
 	@Override
 	public List<Recipe> getRecipes(final String name) {
 		final QRecipe recipe = QRecipe.recipe;
 		return from(recipe)
-				.where(recipe._name.eq(name))
+				.where(recipe.name.eq(name))
 				.list(recipe);
 	}
 	

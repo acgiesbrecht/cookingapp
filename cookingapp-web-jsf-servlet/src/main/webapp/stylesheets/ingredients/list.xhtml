@@ -9,8 +9,8 @@
 			<div class="row-fluid">
 				<div class="panel">
 					<div class="panel-heading">
-						Ingrédients
-						<p:outputPanel id="actions" layout="block" styleClass="pull-right">
+						<span class="page-heading-title">Ingrédients</span>
+						<p:outputPanel id="actions" layout="block" styleClass="hidden-phone pull-right">
 							<a href="/ingredients/add" title="Ajouter" rel="tooltip" class="btn btn-small rnd green">
 								<span class="icon-plus" />
 							</a>
@@ -22,7 +22,7 @@
 								<span class="icon-trash" />
 							</p:commandLink>
 						</p:outputPanel>
-						<div class="hidden-phone pull-right">
+						<div class="pull-right">
 							<p:inputText id="globalFilter" type="search"
 								value="#{ingredientController.filter}" styleClass="input-small">
 								<p:ajax event="keyup" update="ingredientsList" />
@@ -42,7 +42,7 @@
 						<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
 						<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
 						<p:ajax event="toggleSelect" update=":dataForm:actions" />
-						<p:column selectionMode="multiple" style="width:2%" />
+						<p:column selectionMode="multiple" style="width:2%"  />
 						<p:column headerText="Nom">
 							#{ingredient.name}
 						</p:column>

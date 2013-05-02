@@ -10,6 +10,7 @@ import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
+import static org.esupportail.commons.utils.strings.StringUtils.removeUtf8Accents;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
@@ -101,7 +102,9 @@ public class IngredientController {
 			public F<Ingredient, Ordering> f(final Ingredient i1) {
 				return new F<Ingredient, Ordering>() {
 					public Ordering f(final Ingredient i2) {
-						return stringOrd.compare(i1.getName(), i2.getName());
+						final String n1 = removeUtf8Accents(i1.getName());
+						final String n2 = removeUtf8Accents(i2.getName());
+						return stringOrd.compare(n1, n2);
 					}
 				};
 			};
@@ -125,7 +128,7 @@ public class IngredientController {
 	 */
 	public boolean checkIfAddable() {
 		final boolean addable = hasText(newIngredient.getName())
-			&& fromNull(domainService.getIngredient(newIngredient.getName())).isNone();
+			&& fromNull(domainService.getIngredient(newIngredient.getName().trim())).isNone();
 		return addable;
 	}
 	

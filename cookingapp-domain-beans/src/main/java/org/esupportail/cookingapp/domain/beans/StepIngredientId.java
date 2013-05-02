@@ -5,12 +5,15 @@ package org.esupportail.cookingapp.domain.beans;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
+import javax.persistence.Embeddable;
+import javax.persistence.ManyToOne;
 
 /**
  * @author llevague
  * 
  */
+@Embeddable
 public class StepIngredientId implements Serializable {
 
 	/**
@@ -21,22 +24,22 @@ public class StepIngredientId implements Serializable {
 	/**
 	 * The step.
 	 */
-	@Column(name = "step")
-	private Step _step;
+	@ManyToOne(cascade = CascadeType.MERGE, optional = false)
+	private Step step;
 
 	/**
 	 * The ingredient.
 	 */
-	@Column(name = "ingredient")
-	private Ingredient _ingredient;
+	@ManyToOne(cascade = CascadeType.MERGE, optional = false)
+	private Ingredient ingredient;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((_ingredient == null) ? 0 : _ingredient.hashCode());
-		result = prime * result + ((_step == null) ? 0 : _step.hashCode());
+				+ ((ingredient == null) ? 0 : ingredient.hashCode());
+		result = prime * result + ((step == null) ? 0 : step.hashCode());
 		return result;
 	}
 
@@ -52,18 +55,18 @@ public class StepIngredientId implements Serializable {
 			return false;
 		}
 		final StepIngredientId other = (StepIngredientId) obj;
-		if (_ingredient == null) {
-			if (other._ingredient != null) {
+		if (ingredient == null) {
+			if (other.ingredient != null) {
 				return false;
 			}
-		} else if (!_ingredient.equals(other._ingredient)) {
+		} else if (!ingredient.equals(other.ingredient)) {
 			return false;
 		}
-		if (_step == null) {
-			if (other._step != null) {
+		if (step == null) {
+			if (other.step != null) {
 				return false;
 			}
-		} else if (!_step.equals(other._step)) {
+		} else if (!step.equals(other.step)) {
 			return false;
 		}
 		return true;
@@ -73,7 +76,7 @@ public class StepIngredientId implements Serializable {
 	 * @return the step
 	 */
 	public Step getStep() {
-		return _step;
+		return step;
 	}
 
 	/**
@@ -81,14 +84,14 @@ public class StepIngredientId implements Serializable {
 	 *            the step to set
 	 */
 	public void setStep(final Step step) {
-		this._step = step;
+		this.step = step;
 	}
 
 	/**
 	 * @return the ingredient
 	 */
 	public Ingredient getIngredient() {
-		return _ingredient;
+		return ingredient;
 	}
 
 	/**
@@ -96,7 +99,7 @@ public class StepIngredientId implements Serializable {
 	 *            the ingredient to set
 	 */
 	public void setIngredient(final Ingredient ingredient) {
-		this._ingredient = ingredient;
+		this.ingredient = ingredient;
 	}
 
 }

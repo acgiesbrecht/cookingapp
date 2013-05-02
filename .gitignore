@@ -6,3 +6,4 @@ target/
 cookingapp-web-jsf-servlet/cookingapp.log
 cookingapp-web-jsf-servlet/cookingapp.properties
 cookingapp-web-jsf-servlet/cookingapp.script
+*.lck

@@ -21,7 +21,6 @@
 
 /*  Red */
 .btn.red {
-	color: white;
 	text-shadow: none;
 	border-color: #d84a38;
 	background-color: #d84a38;
@@ -60,7 +59,6 @@
 
 /*  Blue */
 .btn.blue {
-	color: white;
 	text-shadow: none;
 	border-color: #4d90fe;
 	background-color: #4d90fe;
@@ -98,7 +96,6 @@
 
 /*  Green */
 .btn.green {
-	color: white;
 	text-shadow: none;
 	border-color: #35aa47;
 	background-color: #35aa47;
@@ -136,7 +133,6 @@
 
 /*  Purple */
 .btn.purple {
-	color: white;
 	text-shadow: none;
 	border-color: #852b99;
 	background-color: #852b99;
@@ -173,7 +169,6 @@
 }
 
 .btn.black {
-	color: white;
 	text-shadow: none;
 	border-color: #555555;
 	background-color: #555555;
@@ -210,6 +205,7 @@
 }
 
 .btn.stripe {
+	border: none;
 	background: transparent;
 }
 
@@ -249,23 +245,35 @@
 
 .stripe {
 	color: #333;
-	border-left: 3px solid;
+	border-left: 3px solid !important;
 }
 
 .stripe.red {
-	border-color: #d84a38;
+	border-color: #d84a38 !important;
 }
 
 .stripe.blue {
-	border-color: #4d90fe;
+	border-color: #4d90fe !important;
 }
 
 .stripe.purple {
-	border-color: #852b99;
+	border-color: #852b99 !important;
 }
 
 .stripe.green {
-	border-color: #35aa47;
+	border-color: #35aa47 !important;
+}
+
+.stripe.black {
+	border-color: #222222 !important;
+}
+
+.stripe.red:hover,
+.stripe.blue:hover,
+.stripe.purple:hover,
+.stripe.green:hover,
+.stripe.black:hover {
+	color: #fff !important;
 }
 
 /*  Mini-button */
@@ -291,6 +299,12 @@
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
+}
+
+.stripe.rnd {
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
 }
 
 .btn-small.rnd {

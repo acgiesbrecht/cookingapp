@@ -13,30 +13,27 @@ import org.springframework.core.io.Resource;
 
 @Configuration
 @ComponentScan("org.esupportail.cookingapp")
-@ImportResource({
-			"classpath:properties/web/converters.xml"})
-@Import({ I18nConfig.class, ApplicationConfig.class, CacheConfig.class,
-		ExceptionHandlingConfig.class, SmtpConfig.class, DomainConfig.class,
+@ImportResource({ "classpath:properties/web/converters.xml" })
+@Import({ExceptionHandlingConfig.class, DomainConfig.class,
 		ControllerConfig.class })
 public class ContextConfig {
-	
-	@Bean(name="app_context")
+
+	@Bean(name = "app_context")
 	public ApplicationContextHolder applicationContextHolder() {
 		return new ApplicationContextHolder();
 	}
-	
+
 	@Bean
-	public PropertySourcesPlaceholderConfigurer propertyConfigurer() {
+	public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
 		PropertySourcesPlaceholderConfigurer pspc = new PropertySourcesPlaceholderConfigurer();
-		final Resource[] resources = new ClassPathResource[] { 
+		final Resource[] resources = new ClassPathResource[] {
 				new ClassPathResource("/properties/defaults.properties"),
-				new ClassPathResource("/properties/config.properties")
-		};
+				new ClassPathResource("/properties/config.properties") };
 		pspc.setLocations(resources);
 		pspc.setIgnoreUnresolvablePlaceholders(true);
 		return pspc;
 	}
-	
+
 	@Bean
 	public JsfMessagesUtils jsfMessagesUtils() {
 		return JsfMessagesUtils.getInstance();
