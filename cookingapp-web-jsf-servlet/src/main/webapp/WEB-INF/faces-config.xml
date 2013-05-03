@@ -16,7 +16,7 @@
 			<supported-locale>fr</supported-locale>
 			<supported-locale>en</supported-locale>
 		</locale-config>
-		<message-bundle>properties.i18n.bundles.JsfMessages</message-bundle>
+		<message-bundle>META-INF.i18n.bundles.JsfMessages</message-bundle>
 	</application>
 	<lifecycle>
 		<phase-listener>org.esupportail.cookingapp.web.rewrite.MultiPageMessagesSupport</phase-listener>

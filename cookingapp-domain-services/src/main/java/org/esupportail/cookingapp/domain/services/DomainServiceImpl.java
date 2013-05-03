@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.esupportail.cookingapp.domain;
+package org.esupportail.cookingapp.domain.services;
 
 
 import static fj.Unit.unit;

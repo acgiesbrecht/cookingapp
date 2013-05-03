@@ -22,8 +22,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
-import org.esupportail.cookingapp.domain.DomainService;
 import org.esupportail.cookingapp.domain.beans.Recipe;
+import org.esupportail.cookingapp.domain.services.DomainService;
 import org.esupportail.cookingapp.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContext;
 import org.primefaces.push.PushContextFactory;

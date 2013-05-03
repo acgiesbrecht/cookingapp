@@ -14,6 +14,10 @@ import org.esupportail.commons.services.exceptionHandling.CachingEmailExceptionS
 import org.esupportail.commons.services.exceptionHandling.ExceptionServiceFactory;
 import org.esupportail.commons.services.i18n.I18nService;
 import org.esupportail.commons.services.smtp.SmtpService;
+import org.esupportail.cookingapp.domain.config.ApplicationConfig;
+import org.esupportail.cookingapp.domain.config.CacheConfig;
+import org.esupportail.cookingapp.domain.config.I18nConfig;
+import org.esupportail.cookingapp.domain.config.SmtpConfig;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

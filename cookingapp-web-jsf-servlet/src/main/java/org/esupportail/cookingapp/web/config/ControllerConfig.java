@@ -1,5 +1,6 @@
 package org.esupportail.cookingapp.web.config;
 
+import org.esupportail.cookingapp.domain.config.DomainConfig;
 import org.esupportail.cookingapp.web.controllers.IngredientController;
 import org.esupportail.cookingapp.web.controllers.RecipeController;
 import org.springframework.context.annotation.Bean;

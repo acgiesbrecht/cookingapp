@@ -1,4 +1,4 @@
-package org.esupportail.cookingapp.web.config;
+package org.esupportail.cookingapp.domain.config;
 
 import org.esupportail.commons.services.application.ApplicationService;
 import org.esupportail.commons.services.application.SimpleApplicationServiceImpl;

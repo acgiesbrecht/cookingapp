@@ -1,4 +1,4 @@
-package org.esupportail.cookingapp.web.config;
+package org.esupportail.cookingapp.domain.config;
 
 import org.esupportail.commons.services.i18n.I18nService;
 import org.esupportail.commons.services.i18n.ResourceBundleMessageSourceI18nServiceImpl;
@@ -19,8 +19,11 @@ public class I18nConfig {
 		ReloadableResourceBundleMessageSource messages = 
 				new ReloadableResourceBundleMessageSource();
 		messages.setBasenames("classpath:properties/i18n/bundles/Custom",
-							  "classpath:properties/i18n/bundles/Messages",
-							  "classpath:properties/i18n/bundles/Commons");
+								"classpath:properties/i18n/bundles/Messages",
+								"classpath:properties/i18n/bundles/Commons",
+								"classpath:META-INF/i18n/bundles/Custom",
+								"classpath:META-INF/i18n/bundles/Messages",
+								"classpath:META-INF/i18n/bundles/Commons");
 		messages.setCacheSeconds(CACHE_SECONDS);
 		return messages;
 	}

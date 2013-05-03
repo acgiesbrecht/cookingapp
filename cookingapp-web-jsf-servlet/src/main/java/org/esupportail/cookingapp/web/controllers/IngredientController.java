@@ -4,18 +4,21 @@
 package org.esupportail.cookingapp.web.controllers;
 
 import static fj.Ord.ord;
-import static fj.Ord.stringOrd;
+import static fj.Ordering.EQ;
+import static fj.Ordering.GT;
+import static fj.Ordering.LT;
 import static fj.data.Array.array;
 import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.iif;
-import static org.esupportail.commons.utils.strings.StringUtils.removeUtf8Accents;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
 import static org.springframework.util.StringUtils.hasText;
 
+import java.text.CollationKey;
+import java.text.Collator;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -23,8 +26,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
-import org.esupportail.cookingapp.domain.DomainService;
 import org.esupportail.cookingapp.domain.beans.Ingredient;
+import org.esupportail.cookingapp.domain.services.DomainService;
 import org.esupportail.cookingapp.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContextFactory;
 
@@ -96,15 +99,19 @@ public class IngredientController {
 				return iif(hasText(term), term);
 			}
 		};
-		
+				
 		final F<Ingredient, F<Ingredient, Ordering>> ordering = 
 				new F<Ingredient, F<Ingredient, Ordering>>() {
+			
+			final Collator collator = Collator.getInstance();
+			
 			public F<Ingredient, Ordering> f(final Ingredient i1) {
 				return new F<Ingredient, Ordering>() {
 					public Ordering f(final Ingredient i2) {
-						final String n1 = removeUtf8Accents(i1.getName());
-						final String n2 = removeUtf8Accents(i2.getName());
-						return stringOrd.compare(n1, n2);
+						final CollationKey k1 = collator.getCollationKey(i1.getName());
+						final CollationKey k2 = collator.getCollationKey(i2.getName());
+						final int x = k1.compareTo(k2);
+						return x < 0 ? LT : x == 0 ? EQ : GT;
 					}
 				};
 			};
@@ -115,6 +122,7 @@ public class IngredientController {
 			@SuppressWarnings("synthetic-access")
 			public Boolean f(final Ingredient i) {
 				final Option<String> letter = isNotEmpty.f(filter);
+				
 				return letter.isSome() ? i.getName()
 						.startsWith(letter.some()) : Boolean.TRUE;
 			}

@@ -164,6 +164,10 @@
 			        </artifactId>
 			        <groupId>org.springframework</groupId>
 			    </exclusion>
+			    <exclusion>
+			    	<artifactId>icu4j</artifactId>
+			    	<groupId>com.ibm.icu</groupId>
+			    </exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -207,13 +211,6 @@
 <!-- 		<rewrite.version>1.1.0.Final</rewrite.version> -->
 		<rewrite.version>2.0.0.Beta1</rewrite.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
-		<cas.url>https://sso-cas.univ-rennes1.fr</cas.url>
-		<tomcat.host>localhost</tomcat.host>
-		<tomcat.port.string>:8080</tomcat.port.string>
-		<log.level>INFO</log.level>
-		<log.output>stdout</log.output>
-		<log.file>/tmp/${project.parent.artifactId}.log</log.file>
-		<cache.path>/tmp/${project.parent.artifactId}/cache</cache.path>
 	</properties>
 
 </project>

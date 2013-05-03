@@ -1,4 +1,4 @@
-package org.esupportail.cookingapp.web.config;
+package org.esupportail.cookingapp.domain.config;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

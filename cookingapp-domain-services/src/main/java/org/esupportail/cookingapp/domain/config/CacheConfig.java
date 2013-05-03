@@ -1,4 +1,4 @@
-package org.esupportail.cookingapp.web.config;
+package org.esupportail.cookingapp.domain.config;
 
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ public class CacheConfig {
 	@Bean
 	public EhCacheManagerFactoryBean cacheManager() {
 		EhCacheManagerFactoryBean cm = new EhCacheManagerFactoryBean();
-		cm.setConfigLocation(new ClassPathResource("/properties/cache/ehcache.xml"));
+		cm.setConfigLocation(new ClassPathResource("META-INF/cache/ehcache.xml"));
 		return cm;
 	}
 }

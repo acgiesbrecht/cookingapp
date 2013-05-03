@@ -1,4 +1,4 @@
-package org.esupportail.cookingapp.web.config;
+package org.esupportail.cookingapp.domain.config;
 
 import static org.elasticsearch.common.settings.ImmutableSettings.settingsBuilder;
 import static org.elasticsearch.node.NodeBuilder.nodeBuilder;
@@ -7,8 +7,8 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.node.Node;
 import org.esupportail.cookingapp.dao.config.DaoConfig;
-import org.esupportail.cookingapp.domain.DomainService;
-import org.esupportail.cookingapp.domain.DomainServiceImpl;
+import org.esupportail.cookingapp.domain.services.DomainService;
+import org.esupportail.cookingapp.domain.services.DomainServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
