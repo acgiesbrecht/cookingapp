@@ -3,6 +3,10 @@
 	border-radius: 0;
 }
 
+.navbar-inverse .btn {
+	color: #ffffff;
+}
+
 .btn.red.disabled,
 .btn.red[disabled],
 .btn.blue.disabled,

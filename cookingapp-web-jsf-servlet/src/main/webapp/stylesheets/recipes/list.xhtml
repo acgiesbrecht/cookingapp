@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/stylesheets/template.xhtml">
+	<ui:define name="content">
+		<h:form id="dataForm">
+			<div class="row-fluid">
+				<div class="panel">
+					<div class="panel-heading">
+						<span class="page-heading-title">Recettes</span>
+						<p:outputPanel id="actions" layout="block" styleClass="hidden-phone pull-right">
+							<a href="/recipes/add" title="Ajouter" rel="tooltip" class="btn btn-small rnd green">
+								<span class="icon-plus" />
+							</a>
+							<p:commandLink title="Supprimer" rel="tooltip"
+								update="recipesList,actions" ajax="false"
+								action="#{recipeController.deleteIngredients}"
+								styleClass="btn btn-small rnd red"
+								rendered="#{not empty recipeController.recipes}">
+								<span class="icon-trash" />
+							</p:commandLink>
+						</p:outputPanel>
+						<div class="pull-right">
+							<p:inputText id="globalFilter" type="search"
+								value="#{recipeController.filter}" styleClass="input-small">
+								<p:ajax event="keyup" update="recipesList" />
+							</p:inputText>
+							<p:watermark for="globalFilter" value="Filtrer" />
+						</div>
+					</div>
+					<p:dataTable id="recipesList" widgetVar="recipesList"
+						value="#{recipeController.recipes}"
+						selection="#{recipeController.selectedRecipes}"
+						var="recipe" paginator="true" paginatorAlwaysVisible="false"
+						rowKey="#{recipe.name}">
+						<p:ajax event="page" process="@this,:dataForm:actions"
+							partialUpdate="true" />
+						<p:ajax event="rowSelect" update=":dataForm:actions" />
+						<p:ajax event="rowUnselect" update=":dataForm:actions" />
+						<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
+						<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
+						<p:ajax event="toggleSelect" update=":dataForm:actions" />
+						<p:column selectionMode="multiple" style="width:2%"  />
+						<p:column headerText="Nom">
+							#{recipe.name}
+						</p:column>
+						<p:column headerText="Description">
+							#{recipe.description}
+						</p:column>
+					</p:dataTable>
+				</div>
+			</div>
+		</h:form>
+
+		<p:socket channel="/recipes" >
+			<p:ajax event="message" update=":dataForm:recipesList" />
+		</p:socket>
+        
+	</ui:define>
+</ui:composition>

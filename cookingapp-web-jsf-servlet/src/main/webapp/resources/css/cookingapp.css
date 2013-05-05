@@ -10,11 +10,11 @@ header > .navbar .navbar-brand {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
 }
 
-fieldset.row,
-fieldset.row-fluid  {
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+/* fieldset.row, */
+/* fieldset.row-fluid  { */
+/*   margin: 0 2px; */
+/*   padding: 0.35em 0.625em 0.75em; */
+/* } */
 
 .navbar [class^="icon-"],
 .navbar [class*=" icon-"] {
@@ -63,8 +63,8 @@ ol.list-inline > li {
 	margin: 5px 0;
 }
 
-.h3 {
-	line-height: 40px;
+.panel .panel {
+	margin-top: 20px;
 }
 
 .no-margin {
@@ -82,28 +82,56 @@ ol.list-inline > li {
 	padding-top: 355px;
 }
 
+/* Remove rounded borders of datatables headers*/
 .ui-state-default[role=columnheader],
 .ui-widget-content .ui-state-default[role=columnheader],
 .ui-widget-header .ui-state-default[role=columnheader] {
 	border-radius: 0;
 }
 
+/* Customize highlight of selected items */
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
     background: rgba(77,144,254,.9);
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.page-heading-title {
-	
+/* Reset font-size for PF textarea */
+.ui-inputtextarea {
+	font-size: 14px;
 }
 
+/* Reset right padding for PF spinner */
+input.ui-spinner-input {
+	padding-right: 20px;
+}
+
+/* Reset border-sizing for PF icons */
+[class*=" ui-icon"], [class*=" ui-helper-"], [class^="ui-helper-"], .ui-selectonemenu .ui-selectonemenu-trigger {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+
+
+/* Hide selectable column from datatable in phone view */
 .ui-selection-column {
 	display: none;
 }
 
+/* Restore selectable column from datatable for 'not phone' devices  */
 @media (min-width: 768px) {
 	.ui-selection-column {
 		display: table-cell;
 	}
+}
+
+
+.selectboxit-container .selectboxit-options {
+	/* Set's the max-height property to only show a subset of the drop down items.
+       If you do not set a max-height property, SelectBoxIt will dynamically
+       position the dropdown (when opened) to make sure the drop down items are not
+       displayed outside of the current window viewport.
+    */
+	max-height: 100px;
 }

@@ -11,7 +11,7 @@ import static fj.data.Array.array;
 import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
-import static fj.data.Option.iif;
+import static fj.data.Option.fromString;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
@@ -33,7 +33,6 @@ import org.primefaces.push.PushContextFactory;
 
 import fj.F;
 import fj.Ordering;
-import fj.data.Option;
 
 /**
  * @author llevague
@@ -83,6 +82,9 @@ public class IngredientController {
 		filter = new String();
 	}
 	
+	/**
+	 * 
+	 */
 	public synchronized void pushIngredients() {
 		PushContextFactory.getDefault().getPushContext()
 				.push("/ingredients", ingredients);
@@ -93,12 +95,6 @@ public class IngredientController {
 	 * @return
 	 */
 	public List<Ingredient> getIngredients() {
-		final F<String, Option<String>> isNotEmpty = new F<String, Option<String>>() {
-			@Override
-			public Option<String> f(final String term) {
-				return iif(hasText(term), term);
-			}
-		};
 				
 		final F<Ingredient, F<Ingredient, Ordering>> ordering = 
 				new F<Ingredient, F<Ingredient, Ordering>>() {
@@ -121,10 +117,12 @@ public class IngredientController {
 			@Override
 			@SuppressWarnings("synthetic-access")
 			public Boolean f(final Ingredient i) {
-				final Option<String> letter = isNotEmpty.f(filter);
-				
-				return letter.isSome() ? i.getName()
-						.startsWith(letter.some()) : Boolean.TRUE;
+				return fromString(filter).option(Boolean.TRUE, new F<String, Boolean>() {
+					@Override
+					public Boolean f(final String a) {
+						return fromNull(i.getName()).orSome("").startsWith(a);
+					}
+				});
 			}
 		};
 		return wrap(iterableList(ingredients)
@@ -142,6 +140,7 @@ public class IngredientController {
 	
 	/**
 	 * Add an {@link Ingredient}.
+	 * @return
 	 */
 	public String addIngredient() {
 		if (checkIfAddable()) {
@@ -157,6 +156,7 @@ public class IngredientController {
 	
 	/**
 	 * Delete selected {@link Ingredient}.
+	 * @return
 	 */
 	public String deleteIngredients() {
 		if (array(selectedIngredients).isNotEmpty()) {

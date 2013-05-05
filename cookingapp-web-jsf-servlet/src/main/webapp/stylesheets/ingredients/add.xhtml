@@ -6,15 +6,15 @@
     template="/stylesheets/template.xhtml">
     <ui:define name="content">
         <h:form id="addForm" styleClass="form-horizontal">
-			<div class="row-fluid">
+			<div class="row">
 				<div class="panel">
 					<div class="panel-heading">
-						<span class="page-heading-title">Ajouter un ingrédient</span>
+						<span class="h4">Ajouter un ingrédient</span>
 		                <p:outputPanel id="addFormButtons" layout="block" styleClass="actions pull-right">
 	                        <p:commandLink rel="tooltip" title="Annuler" immediate="true"
 	                            action="#{ingredientController.goList}"
 	                            styleClass="btn btn-small rnd">
-	                            <span class="icon-chevron-left" />
+	                            <span class="icon-remove" />
 	                        </p:commandLink>
 	                        <p:commandLink update="@form" rel="tooltip" title="Enregistrer"
 	                            action="#{ingredientController.addIngredient}" 

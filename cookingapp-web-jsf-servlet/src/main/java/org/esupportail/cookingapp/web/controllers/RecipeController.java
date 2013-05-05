@@ -10,8 +10,8 @@ import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.fromString;
-import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
-import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_ADD;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.RECIPES_LIST;
+import static org.esupportail.cookingapp.web.rewrite.NavigationRules.RECIPE_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
 import static org.springframework.util.StringUtils.hasText;
 
@@ -22,10 +22,11 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
+import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
+import org.esupportail.cookingapp.domain.beans.Step;
 import org.esupportail.cookingapp.domain.services.DomainService;
 import org.esupportail.cookingapp.utils.JsfMessagesUtils;
-import org.primefaces.push.PushContext;
 import org.primefaces.push.PushContextFactory;
 
 import fj.F;
@@ -65,6 +66,18 @@ public class RecipeController {
 	 * A new {@link Recipe} to add.
 	 */
 	private Recipe newRecipe;
+
+	/**
+	 * A new {@link Step} to add to the {@link Recipe}.
+	 */
+	private Step newStep;
+	
+	
+
+	/**
+	 * The {@link Ingredient} list.
+	 */
+	private List<Ingredient> ingredients;
 	
 	/**
 	 * A filtered value.
@@ -73,15 +86,22 @@ public class RecipeController {
 	
 	@PostConstruct
 	public void init() {
+		filter = new String();
+		// recipe
 		recipes = domainService.getRecipes();
 		selectedRecipes = new Recipe[0];
 		newRecipe = new Recipe();
-		filter = new String();
+		
+		// step
+		
+		
+		// ingredients
+		ingredients = domainService.getIngredients();
 	}
 	
 	public synchronized void pushRecipes() {
-		PushContext pc = PushContextFactory.getDefault().getPushContext();
-		pc.push("/recipes", recipes);
+		PushContextFactory.getDefault().getPushContext()
+				.push("/recipes", recipes);
 	}
 	
 	/**
@@ -108,7 +128,7 @@ public class RecipeController {
 				return fromString(filter).option(Boolean.TRUE, new F<String, Boolean>() {
 					@Override
 					public Boolean f(final String a) {
-						return r.getName().startsWith(a);
+						return fromNull(r.getName()).orSome("").startsWith(a);
 					}
 				});
 			}
@@ -134,10 +154,10 @@ public class RecipeController {
 			domainService.addRecipe(newRecipe);
 			recipes.add(newRecipe);
 			pushRecipes();
-			jsfMessagesUtils.addInfoMessage(null, "INFO.INGREDIENT.ADD", null, newRecipe.getName());
+			jsfMessagesUtils.addInfoMessage(null, "INFO.RECIPE.ADD", null, newRecipe.getName());
 			return goList();
 		}
-		jsfMessagesUtils.addErrorMessage(null, "ERROR.INGREDIENT.ADD", null);
+		jsfMessagesUtils.addErrorMessage(null, "ERROR.RECIPE.ADD", null);
 		return null;
 	}
 
@@ -148,8 +168,8 @@ public class RecipeController {
 	public String deleteRecipes() {
 		if (array(selectedRecipes).isNotEmpty()) {
 //			domainService.deleteRecipes(selectedRecipes);
-			recipes.removeAll(array(selectedRecipes).toCollection());
-			jsfMessagesUtils.addInfoMessage(null, "INFO.INGREDIENT.DELETE", null);
+//			recipes.removeAll(array(selectedRecipes).toCollection());
+			jsfMessagesUtils.addInfoMessage(null, "INFO.RECIPE.DELETE", null);
 		}
 		pushRecipes();
 		return null;
@@ -160,7 +180,7 @@ public class RecipeController {
 	 * @return
 	 */
 	public String goAdd() {
-		return INGREDIENT_ADD + REDIRECT;
+		return RECIPE_ADD + REDIRECT;
 	}
 
 	/**
@@ -168,7 +188,7 @@ public class RecipeController {
 	 * @return
 	 */
 	public String goList() {
-		return INGREDIENTS_LIST + REDIRECT;
+		return RECIPES_LIST + REDIRECT;
 	}
 	
 	/**
@@ -183,6 +203,20 @@ public class RecipeController {
 	 */
 	public void setNewRecipe(final Recipe newRecipe) {
 		this.newRecipe = newRecipe;
+	}
+
+	/**
+	 * @return the newStep
+	 */
+	public Step getNewStep() {
+		return newStep;
+	}
+
+	/**
+	 * @param newStep the newStep to set
+	 */
+	public void setNewStep(final Step newStep) {
+		this.newStep = newStep;
 	}
 
 	/**
@@ -204,6 +238,13 @@ public class RecipeController {
 	 */
 	public void setSelectedRecipes(final Recipe[] selectedRecipes) {
 		this.selectedRecipes = selectedRecipes;
+	}
+
+	/**
+	 * @return the ingredients
+	 */
+	public List<Ingredient> getIngredients() {
+		return ingredients;
 	}
 
 	/**

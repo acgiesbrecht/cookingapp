@@ -43,7 +43,7 @@ public class Step implements Serializable {
 	/**
 	 * Instructions to follow.
 	 */
-	private String instructions;
+	private String instructions = "";
 
 	/**
 	 * Mandatory ingredients with their quantity.
@@ -55,7 +55,6 @@ public class Step implements Serializable {
 	 * Constructor.
 	 */
 	public Step() {
-		instructions = "";
 	}
 
 	@Override

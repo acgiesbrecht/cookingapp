@@ -33,7 +33,7 @@ public class StepIngredient implements Serializable {
 	 */
 	@Basic(optional = false)
 	@Column(name = "quantity")
-	private int quantity = 0;
+	private int quantity = 1;
 
 	/**
 	 * The measuring unit.

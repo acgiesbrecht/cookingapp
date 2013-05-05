@@ -200,16 +200,10 @@
            <artifactId>rewrite-impl-servlet</artifactId>
            <version>${rewrite.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.ocpsoft.rewrite</groupId>
-            <artifactId>rewrite-integration-faces</artifactId>
-            <version>${rewrite.version}</version>
-        </dependency>
 	</dependencies>
 	<properties>
         <atomikos.version>3.8.0</atomikos.version>
-<!-- 		<rewrite.version>1.1.0.Final</rewrite.version> -->
-		<rewrite.version>2.0.0.Beta1</rewrite.version>
+		<rewrite.version>2.0.0.Beta2</rewrite.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
 	</properties>
 
