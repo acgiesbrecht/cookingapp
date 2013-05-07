@@ -11,16 +11,16 @@
 					<div class="panel-heading">
 						<span class="h4">Ajouter un ingrédient</span>
 		                <p:outputPanel id="addFormButtons" layout="block" styleClass="actions pull-right">
+                            <p:commandLink update="@form" rel="tooltip" title="Enregistrer"
+                                action="#{ingredientController.addIngredient}" 
+                                styleClass="btn btn-small rnd green">
+                                <span class="icon-save" />
+                            </p:commandLink>
 	                        <p:commandLink rel="tooltip" title="Annuler" immediate="true"
 	                            action="#{ingredientController.goList}"
 	                            styleClass="btn btn-small rnd">
 	                            <span class="icon-remove" />
 	                        </p:commandLink>
-	                        <p:commandLink update="@form" rel="tooltip" title="Enregistrer"
-	                            action="#{ingredientController.addIngredient}" 
-	                            styleClass="btn btn-small rnd green">
-	                            <span class="icon-save" />
-                            </p:commandLink>
 		                </p:outputPanel>
 						
 					</div>

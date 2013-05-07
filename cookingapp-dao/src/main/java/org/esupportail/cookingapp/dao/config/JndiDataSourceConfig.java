@@ -1,6 +1,5 @@
 package org.esupportail.cookingapp.dao.config;
 
-import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +16,7 @@ public class JndiDataSourceConfig {
 	private String jndiDatasourceName;
 
 	@Bean(name = "JNDIDataSource")
-	public DataSource jndiDataSource() throws NamingException {
+	public DataSource jndiDataSource() {
 		JndiDataSourceLookup lookup = new JndiDataSourceLookup();
 		return lookup.getDataSource(jndiDatasourceName);
 	}

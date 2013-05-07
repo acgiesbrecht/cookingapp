@@ -11,7 +11,7 @@ header > .navbar .navbar-brand {
 	background-position: center;
 	min-height: 40px;
 	min-width: 130px;
-	text-indent: -999px;
+	text-indent: -99999px;
 }
 
 .navbar .nav li {
@@ -130,11 +130,7 @@ input.ui-spinner-input {
 }
 
 
-.selectboxit-container .selectboxit-options {
-	/* Set's the max-height property to only show a subset of the drop down items.
-       If you do not set a max-height property, SelectBoxIt will dynamically
-       position the dropdown (when opened) to make sure the drop down items are not
-       displayed outside of the current window viewport.
-    */
-	max-height: 100px;
+.wysihtml5-sandbox {
+	min-height: 100px;
+	overflow: auto;
 }

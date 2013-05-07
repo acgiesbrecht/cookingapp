@@ -3,7 +3,6 @@ package org.esupportail.cookingapp.dao.config;
 import java.util.Properties;
 
 import javax.annotation.Resource;
-import javax.inject.Inject;
 import javax.sql.DataSource;
 
 import org.esupportail.cookingapp.dao.DaoService;
@@ -41,7 +40,6 @@ public class DaoConfig {
 	@Value("${hibernate.use_sql_comments}")
 	private boolean useSqlComments;
 
-	@Inject
 	@Resource(name="${datasource.bean}")
 	private DataSource dataSource;
 

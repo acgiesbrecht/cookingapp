@@ -3,6 +3,16 @@
 	border-radius: 0;
 }
 
+.btn-group .btn {
+    margin-left: inherit;
+}
+
+.wysihtml5-toolbar .btn-group > .btn {
+    border-radius: 0;
+}
+
+
+
 .navbar-inverse .btn {
 	color: #ffffff;
 }

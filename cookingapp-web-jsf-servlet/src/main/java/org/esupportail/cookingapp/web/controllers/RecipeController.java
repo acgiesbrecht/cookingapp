@@ -18,8 +18,6 @@ import static org.springframework.util.StringUtils.hasText;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
@@ -36,8 +34,6 @@ import fj.Ordering;
  * @author llevague
  *
  */
-@ViewScoped
-@ManagedBean
 public class RecipeController {
 
 	/**

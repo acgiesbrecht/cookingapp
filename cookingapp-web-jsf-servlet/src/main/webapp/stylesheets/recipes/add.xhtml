@@ -65,6 +65,7 @@
 							<h:panelGroup />
 							
 							<h:selectOneMenu id="ingredient">
+                                <f:selectItem itemValue="" itemLabel="" />
 								<f:selectItems value="#{recipeController.ingredients}" var="ingredient" itemLabel="#{ingredient.name}" itemValue="#{ingredient.id}" />
 							</h:selectOneMenu>
 							<p:spinner min="1" size="3"  />
@@ -83,7 +84,7 @@
 						<hr />
 						
 						<h5>Instructions</h5>
-						<h:inputTextarea id="stepInstructions"
+						<h:inputTextarea id="stepInstructions" styleClass="editor"
 							value="#{recipeController.newStep.instructions}" />
 					</div>
 				</div>
