@@ -13,7 +13,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 @Configuration
-@ComponentScan("org.esupportail.cookingapp")
+//@ComponentScan("org.esupportail.cookingapp")
 @ImportResource({ "classpath:properties/web/converters.xml" })
 @Import({ExceptionHandlingConfig.class, DomainConfig.class,
 		ControllerConfig.class })
