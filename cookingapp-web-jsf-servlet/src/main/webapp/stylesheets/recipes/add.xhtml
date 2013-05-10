@@ -64,7 +64,10 @@
 								styleClass="control-label" />
 							<h:panelGroup />
 							
-							<h:selectOneMenu id="ingredient">
+							<h:panelGroup rendered="#{empty recipeController.ingredients}">
+								<a href="/ingredients/add" class="btn btn-link">Ajouter un ingrédient</a>
+							</h:panelGroup>
+							<h:selectOneMenu id="ingredient" rendered="#{not empty recipeController.ingredients}">
                                 <f:selectItem itemValue="" itemLabel="" />
 								<f:selectItems value="#{recipeController.ingredients}" var="ingredient" itemLabel="#{ingredient.name}" itemValue="#{ingredient.id}" />
 							</h:selectOneMenu>
@@ -84,8 +87,9 @@
 						<hr />
 						
 						<h5>Instructions</h5>
-						<h:inputTextarea id="stepInstructions" styleClass="editor"
+						<h:inputTextarea id="stepInstructions" 
 							value="#{recipeController.newStep.instructions}" />
+<!-- 						styleClass="editor" -->
 					</div>
 				</div>
 			</div>
