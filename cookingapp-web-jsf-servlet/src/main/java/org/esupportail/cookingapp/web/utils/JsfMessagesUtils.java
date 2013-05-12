@@ -1,7 +1,7 @@
 /**
  * ESUP-Portail Commons - Copyright (c) 2006-2009 ESUP-Portail consortium.
  */
-package org.esupportail.cookingapp.utils;
+package org.esupportail.cookingapp.web.utils;
 
 import java.util.Locale;
 

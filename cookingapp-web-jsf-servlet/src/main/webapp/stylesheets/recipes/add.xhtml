@@ -47,7 +47,7 @@
 							<p:outputPanel id="step2FormButtons" layout="block"
 								styleClass="actions pull-right ">
 									<p:commandLink rel="tooltip" title="Ajouter"
-			                            styleClass="btn btn-small rnd purple">
+			                            styleClass="btn btn-small rnd blue">
 			                            <span class="icon-ok" />
 									</p:commandLink>
 							</p:outputPanel>
@@ -65,21 +65,21 @@
 							<h:panelGroup />
 							
 							<h:panelGroup rendered="#{empty recipeController.ingredients}">
-								<a href="/ingredients/add" class="btn btn-link">Ajouter un ingrédient</a>
+								<a href="/ingredients/add" class="btn stripe">Ajouter un ingrédient</a>
 							</h:panelGroup>
-							<h:selectOneMenu id="ingredient" rendered="#{not empty recipeController.ingredients}">
+							<h:selectOneMenu id="ingredient" styleClass="selectpicker show-tick" title="Sélectionnez une valeur" rendered="#{not empty recipeController.ingredients}">
                                 <f:selectItem itemValue="" itemLabel="" />
 								<f:selectItems value="#{recipeController.ingredients}" var="ingredient" itemLabel="#{ingredient.name}" itemValue="#{ingredient.id}" />
 							</h:selectOneMenu>
 							<p:spinner min="1" size="3"  />
-							<h:selectOneMenu id="unity">
+							<h:selectOneMenu id="unity" styleClass="selectpicker show-tick" >
 								<f:selectItem itemValue="g" itemLabel="g" />
 								<f:selectItem itemValue="cl" itemLabel="cl" />
 							</h:selectOneMenu>
 							
 							<h:panelGroup styleClass="pull-right">
 							<p:commandLink rel="tooltip" title="Valider"
-	                            styleClass="btn btn-small rnd">
+	                            styleClass="btn rnd">
 	                            <span class="icon-ok" />
 							</p:commandLink>
 							</h:panelGroup>
@@ -87,7 +87,7 @@
 						<hr />
 						
 						<h5>Instructions</h5>
-						<h:inputTextarea id="stepInstructions" 
+						<h:inputTextarea id="stepInstructions" styleClass="editor"
 							value="#{recipeController.newStep.instructions}" />
 <!-- 						styleClass="editor" -->
 					</div>

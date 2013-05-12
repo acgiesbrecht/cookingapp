@@ -3,6 +3,17 @@ html > body {
 	font: 400 12px 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial';
 }
 
+/** Required for top fixed navbar **/
+body {
+  padding-top: 64px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}
+/** End requirement **/
+
 header > .navbar .navbar-brand {
 	background-image: url("/resources/images/logo.svg") !important;
 	background-repeat: no-repeat;
@@ -128,8 +139,10 @@ input.ui-spinner-input {
 	}
 }
 
-
 .wysihtml5-sandbox {
 	min-height: 100px;
 	overflow: auto;
 }
+
+.btn .caret {
+	border-top-color: #333;

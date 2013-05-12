@@ -1,6 +1,12 @@
 .btn {
-	margin-left: 5px;
 	border-radius: 0;
+	color: inherit;
+	margin-left: 5px;
+}
+.btn:active,
+.btn:focus,
+.btn:hover {
+	color: inherit;
 }
 
 .btn-group .btn {
@@ -35,6 +41,7 @@
 
 /*  Red */
 .btn.red {
+	color: #ffffff;
 	text-shadow: none;
 	border-color: #d84a38;
 	background-color: #d84a38;
@@ -56,6 +63,7 @@
 .btn.red.active,
 .btn.red[disabled],
 .btn.red.disabled {
+	color: #ffffff;
 	border-color: #d84a38;
 	background-color: #c53727;
 	background-image: -moz-linear-gradient(top, #c53727, #c53727);
@@ -73,6 +81,7 @@
 
 /*  Blue */
 .btn.blue {
+	color: #ffffff;
 	text-shadow: none;
 	border-color: #4d90fe;
 	background-color: #4d90fe;
@@ -94,6 +103,7 @@
 .btn.blue.active,
 .btn.blue[disabled],
 .btn.blue.disabled	{
+	color: #ffffff;
 	border-color: #0072bb;
 	background-color: #0072bb;
 	background-image: -moz-linear-gradient(top, #0072bb, #0072bb);
@@ -110,6 +120,7 @@
 
 /*  Green */
 .btn.green {
+	color: #ffffff;
 	text-shadow: none;
 	border-color: #35aa47;
 	background-color: #35aa47;
@@ -131,6 +142,7 @@
 .btn.green.active,
 .btn.green.disabled,
 .btn.green[disabled] {
+	color: #ffffff;
 	border-color: #1d943b;
 	background-color: #1d943b;
 	background-image: -moz-linear-gradient(top, #1d943b, #1d943b);
@@ -147,6 +159,7 @@
 
 /*  Purple */
 .btn.purple {
+	color: #ffffff;
 	text-shadow: none;
 	border-color: #852b99;
 	background-color: #852b99;
@@ -168,6 +181,7 @@
 .btn.purple.active,
 .btn.purple.disabled,
 .btn.purple[disabled] {
+	color: #ffffff;
 	border-color: #6d1b81;
 	background-color: #6d1b81;
 	background-image: -moz-linear-gradient(top, #6d1b81, #6d1b81);
@@ -183,6 +197,7 @@
 }
 
 .btn.black {
+	color: #ffffff;
 	text-shadow: none;
 	border-color: #555555;
 	background-color: #555555;
@@ -204,6 +219,7 @@
 .btn.black.active,
 .btn.black.disabled,
 .btn.black[disabled] {
+	color: #ffffff;
 	border-color: #222222;
 	background-color: #222222;
 	background-image: -moz-linear-gradient(top, #222222, #222222);
@@ -219,6 +235,7 @@
 }
 
 .btn.stripe {
+	color: inherit;
 	border: none;
 	background: transparent;
 }

@@ -10,6 +10,7 @@ import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.fromString;
+import static org.esupportail.cookingapp.utils.SortUtils.ingredientOrd;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.RECIPES_LIST;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.RECIPE_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
@@ -24,7 +25,7 @@ import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
 import org.esupportail.cookingapp.domain.beans.Step;
 import org.esupportail.cookingapp.domain.services.DomainService;
-import org.esupportail.cookingapp.utils.JsfMessagesUtils;
+import org.esupportail.cookingapp.web.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContextFactory;
 
 import fj.F;
@@ -92,7 +93,9 @@ public class RecipeController {
 		
 		
 		// ingredients
-		ingredients = domainService.getIngredients();
+		ingredients = wrap(
+				iterableList(domainService.getIngredients())
+						.sort(ingredientOrd)).toStandardList();
 	}
 	
 	public synchronized void pushRecipes() {

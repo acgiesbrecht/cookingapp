@@ -3,22 +3,17 @@
  */
 package org.esupportail.cookingapp.web.controllers;
 
-import static fj.Ord.ord;
-import static fj.Ordering.EQ;
-import static fj.Ordering.GT;
-import static fj.Ordering.LT;
 import static fj.data.Array.array;
 import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.fromString;
+import static org.esupportail.cookingapp.utils.SortUtils.ingredientOrd;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENTS_LIST;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.INGREDIENT_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
 import static org.springframework.util.StringUtils.hasText;
 
-import java.text.CollationKey;
-import java.text.Collator;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -26,11 +21,10 @@ import javax.inject.Inject;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.services.DomainService;
-import org.esupportail.cookingapp.utils.JsfMessagesUtils;
+import org.esupportail.cookingapp.web.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContextFactory;
 
 import fj.F;
-import fj.Ordering;
 
 /**
  * @author llevague
@@ -91,23 +85,6 @@ public class IngredientController {
 	 * @return
 	 */
 	public List<Ingredient> getIngredients() {
-				
-		final F<Ingredient, F<Ingredient, Ordering>> ordering = 
-				new F<Ingredient, F<Ingredient, Ordering>>() {
-			
-			final Collator collator = Collator.getInstance();
-			
-			public F<Ingredient, Ordering> f(final Ingredient i1) {
-				return new F<Ingredient, Ordering>() {
-					public Ordering f(final Ingredient i2) {
-						final CollationKey k1 = collator.getCollationKey(i1.getName());
-						final CollationKey k2 = collator.getCollationKey(i2.getName());
-						final int x = k1.compareTo(k2);
-						return x < 0 ? LT : x == 0 ? EQ : GT;
-					}
-				};
-			};
-		};
 		
 		final F<Ingredient, Boolean> filtering = new F<Ingredient, Boolean>() {
 			@Override
@@ -122,7 +99,7 @@ public class IngredientController {
 			}
 		};
 		return wrap(iterableList(ingredients)
-				.filter(filtering).sort(ord(ordering))).toStandardList();
+				.filter(filtering).sort(ingredientOrd)).toStandardList();
 	}
 	
 	/**

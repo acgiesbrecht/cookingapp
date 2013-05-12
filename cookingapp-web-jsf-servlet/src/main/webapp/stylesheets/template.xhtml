@@ -13,24 +13,18 @@
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="cache-control" content="no-cache" />
         <meta http-equiv="expires" content="0" />
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1.0" />
-        <title><h:outputText value="#{applicationService.name}" /></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#{applicationService.name}</title>
 
         <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <!-- 		<link href="/resources/css/font-awesome-corp.css" rel="stylesheet" type="text/css" /> -->
-        <!-- 		<link href="/resources/css/font-awesome-ext.css" rel="stylesheet" type="text/css" /> -->
-        <!-- 		<link href="/resources/css/font-awesome-social.css" rel="stylesheet" type="text/css" /> -->
         <link href="/resources/css/cookingapp.css" rel="stylesheet" type="text/css" />
         <link href="/resources/css/cookingapp-buttons.css" rel="stylesheet" type="text/css" />
         <link href="/resources/css/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css" />
-        <!--[if lt IE 9]>
-            <script src="/resources/js/modernizr.js" type="text/javascript"></script>
-        <![endif]-->
+        <link href="/resources/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet" type="text/css" />
     </h:head>
-    <h:body id="body">
+    <body id="body">
         <header>
             <div class="navbar navbar-fixed-top">
                 <div class="container">
@@ -54,20 +48,25 @@
                 </div>
             </div>
         </header>
-        <div style="margin-top: 80px;" />
-        <p:growl id="messages" showSummary="true" autoUpdate="true"
+        
+        <!-- Content -->
+        <p:growl id="messages" showSummary="true" showDetail="true" autoUpdate="true"
             sticky="false" escape="false" />
         <div class="container">
             <ui:insert name="content" />
         </div>
+        
+        <!-- Javascripts -->
         <script src="/resources/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="/resources/js/wysihtml5-0.3.0.min.js" type="text/javascript"></script>
         <script src="/resources/js/bootstrap-wysihtml5.js" type="text/javascript"></script>
+        <script src="/resources/js/bootstrap-select.js" type="text/javascript"></script>
 
         <script type="text/javascript">
 			$('[rel=tooltip]').tooltip();
             $('[rel=popover]').popover();
-            $('.editor').wysihtml5({"link":false,"image":false});
+            $('.editor').wysihtml5({locale:"fr","link":false,"image":false});
+//             $('select').selectpicker();
 
             $('[type=search]').keypress(function(e) {
               if (e.keyCode == '13') {
@@ -76,7 +75,7 @@
                }
             });
 		</script>
-    </h:body>
+    </body>
 </f:view>
 
 </html>

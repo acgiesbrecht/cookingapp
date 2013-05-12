@@ -459,53 +459,101 @@
     }
 
     var locale = $.fn.wysihtml5.locale = {
-        en: {
-            font_styles: {
-                normal: "Normal text",
-                h1: "Heading 1",
-                h2: "Heading 2",
-                h3: "Heading 3",
-                h4: "Heading 4",
-                h5: "Heading 5",
-                h6: "Heading 6"
+            en: {
+                font_styles: {
+                    normal: "Normal text",
+                    h1: "Heading 1",
+                    h2: "Heading 2",
+                    h3: "Heading 3",
+                    h4: "Heading 4",
+                    h5: "Heading 5",
+                    h6: "Heading 6"
+                },
+                emphasis: {
+                    bold: "Bold",
+                    italic: "Italic",
+                    underline: "Underline"
+                },
+                lists: {
+                    unordered: "Unordered list",
+                    ordered: "Ordered list",
+                    outdent: "Outdent",
+                    indent: "Indent"
+                },
+                link: {
+                    insert: "Insert link",
+                    cancel: "Cancel",
+                    target: "Open link in new window"
+                },
+                image: {
+                    insert: "Insert image",
+                    cancel: "Cancel"
+                },
+                html: {
+                    edit: "Edit HTML"
+                },
+                colours: {
+                    black: "Black",
+                    silver: "Silver",
+                    gray: "Grey",
+                    maroon: "Maroon",
+                    red: "Red",
+                    purple: "Purple",
+                    green: "Green",
+                    olive: "Olive",
+                    navy: "Navy",
+                    blue: "Blue",
+                    orange: "Orange"
+                }
             },
-            emphasis: {
-                bold: "Bold",
-                italic: "Italic",
-                underline: "Underline"
-            },
-            lists: {
-                unordered: "Unordered list",
-                ordered: "Ordered list",
-                outdent: "Outdent",
-                indent: "Indent"
-            },
-            link: {
-                insert: "Insert link",
-                cancel: "Cancel",
-                target: "Open link in new window"
-            },
-            image: {
-                insert: "Insert image",
-                cancel: "Cancel"
-            },
-            html: {
-                edit: "Edit HTML"
-            },
-            colours: {
-                black: "Black",
-                silver: "Silver",
-                gray: "Grey",
-                maroon: "Maroon",
-                red: "Red",
-                purple: "Purple",
-                green: "Green",
-                olive: "Olive",
-                navy: "Navy",
-                blue: "Blue",
-                orange: "Orange"
-            }
-        }
+
+	    fr: {
+	        font_styles: {
+	            normal: "Texte normal",
+	            h1: "Titre 1",
+	            h2: "Titre 2",
+	            h3: "Titre 3",
+	            h4: "Titre 4",
+	            h5: "Titre 5",
+	            h6: "Titre 6"
+	        },
+	        emphasis: {
+	            bold: "Gras",
+	            italic: "Italique",
+	            underline: "Souligné"
+	        },
+	        lists: {
+	            unordered: "Liste non ordonnée",
+	            ordered: "Liste ordonnée",
+	            outdent: "Désintdenter",
+	            indent: "Indenter"
+	        },
+	        link: {
+	            insert: "Inserer un lien",
+	            cancel: "Annnuler",
+	            target: "Ouvrir dans une nouvelle fenêtre"
+	        },
+	        image: {
+	            insert: "Inserer une image",
+	            cancel: "Annuler"
+	        },
+	        html: {
+	            edit: "Editer le HTML"
+	        },
+	        colours: {
+	            black: "Noir",
+	            silver: "Argent",
+	            gray: "Gris",
+	            maroon: "Marron",
+	            red: "Rouge",
+	            purple: "Violet",
+	            green: "Vert",
+	            olive: "Olive",
+	            navy: "Bleu marine",
+	            blue: "Bleu",
+	            orange: "Orange"
+	        }
+	    }
     };
 
 }(window.jQuery, window.wysihtml5);
