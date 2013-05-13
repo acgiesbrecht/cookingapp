@@ -6,15 +6,13 @@ import org.esupportail.cookingapp.web.utils.JsfMessagesUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 @Configuration
-@ImportResource({ "classpath:properties/web/converters.xml" })
-@Import({ExceptionHandlingConfig.class, DomainConfig.class,
-		ControllerConfig.class })
+@Import({ ExceptionHandlingConfig.class, DomainConfig.class,
+		ControllerConfig.class, ConverterConfig.class })
 public class ContextConfig {
 
 	@Bean(name = "app_context")
@@ -25,7 +23,7 @@ public class ContextConfig {
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
 		PropertySourcesPlaceholderConfigurer pspc = new PropertySourcesPlaceholderConfigurer();
-		final Resource[] resources = new ClassPathResource[] {
+		final Resource[] resources = new Resource[] {
 				new ClassPathResource("/properties/defaults.properties"),
 				new ClassPathResource("/properties/config.properties") };
 		pspc.setLocations(resources);

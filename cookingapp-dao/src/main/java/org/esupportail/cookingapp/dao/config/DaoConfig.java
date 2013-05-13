@@ -25,6 +25,8 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 @Import({JdbcDataSourceConfig.class, JndiDataSourceConfig.class})
 public class DaoConfig {
 	
+	private final String[] PACKAGES_TO_SCAN = new String[]{"org.esupportail.cookingapp.domain.beans"}; 
+	
 	@Value("${jpa.database.type}")
 	private String databaseType;
 
@@ -67,8 +69,7 @@ public class DaoConfig {
 		factoryBean.setJpaProperties(jpaProperties());
 		factoryBean.setJpaVendorAdapter(vendorAdapter());
 		factoryBean.setDataSource(dataSource);
-		factoryBean
-				.setPersistenceXmlLocation("classpath*:META-INF/cookingapp-dao-persistence.xml");
+		factoryBean.setPackagesToScan(PACKAGES_TO_SCAN);
 		return factoryBean;
 	}
 
