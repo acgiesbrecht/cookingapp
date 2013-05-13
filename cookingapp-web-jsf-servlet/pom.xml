@@ -169,12 +169,46 @@
 					<artifactId>icu4j</artifactId>
 					<groupId>com.ibm.icu</groupId>
 				</exclusion>
+				<exclusion>
+				    <artifactId>spring-context-support</artifactId>
+				    <groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+				    <artifactId>spring-beans</artifactId>
+				    <groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+				    <artifactId>spring-core</artifactId>
+				    <groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+				    <artifactId>spring-test</artifactId>
+				    <groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+				    <artifactId>spring-web</artifactId>
+				    <groupId>org.springframework</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.esupportail</groupId>
 			<artifactId>esup-commons2-annotations</artifactId>
 			<version>${esupcommons.version}</version>
+			<exclusions>
+			    <exclusion>
+			        <artifactId>spring-context-support</artifactId>
+			        <groupId>org.springframework</groupId>
+			    </exclusion>
+			    <exclusion>
+			        <artifactId>spring-beans</artifactId>
+			        <groupId>org.springframework</groupId>
+			    </exclusion>
+			    <exclusion>
+			        <artifactId>spring-core</artifactId>
+			        <groupId>org.springframework</groupId>
+			    </exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
