@@ -6,6 +6,7 @@ package org.esupportail.cookingapp.domain.services;
 
 import static fj.Unit.unit;
 import static fj.data.Array.array;
+import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 
@@ -19,11 +20,10 @@ import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.Client;
 import org.esupportail.commons.services.logging.Logger;
 import org.esupportail.commons.services.logging.LoggerImpl;
-import org.esupportail.cookingapp.dao.DaoService;
+import org.esupportail.cookingapp.dao.repositories.IngredientRepository;
+import org.esupportail.cookingapp.dao.repositories.RecipeRepository;
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
-import org.esupportail.cookingapp.domain.beans.Step;
-import org.esupportail.cookingapp.domain.beans.StepIngredient;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -63,10 +63,16 @@ public class DomainServiceImpl implements DomainService {
 	private final String TYPE_INGREDIENT = "ingredient";
 	
 	/**
-	 * The DAO service.
+	 * A repository for {@link Ingredient}s
 	 */
 	@Inject
-	private DaoService daoService;
+	private IngredientRepository ingredientRepository;
+	
+	/**
+	 * A repository for {@link Recipe}s
+	 */
+	@Inject
+	private RecipeRepository recipeRepository;
 	
 	/**
 	 * An elasticSearch client.
@@ -86,19 +92,18 @@ public class DomainServiceImpl implements DomainService {
 	@Override
 	@Transactional(propagation=Propagation.SUPPORTS, readOnly=true)
 	public Ingredient getIngredient(final String name) {
-		return daoService.getIngredient(name);
+		return ingredientRepository.findByName(name);
 	}
 
 	@Override
 	@Transactional(propagation=Propagation.SUPPORTS, readOnly=true)
 	public List<Ingredient> getIngredients() {
-		return fromNull(daoService.getIngredients()).orSome(new ArrayList<Ingredient>());
+		return new ArrayList<>(wrap(ingredientRepository.findAll()).toStandardList());
 	}
 
 	@Override
 	public Ingredient addIngredient(final Ingredient ingredient) {
-		daoService.add(ingredient);
-		final Ingredient theIngredient = daoService.getIngredient(ingredient.getName());
+		final Ingredient theIngredient = ingredientRepository.save(ingredient);
 		clientES.prepareIndex(INDEX, TYPE_INGREDIENT, theIngredient.getId().toString())
 			.setSource(getJson(theIngredient)).execute().actionGet();
 		return theIngredient;
@@ -106,9 +111,9 @@ public class DomainServiceImpl implements DomainService {
 
 	@Override
 	public void deleteIngredient(final Ingredient ingredient) {
-		final Ingredient theIngredient = daoService.getIngredient(ingredient.getName());
+		final Ingredient theIngredient = getIngredient(ingredient.getName());
 		clientES.delete(new DeleteRequest(INDEX, TYPE_INGREDIENT, theIngredient.getId().toString()));
-		daoService.delete(theIngredient);
+		ingredientRepository.delete(theIngredient);
 	}
 
 	@Override
@@ -123,67 +128,34 @@ public class DomainServiceImpl implements DomainService {
 
 	@Override
 	public void deleteIngredients(final Collection<Ingredient> ingredients) {
-		fromNull(ingredients).foreach(new F<Collection<Ingredient>, Unit>() {
+		fromNull(ingredients).option(unit(), new F<Collection<Ingredient>, Unit>() {
 			@Override
-			public Unit f(final Collection<Ingredient> c) {
-				for (Ingredient ingredient : c) {
-					deleteIngredient(ingredient);
-				}
+			public Unit f(final Collection<Ingredient> a) {
+				ingredientRepository.delete(ingredients);
 				return unit();
-			}
-		});
-	}
-
-	@Override
-	public Step getStep(final Long id) {
-		return daoService.getStep(id);
-	}
-
-	@Override
-	public void addStep(final Step step) {
-		daoService.add(step);
-	}
-
-	@Override
-	public void deleteStep(final Step step) {
-		daoService.delete(step);
-	}
-
-	@Override
-	public StepIngredient getStepIngredient(final Step step) {
-		return daoService.getStepIngredient(step);
-	}
-
-	@Override
-	public StepIngredient getStepIngredient(final Ingredient ingredient) {
-		return daoService.getStepIngredient(ingredient);
-	}
-
-	@Override
-	public StepIngredient getStepIngredient(final Step step, final Ingredient ingredient) {
-		return daoService.getStepIngredient(step, ingredient);
+			}});
 	}
 
 	@Override
 	public Recipe getRecipe(final Long id) {
-		return daoService.getRecipe(id);
+		return recipeRepository.findOne(id);
 	}
 
 	@Override
 	public List<Recipe> getRecipes() {
-		return fromNull(daoService.getRecipes()).orSome(new ArrayList<Recipe>());
+		return new ArrayList<>(wrap(recipeRepository.findAll()).toStandardList());
 	}
 
 	@Override
 	public List<Recipe> getRecipes(final String name) {
-		return fromNull(daoService.getRecipes(name)).orSome(new ArrayList<Recipe>());
+		return new ArrayList<>(wrap(recipeRepository.findByName(name)).toStandardList());
 	}
 
 	@Override
 	public void addRecipe(final Recipe recipe) {
 		final List<Recipe> recipies = getRecipes(recipe.getName());
 		recipe.getAlternatives().addAll(recipies);
-		daoService.add(recipe);
+		recipeRepository.save(recipe);
 		iterableList(recipies).foreach(new Effect<Recipe>() {
 			@Override
 			public void e(final Recipe r) {
@@ -203,7 +175,7 @@ public class DomainServiceImpl implements DomainService {
 				}
 			}
 		});
-		daoService.delete(toDelete.withAlternatives(new ArrayList<Recipe>()));
+		recipeRepository.delete(toDelete.withAlternatives(new ArrayList<Recipe>()));
 	}
 	
 	private <T> String getJson(final T object) {

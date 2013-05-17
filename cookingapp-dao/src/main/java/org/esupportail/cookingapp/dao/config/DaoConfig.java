@@ -5,14 +5,13 @@ import java.util.Properties;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
-import org.esupportail.cookingapp.dao.DaoService;
-import org.esupportail.cookingapp.dao.JpaDaoService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -22,10 +21,11 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
 @Lazy
+@EnableJpaRepositories("org.esupportail.cookingapp.dao.repositories")
 @Import({JdbcDataSourceConfig.class, JndiDataSourceConfig.class})
 public class DaoConfig {
 	
-	private final String[] PACKAGES_TO_SCAN = new String[]{"org.esupportail.cookingapp.domain.beans"}; 
+	private final String[] ENTITIES_PACKAGES = new String[]{"org.esupportail.cookingapp.domain.beans"}; 
 	
 	@Value("${jpa.database.type}")
 	private String databaseType;
@@ -51,11 +51,6 @@ public class DaoConfig {
 	}
 
 	@Bean
-	public DaoService daoService() {
-		return new JpaDaoService();
-	}
-
-	@Bean
 	public JpaTransactionManager transactionManager() {
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
 		transactionManager.setEntityManagerFactory(entityManagerFactory()
@@ -69,7 +64,7 @@ public class DaoConfig {
 		factoryBean.setJpaProperties(jpaProperties());
 		factoryBean.setJpaVendorAdapter(vendorAdapter());
 		factoryBean.setDataSource(dataSource);
-		factoryBean.setPackagesToScan(PACKAGES_TO_SCAN);
+		factoryBean.setPackagesToScan(ENTITIES_PACKAGES);
 		return factoryBean;
 	}
 
