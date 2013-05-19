@@ -1,9 +1,9 @@
 package org.esupportail.cookingapp.dao.repositories;
 
 import org.esupportail.cookingapp.domain.beans.Recipe;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RecipeRepository extends PagingAndSortingRepository<Recipe, Long> {
+public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 
 	/**
 	 * Finds the list of {@link Recipe} which name match the parameter.

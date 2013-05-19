@@ -29,6 +29,7 @@ header > .navbar .navbar-brand {
 }
 
 .navbar-nav > li > a {
+	border-radius: 0;
 	padding: 10px 15px;
 }
 

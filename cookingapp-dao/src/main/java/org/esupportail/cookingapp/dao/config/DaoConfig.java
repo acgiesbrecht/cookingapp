@@ -3,6 +3,7 @@ package org.esupportail.cookingapp.dao.config;
 import java.util.Properties;
 
 import javax.annotation.Resource;
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -12,15 +13,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.hibernate4.HibernateExceptionTranslator;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @Lazy
+@EnableTransactionManagement
 @EnableJpaRepositories("org.esupportail.cookingapp.dao.repositories")
 @Import({JdbcDataSourceConfig.class, JndiDataSourceConfig.class})
 public class DaoConfig {
@@ -51,21 +56,27 @@ public class DaoConfig {
 	}
 
 	@Bean
-	public JpaTransactionManager transactionManager() {
+	public PlatformTransactionManager transactionManager() {
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
-		transactionManager.setEntityManagerFactory(entityManagerFactory()
-				.getObject());
+		transactionManager.setEntityManagerFactory(entityManagerFactory());
 		return transactionManager;
 	}
 
 	@Bean
-	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-		LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-		factoryBean.setJpaProperties(jpaProperties());
-		factoryBean.setJpaVendorAdapter(vendorAdapter());
-		factoryBean.setDataSource(dataSource);
-		factoryBean.setPackagesToScan(ENTITIES_PACKAGES);
-		return factoryBean;
+	public EntityManagerFactory entityManagerFactory() {
+		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+		factory.setJpaProperties(jpaProperties());
+		factory.setJpaVendorAdapter(vendorAdapter());
+		factory.setDataSource(dataSource);
+		factory.setPackagesToScan(ENTITIES_PACKAGES);
+		factory.afterPropertiesSet();
+		return factory.getObject();
+	}
+	
+	@Bean
+	//http://stackoverflow.com/questions/8434712/no-persistence-exception-translators-found-in-bean-factory-cannot-perform-excep
+	public HibernateExceptionTranslator hibernateExceptionTranslator() {
+		return new HibernateExceptionTranslator();
 	}
 
 	private Properties jpaProperties() {
