@@ -9,8 +9,6 @@ import java.util.List;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
-import org.esupportail.cookingapp.domain.beans.Step;
-import org.esupportail.cookingapp.domain.beans.StepIngredient;
 
 
 /**
@@ -56,49 +54,6 @@ public interface DomainService extends Serializable {
 	 */
 	void deleteIngredients(final Collection<Ingredient> ingredients);
 	
-
-	/**
-	 * Finds the {@link Step} by its id.
-	 * @param id
-	 * @return
-	 */
-	Step getStep(Long id);
-
-	/**
-	 * Add the {@link Step}.
-	 * @param step
-	 */
-	void addStep(Step step);
-	
-	/**
-	 * Delete the {@link Step}.
-	 * @param step
-	 */
-	void deleteStep(Step step);
-
-
-	/**
-	 * Finds the {@link StepIngredient} by its {@link Step}.
-	 * @param step
-	 * @return
-	 */
-	StepIngredient getStepIngredient(Step step);
-	
-	/**
-	 * Finds the {@link StepIngredient} by its {@link Ingredient}.
-	 * @param ingredient
-	 * @return
-	 */
-	StepIngredient getStepIngredient(Ingredient ingredient);
-	
-	/**
-	 * Finds the {@link StepIngredient} by its {@link Step} and its {@link Ingredient}.
-	 * @param step
-	 * @param ingredient
-	 * @return
-	 */
-	StepIngredient getStepIngredient(Step step, Ingredient ingredient);
-
 
 	/**
 	 * Finds the {@link Recipe} by its id.

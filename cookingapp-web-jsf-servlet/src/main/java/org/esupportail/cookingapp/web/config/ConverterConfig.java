@@ -1,7 +1,5 @@
 package org.esupportail.cookingapp.web.config;
 
-import org.esupportail.commons.web.converters.LocaleConverter;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
@@ -9,8 +7,9 @@ import org.springframework.context.annotation.Lazy;
 @Lazy
 public class ConverterConfig {
 
-	@Bean
-	public LocaleConverter localeConverter() {
-		return new LocaleConverter();
-	}
+//FIXME
+//	@Bean
+//	public LocaleConverter localeConverter() {
+//		return new LocaleConverter();
+//	}
 }

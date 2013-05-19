@@ -32,6 +32,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		context.setInitParameter("javax.faces.DEFAULT_SUFFIX", ".xhtml");
 		context.setInitParameter("org.apache.myfaces.ERROR_HANDLING", "true");
 		context.setInitParameter("javax.faces.FACELETS_SKIP_COMMENTS", "true");
+		context.setInitParameter("org.apache.myfaces.SERIALIZE_STATE_IN_SESSION", "false"); // for viewscope
 		context.setInitParameter("primefaces.THEME", "bootstrap");
 
 		AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();

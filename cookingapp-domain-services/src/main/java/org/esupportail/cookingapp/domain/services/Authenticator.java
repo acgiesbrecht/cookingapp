@@ -10,9 +10,9 @@ import org.esupportail.cookingapp.domain.beans.AuthUser;
  *
  */
 public interface Authenticator {
-	
-	/**
-	 * @return the authenticated user.
-	 */
-	AuthUser getUser();
+//	
+//	/**
+//	 * @return the authenticated user.
+//	 */
+//	AuthUser getUser();
 }

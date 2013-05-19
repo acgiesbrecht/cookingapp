@@ -15,13 +15,13 @@ import org.springframework.context.annotation.Scope;
 public class ControllerConfig {
 
 	@Bean
-	@Scope("request")
+	@Scope("view")
 	public IngredientController ingredientController() {
 		return new IngredientController();
 	}
 	
 	@Bean
-	@Scope("request")
+	@Scope("view")
 	public RecipeController recipeController() {
 		return new RecipeController();
 	}

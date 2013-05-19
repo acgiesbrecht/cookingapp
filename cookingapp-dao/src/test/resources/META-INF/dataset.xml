@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<dataset>
-    <INGREDIENT name="sel fin"			description="" deletable="1" />
-    <INGREDIENT name="poivre noir"		description="" deletable="1" />
-    <INGREDIENT name="pomme golden"		description="" deletable="1" />
-    <INGREDIENT name="pomme grany"		description="" deletable="1" />
-    <INGREDIENT name="pomme elstar"		description="" deletable="1" />
-</dataset>
