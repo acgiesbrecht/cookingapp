@@ -1,6 +1,8 @@
 package org.esupportail.cookingapp.dao.repositories;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
@@ -11,5 +13,12 @@ public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
 	 * @return
 	 */
 	Ingredient findByName(String name);
+	
+	/**
+	 * Finds the {@link Ingredient}s which name starting with the string parameter.
+	 * @param name
+	 * @return
+	 */
+	Page<Ingredient> findByNameStartingWith(String name, Pageable pageable);
 	
 }

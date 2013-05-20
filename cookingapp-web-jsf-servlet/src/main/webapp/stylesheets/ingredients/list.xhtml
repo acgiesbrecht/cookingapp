@@ -24,25 +24,22 @@
 						</p:outputPanel>
 						<div class="pull-right">
 							<p:inputText id="globalFilter" type="search"
-								value="#{ingredientController.filter}" styleClass="input-small">
+								value="#{ingredientController.ingredients.filter}" styleClass="input-small">
 								<p:ajax event="keyup" update="ingredientsList" />
 							</p:inputText>
 							<p:watermark for="globalFilter" value="Filtrer" />
 						</div>
 					</div>
-					<p:dataTable id="ingredientsList" widgetVar="ingredientsList"
-						value="#{ingredientController.ingredients}"
+					<p:dataTable id="ingredientsList"
+						value="#{ingredientController.ingredients}" rows="2" rowsPerPageTemplate="1,2,3,4,5,6,7,8,9,10"
 						selection="#{ingredientController.selectedIngredients}"
-						var="ingredient" paginator="true" paginatorAlwaysVisible="false"
-						rowKey="#{ingredient.name}">
-						<p:ajax event="page" process="@this,:dataForm:actions"
-							partialUpdate="true" />
+						var="ingredient" paginator="true" lazy="true">
 						<p:ajax event="rowSelect" update=":dataForm:actions" />
 						<p:ajax event="rowUnselect" update=":dataForm:actions" />
 						<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
 						<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
 						<p:ajax event="toggleSelect" update=":dataForm:actions" />
-						<p:column selectionMode="multiple" style="width:2%"  />
+						<p:column selectionMode="multiple" style="width:18px!important"  />
 						<p:column headerText="Nom">
 							#{ingredient.name}
 						</p:column>

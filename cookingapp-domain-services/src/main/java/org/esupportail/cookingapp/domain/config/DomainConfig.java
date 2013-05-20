@@ -7,13 +7,17 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.node.Node;
 import org.esupportail.cookingapp.dao.config.DaoConfig;
-import org.esupportail.cookingapp.domain.services.DomainService;
-import org.esupportail.cookingapp.domain.services.DomainServiceImpl;
+import org.esupportail.cookingapp.domain.services.IngredientService;
+import org.esupportail.cookingapp.domain.services.IngredientServiceImpl;
+import org.esupportail.cookingapp.domain.services.RecipeService;
+import org.esupportail.cookingapp.domain.services.RecipeServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @Lazy
@@ -22,10 +26,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DomainConfig {
 	
 	private final String DEFAULT_ES_CONFIG_FILE = "es.properties";
-		
+
 	@Bean
-	public DomainService domainService() {
-		return new DomainServiceImpl();
+	public IngredientService ingredientService() {
+		return new IngredientServiceImpl();
+	}
+	@Bean
+	public RecipeService recipeService() {
+		return new RecipeServiceImpl();
 	}
 	
 	@Lazy(false)
@@ -39,6 +47,11 @@ public class DomainConfig {
 	@Bean
 	public Client esClient() {
 		return esNode().start().client();
+	}
+	
+	@Bean
+	public ObjectMapper objectMapper() {
+		return new ObjectMapper();
 	}
 	
 	

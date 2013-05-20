@@ -4,18 +4,17 @@
 package org.esupportail.cookingapp.domain.services;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
-import org.esupportail.cookingapp.domain.beans.Recipe;
+import org.springframework.data.domain.Page;
 
 
 /**
  * @author llevague
  * 
  */
-public interface DomainService extends Serializable {
+public interface IngredientService extends Serializable {
 
 	/**
 	 * Finds the {@link Ingredient} by its name.
@@ -25,10 +24,27 @@ public interface DomainService extends Serializable {
 	Ingredient getIngredient(String name);
 
 	/**
-	 * Finds all the {@link Ingredient}.
+	 * Finds all the {@link Ingredient}s.
 	 * @return
 	 */
 	List<Ingredient> getIngredients();
+	
+	/**
+	 * Finds all the {@link Ingredient}s.
+	 * @param page
+	 * @param size
+	 * @return
+	 */
+	Page<Ingredient> getIngredients(int page, int size);
+
+	/**
+	 * Finds all the {@link Ingredient}s starting with the string parameter.
+	 * @param name
+	 * @param page
+	 * @param size
+	 * @return
+	 */
+	Page<Ingredient> getIngredientsStartingWith(final String name, int page, int size);
 
 	/**
 	 * Add the {@link Ingredient}.
@@ -52,39 +68,5 @@ public interface DomainService extends Serializable {
 	 * Delete the list of {@link Ingredient}.
 	 * @param ingredients
 	 */
-	void deleteIngredients(final Collection<Ingredient> ingredients);
-	
-
-	/**
-	 * Finds the {@link Recipe} by its id.
-	 * @param id
-	 * @return
-	 */
-	Recipe getRecipe(Long id);
-	
-	/**
-	 * Finds the list of all {@link Recipe}.
-	 * @param name
-	 * @return
-	 */
-	List<Recipe> getRecipes();
-	
-	/**
-	 * Finds the list of {@link Recipe} which name match the parameter.
-	 * @param name
-	 * @return
-	 */
-	List<Recipe> getRecipes(String name);
-	
-	/**
-	 * Add the {@link Recipe}.
-	 * @param recipe
-	 */
-	void addRecipe(Recipe recipe);
-	
-	/**
-	 * Delete the {@link Recipe}.
-	 * @param recipe
-	 */
-	void deleteRecipe(Recipe recipe);
+	void deleteIngredients(final Iterable<Ingredient> ingredients);
 }

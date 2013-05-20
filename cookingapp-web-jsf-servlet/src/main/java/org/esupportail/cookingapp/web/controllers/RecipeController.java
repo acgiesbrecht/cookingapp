@@ -3,14 +3,13 @@
  */
 package org.esupportail.cookingapp.web.controllers;
 
-import static fj.Ord.ord;
-import static fj.Ord.stringOrd;
 import static fj.data.Array.array;
 import static fj.data.IterableW.wrap;
 import static fj.data.List.iterableList;
 import static fj.data.Option.fromNull;
 import static fj.data.Option.fromString;
 import static org.esupportail.cookingapp.utils.SortUtils.ingredientOrd;
+import static org.esupportail.cookingapp.utils.SortUtils.recipeOrd;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.RECIPES_LIST;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.RECIPE_ADD;
 import static org.esupportail.cookingapp.web.rewrite.NavigationRules.REDIRECT;
@@ -24,12 +23,12 @@ import javax.inject.Inject;
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.beans.Recipe;
 import org.esupportail.cookingapp.domain.beans.Step;
-import org.esupportail.cookingapp.domain.services.DomainService;
+import org.esupportail.cookingapp.domain.services.IngredientService;
+import org.esupportail.cookingapp.domain.services.RecipeService;
 import org.esupportail.cookingapp.web.utils.JsfMessagesUtils;
 import org.primefaces.push.PushContextFactory;
 
 import fj.F;
-import fj.Ordering;
 
 /**
  * @author llevague
@@ -41,7 +40,13 @@ public class RecipeController {
 	 * The service.
 	 */
 	@Inject
-	private DomainService domainService;
+	private RecipeService recipeService;
+	
+	/**
+	 * The service.
+	 */
+	@Inject
+	private IngredientService ingredientService;
 	
 	/**
 	 * The jsf utilities.
@@ -85,7 +90,7 @@ public class RecipeController {
 	public void init() {
 		filter = new String();
 		// recipe
-		recipes = domainService.getRecipes();
+		recipes = recipeService.getRecipes();
 		selectedRecipes = new Recipe[0];
 		newRecipe = new Recipe();
 		
@@ -94,7 +99,7 @@ public class RecipeController {
 		
 		// ingredients
 		ingredients = wrap(
-				iterableList(domainService.getIngredients())
+				iterableList(ingredientService.getIngredients())
 						.sort(ingredientOrd)).toStandardList();
 	}
 	
@@ -109,17 +114,6 @@ public class RecipeController {
 	 */
 	public List<Recipe> getRecipes() {
 
-		final F<Recipe, F<Recipe, Ordering>> ordering = 
-				new F<Recipe, F<Recipe, Ordering>>() {
-			public F<Recipe, Ordering> f(final Recipe i1) {
-				return new F<Recipe, Ordering>() {
-					public Ordering f(final Recipe i2) {
-						return stringOrd.compare(i1.getName(), i2.getName());
-					}
-				};
-			};
-		};
-
 		final F<Recipe, Boolean> filtering = new F<Recipe, Boolean>() {
 			@Override
 			@SuppressWarnings("synthetic-access")
@@ -133,7 +127,7 @@ public class RecipeController {
 			}
 		};
 		return wrap(iterableList(recipes)
-				.filter(filtering).sort(ord(ordering))).toStandardList();
+				.filter(filtering).sort(recipeOrd)).toStandardList();
 	}
 	
 	/**
@@ -141,7 +135,7 @@ public class RecipeController {
 	 */
 	public boolean checkIfAddable() {
 		final boolean addable = hasText(newRecipe.getName())
-			&& fromNull(domainService.getRecipes(newRecipe.getName())).isNone();
+			&& fromNull(recipeService.getRecipes(newRecipe.getName())).isNone();
 		return addable;
 	}
 	
@@ -150,7 +144,7 @@ public class RecipeController {
 	 */
 	public String addRecipe() {
 		if (checkIfAddable()) {
-			domainService.addRecipe(newRecipe);
+			recipeService.addRecipe(newRecipe);
 			recipes.add(newRecipe);
 			pushRecipes();
 			jsfMessagesUtils.addInfoMessage(null, "INFO.RECIPE.ADD", null, newRecipe.getName());
@@ -166,7 +160,7 @@ public class RecipeController {
 	 */
 	public String deleteRecipes() {
 		if (array(selectedRecipes).isNotEmpty()) {
-//			domainService.deleteRecipes(selectedRecipes);
+//			recipeService.deleteRecipes(selectedRecipes);
 //			recipes.removeAll(array(selectedRecipes).toCollection());
 			jsfMessagesUtils.addInfoMessage(null, "INFO.RECIPE.DELETE", null);
 		}
@@ -219,10 +213,10 @@ public class RecipeController {
 	}
 
 	/**
-	 * @param domainService the domainService to set
+	 * @param recipeService the recipeService to set
 	 */
-	public void setDomainService(final DomainService domainService) {
-		this.domainService = domainService;
+	public void setRecipeService(final RecipeService recipeService) {
+		this.recipeService = recipeService;
 	}
 
 	/**
