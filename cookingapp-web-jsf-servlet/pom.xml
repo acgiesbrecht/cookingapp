@@ -199,7 +199,7 @@
 	</dependencies>
 	<properties>
 		<atomikos.version>3.8.0</atomikos.version>
-		<rewrite.version>2.0.0.Beta2</rewrite.version>
+		<rewrite.version>2.0.1.Final</rewrite.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
 	</properties>
 

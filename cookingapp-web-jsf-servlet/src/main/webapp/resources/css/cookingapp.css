@@ -127,6 +127,15 @@ input.ui-spinner-input {
 	-webkit-box-sizing: content-box;
 }
 
+select.ui-paginator-rpp-options {
+	display: inline-block;
+	width: auto;
+	padding: inherit;
+	line-height: normal;
+	min-height: inherit;
+	height: auto;
+}
+
 
 /* Hide selectable column from datatable in phone view */
 .ui-selection-column {
