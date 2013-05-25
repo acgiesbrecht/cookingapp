@@ -15,7 +15,6 @@ import javax.inject.Inject;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.services.IngredientService;
-import org.esupportail.cookingapp.web.beans.IngredientLazyDataModel;
 import org.esupportail.cookingapp.web.utils.JsfMessagesUtils;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.push.PushContextFactory;
@@ -41,6 +40,7 @@ public class IngredientController {
 	/**
 	 * The {@link Ingredient} list.
 	 */
+	@Inject
 	private LazyDataModel<Ingredient> ingredients;
 		
 	/**
@@ -55,7 +55,6 @@ public class IngredientController {
 	
 	@PostConstruct
 	public void init() {
-		ingredients = new IngredientLazyDataModel(ingredientService);
 		selectedIngredients = new Ingredient[0];
 		newIngredient = new Ingredient();
 	}

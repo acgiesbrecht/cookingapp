@@ -3,7 +3,6 @@ package org.esupportail.cookingapp.web.config;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.esupportail.commons.context.ApplicationContextHolder;
 import org.esupportail.cookingapp.domain.config.DomainConfig;
 import org.esupportail.cookingapp.web.utils.JsfMessagesUtils;
 import org.esupportail.cookingapp.web.utils.ViewScope;
@@ -17,13 +16,8 @@ import org.springframework.core.io.Resource;
 
 @Configuration
 @Import({ ExceptionHandlingConfig.class, DomainConfig.class,
-		ControllerConfig.class, ConverterConfig.class })
+		ControllerConfig.class, ConverterConfig.class, WebBeansConfig.class })
 public class ContextConfig {
-
-	@Bean(name = "app_context")
-	public ApplicationContextHolder applicationContextHolder() {
-		return new ApplicationContextHolder();
-	}
 
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
