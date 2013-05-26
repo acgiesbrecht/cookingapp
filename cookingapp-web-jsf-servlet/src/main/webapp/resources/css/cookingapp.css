@@ -90,7 +90,7 @@ ol.list-inline > li {
 }
 
 .content-404 .message-404 {
-	background: url('/resources/images/404.png') top center no-repeat transparent;
+	background: url('#{request.contextPath}/resources/images/404.png') top center no-repeat transparent;
 	text-align: center;
 	margin-top: 20px;
 	padding-top: 355px;
