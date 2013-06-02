@@ -3,14 +3,21 @@ package org.esupportail.cookingapp.web.beans;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import static org.esupportail.cookingapp.web.beans.Conversions.sortOrder2Direction;
+
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.esupportail.cookingapp.domain.services.IngredientService;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 
 import fj.data.Option;
 
+@Named
 public class IngredientLazyDataModel extends LazyDataModel<Ingredient> {
 
 	/**
@@ -31,22 +38,19 @@ public class IngredientLazyDataModel extends LazyDataModel<Ingredient> {
 	/**
 	 * A service.
 	 */
+	@Inject
 	private IngredientService ingredientService;
-	
-	public IngredientLazyDataModel(final IngredientService ingredientService) {
-		super();
-		this.ingredientService = ingredientService;
-	}
 
 	@Override
 	public List<Ingredient> load(int first, int pageSize, String sortField,
 			SortOrder sortOrder, Map<String, String> filters) {
 		final Option<String> filtered = Option.fromString(filter);
 		final int pageNumber = Double.valueOf(Math.ceil(first / pageSize)).intValue();
+		final Sort sort = (sortField != null) ? new Sort(sortOrder2Direction(sortOrder), sortField) : null;
 		if (filtered.isSome()) {
-			page = ingredientService.getIngredientsStartingWith(filtered.some(), pageNumber, pageSize);
+			page = ingredientService.getIngredientsStartingWith(filtered.some(), pageNumber, pageSize, sort);
 		} else {
-			page = ingredientService.getIngredients(pageNumber, pageSize);
+			page = ingredientService.getIngredients(pageNumber, pageSize, sort, filters);
 		}
 		this.setRowCount(Long.valueOf(page.getTotalElements()).intValue());
 		return page.getContent();

@@ -5,9 +5,11 @@ package org.esupportail.cookingapp.domain.services;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 
 
 /**
@@ -33,9 +35,38 @@ public interface IngredientService extends Serializable {
 	 * Finds all the {@link Ingredient}s.
 	 * @param page
 	 * @param size
+	 * @param sort
+	 * @param filters
+	 * @return
+	 */
+	Page<Ingredient> getIngredients(int page, int size, Sort sort, Map<String, String> filters);
+	
+	/**
+	 * Finds all the {@link Ingredient}s.
+	 * @param page
+	 * @param size
+	 * @param sort
+	 * @return
+	 */
+	Page<Ingredient> getIngredients(int page, int size, Sort sort);
+	
+	/**
+	 * Finds all the {@link Ingredient}s.
+	 * @param page
+	 * @param size
 	 * @return
 	 */
 	Page<Ingredient> getIngredients(int page, int size);
+
+	/**
+	 * Finds all the {@link Ingredient}s starting with the string parameter.
+	 * @param name
+	 * @param page
+	 * @param size
+	 * @param sort
+	 * @return
+	 */
+	Page<Ingredient> getIngredientsStartingWith(final String name, int page, int size, Sort sort);
 
 	/**
 	 * Finds all the {@link Ingredient}s starting with the string parameter.

@@ -4,8 +4,9 @@ import org.esupportail.cookingapp.domain.beans.Ingredient;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
+public interface IngredientRepository extends JpaRepository<Ingredient, Long>, JpaSpecificationExecutor<Ingredient> {
 
 	/**
 	 * Finds the {@link Ingredient} by its name.

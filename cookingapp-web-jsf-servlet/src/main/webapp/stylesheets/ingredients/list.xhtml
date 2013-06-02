@@ -34,14 +34,14 @@
 						value="#{ingredientController.ingredients}" rows="5"
 						rowsPerPageTemplate="1,2,3,4,5,6,7,8,9,10" paginator="true"
 						selection="#{ingredientController.selectedIngredients}"
-						var="ingredient" lazy="true">
+						var="ingredient" lazy="true" sortBy="#{ingredient.name}">
 						<p:ajax event="rowSelect" update=":dataForm:actions" />
 						<p:ajax event="rowUnselect" update=":dataForm:actions" />
 						<p:ajax event="rowSelectCheckbox" update=":dataForm:actions" />
 						<p:ajax event="rowUnselectCheckbox" update=":dataForm:actions" />
 						<p:ajax event="toggleSelect" update=":dataForm:actions" />
 						<p:column selectionMode="multiple" style="width:18px!important" />
-						<p:column headerText="Nom">
+						<p:column headerText="Nom" filterBy="#{ingredient.name}">
 							#{ingredient.name}
 						</p:column>
 						<p:column headerText="Description">
